@@ -1,0 +1,3 @@
+bucket,N,unique_days,expectancy,profit_factor,win_rate,median_R,average_winner,average_loser,MFE,MAE,max_drawdown,positive_day_pct,best_day,best_day_R,best_day_contribution,worst_day,worst_day_R,remove_best_day_expectancy,bootstrap_ci_low,bootstrap_ci_high
+DISCOVERY,721,12,-0.1792,0.6294,0.4674,-0.0084,0.6512,-0.9298,1.1914,0.9,148.1894,0.0833,2026-08-14,11.3082,0.0875,2026-08-24,-24.5698,-0.211,-0.2772,-0.0938
+HOLDOUT,588,7,0.0688,1.1879,0.5731,0.0235,0.7584,-0.9194,1.2927,0.9154,36.2877,0.5714,2026-08-26,21.4341,0.5301,2026-08-31,-18.0687,0.036,-0.0526,0.1779

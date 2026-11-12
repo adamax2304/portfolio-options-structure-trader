@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Options Structure Trader</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header>
+    <div><span class="eyebrow">STANDALONE RESEARCH SYSTEM</span><h1>Options Structure Trader</h1></div>
+    <div class="safety"><span></span> PAPER ONLY · LIVE AUTO DISABLED</div>
+  </header>
+  <main>
+    <section class="hero panel">
+      <div><p class="muted">Structure map</p><h2 id="selectedTicker">SPY</h2><p id="spot">Run a scan to build the local map.</p></div>
+      <div class="controls">
+        <select id="ticker"></select>
+        <button id="scanButton">Run real-data scan</button>
+        <button class="secondary" id="demoButton">Run demo</button>
+      </div>
+      <div class="metrics">
+        <article><label>Gamma flip</label><strong id="gammaFlip">—</strong></article>
+        <article><label>Call wall</label><strong id="callWall">—</strong></article>
+        <article><label>Put wall</label><strong id="putWall">—</strong></article>
+        <article><label>Macro guard</label><strong id="guard">—</strong></article>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="panel span2">
+        <div class="panel-title"><div><p class="muted">Phase 2D · ALWAYS-ON SCHEDULER</p><h3>Daemon and RTH countdown</h3></div><span id="daemonBadge" class="badge">NOT STARTED</span></div>
+        <div class="metrics compact daemon-metrics">
+          <article><label>Daemon status</label><strong id="daemonStatus">—</strong></article>
+          <article><label>Session state</label><strong id="sessionState">—</strong></article>
+          <article><label>Next RTH open</label><strong id="nextOpen">—</strong></article>
+          <article><label>Next RTH close</label><strong id="nextClose">—</strong></article>
+          <article><label>Last scan</label><strong id="lastScan">—</strong></article>
+          <article><label>Next scan</label><strong id="nextScan">—</strong></article>
+          <article><label>Scans today</label><strong id="scansToday">0</strong></article>
+          <article><label>Free Validation today</label><strong id="daemonFreeToday">0</strong></article>
+          <article><label>Shadow today</label><strong id="daemonShadowToday">0</strong></article>
+          <article><label>Production today</label><strong id="daemonProductionToday">0</strong></article>
+          <article><label>Daily report</label><strong id="dailyReportStatus">—</strong></article>
+          <article><label>Provider freshness</label><strong id="providerFreshness">—</strong></article>
+          <article><label>Last error</label><strong id="daemonError">None</strong></article>
+        </div>
+        <p class="muted">Live trading: <b id="daemonLiveDisabled">DISABLED</b> · provider state refreshes with every daemon heartbeat.</p>
+      </article>
+      <article class="panel span2">
+        <div class="panel-title"><div><p class="muted">Phase 2C · THREE ISOLATED LANES</p><h3>Free-data validation</h3></div><span id="observationBadge" class="badge">COLLECTING</span></div>
+        <div class="metrics compact">
+          <article><label>Free Validation scans</label><strong id="freeScans">0 / 50</strong></article>
+          <article><label>Free Validation trades</label><strong id="freeTrades">0</strong></article>
+          <article><label>Production-valid scans</label><strong id="validScans">0</strong></article>
+          <article><label>Shadow observations</label><strong id="shadowObservations">0</strong></article>
+          <article><label>Provider readiness</label><strong id="providerReadiness">—</strong></article>
+          <article><label>Macro approval</label><strong id="macroApproval">—</strong></article>
+          <article><label>Missing OI / Greeks</label><strong id="missingOptions">0</strong></article>
+          <article><label>Stale candles</label><strong id="staleCandles">0</strong></article>
+          <article><label>Unofficial source</label><strong id="unofficialWarning">—</strong></article>
+          <article><label>Live trading</label><strong id="liveDisabled">DISABLED</strong></article>
+        </div>
+        <p id="observationStatus" class="muted"></p>
+      </article>
+      <article class="panel span2">
+        <div class="panel-title"><div><p class="muted">PHASE 2D EMPIRICAL TARGET</p><h3>Expanded-watchlist progress</h3></div><span id="phase2dBadge" class="badge">PENDING</span></div>
+        <div class="metrics compact">
+          <article><label>Free Validation scans</label><strong id="phase2dScans">0 / 500</strong></article>
+          <article><label>Tier 1 scans</label><strong id="tier1Scans">0 / 50</strong></article>
+          <article><label>Valid symbols</label><strong id="validSymbols">0 / 20</strong></article>
+          <article><label>Provider failures today</label><strong id="providerFailuresToday">0</strong></article>
+          <article><label>Symbols valid today</label><strong id="symbolsValidToday">0</strong></article>
+          <article><label>Symbols blocked today</label><strong id="symbolsBlockedToday">0</strong></article>
+        </div>
+      </article>
+      <article class="panel span2">
+        <div class="panel-title"><div><p class="muted">FREE MARKET DATA</p><h3>Market Data Freshness</h3></div><span id="freshnessBadge" class="badge">WAITING</span></div>
+        <div class="metrics compact">
+          <article><label>Yahoo fresh/stale</label><strong id="yfFreshness">0 / 0</strong></article>
+          <article><label>Finnhub quotes</label><strong id="fhFreshness">0</strong></article>
+          <article><label>Alpha fallback</label><strong id="avFallback">0 / 0</strong></article>
+          <article><label>Cross conflicts</label><strong id="crossConflicts">0</strong></article>
+        </div>
+        <div class="table-wrap freshness-table"><table><thead><tr><th>Symbol</th><th>Tier</th><th>Provider</th><th>Latest completed</th><th>Expected</th><th>Lag</th><th>Finnhub age</th><th>Fallback</th><th>Attempts</th><th>Status</th></tr></thead><tbody id="freshnessRows"></tbody></table></div>
+      </article>
+      <article class="panel span2">
+        <div class="panel-title"><div><p class="muted">PAPER MODE</p><h3>Paper Trading Status</h3></div><span id="paperStatusBadge" class="badge">LOADING</span></div>
+        <div class="metrics compact">
+          <article><label>Valid RTH scans</label><strong id="paperValidScans">0</strong></article>
+          <article><label>Natural setups</label><strong id="paperNaturalSetups">0</strong></article>
+          <article><label>Unique reclaim events</label><strong id="paperUniqueEvents">0</strong></article>
+          <article><label>Free Validation trades</label><strong id="paperFreeValidationTrades">0</strong></article>
+          <article><label>Entries opened</label><strong id="paperEntriesOpened">0</strong></article>
+          <article><label>Entries closed</label><strong id="paperEntriesClosed">0</strong></article>
+          <article><label>W / L / BE</label><strong id="paperWlb">0 / 0 / 0</strong></article>
+          <article><label>Avg realized R</label><strong id="paperAvgR">0</strong></article>
+          <article><label>Average winner R</label><strong id="paperAvgWinnerR">0</strong></article>
+          <article><label>Average loser R</label><strong id="paperAvgLoserR">0</strong></article>
+          <article><label>Expectancy R</label><strong id="paperExpectancyR">0</strong></article>
+          <article><label>Profit factor</label><strong id="paperProfitFactor">0</strong></article>
+          <article><label>Open portfolio risk R</label><strong id="paperOpenRiskR">0</strong></article>
+          <article><label>Shadow downgrade reasons</label><strong id="paperShadowReasons">—</strong></article>
+          <article><label>Avg MFE</label><strong id="paperAvgMfe">0</strong></article>
+          <article><label>Avg MAE</label><strong id="paperAvgMae">0</strong></article>
+        </div>
+        <p id="paperSyntheticNote" class="muted"></p>
+        <div class="table-wrap"><table><thead><tr><th>Open</th><th>Lane</th><th>Dir</th><th>Entry</th><th>Current</th><th>Stop</th><th>Targets</th><th>R</th><th>MFE/MAE</th><th>Status</th></tr></thead><tbody id="paperOpenRows"></tbody></table></div>
+        <div class="table-wrap"><table><thead><tr><th>Closed</th><th>Lane</th><th>Dir</th><th>Entry</th><th>Exit</th><th>R</th><th>Reason</th><th>Duration</th><th>Quality</th></tr></thead><tbody id="paperClosedRows"></tbody></table></div>
+        <div class="table-wrap"><table><thead><tr><th>Pending setup</th><th>Dir</th><th>Level</th><th>Score</th><th>Confidence</th><th>Missing / reason</th></tr></thead><tbody id="paperPendingRows"></tbody></table></div>
+        <div class="table-wrap"><table><thead><tr><th>Valid scan</th><th>Time</th><th>Level</th><th>Relative</th><th>State</th><th>Score</th><th>Result</th></tr></thead><tbody id="paperScanRows"></tbody></table></div>
+      </article>
+      <article class="panel span2">
+        <div class="panel-title"><div><p class="muted">COUNTERFACTUAL RESEARCH</p><h3>Trade Management Research</h3></div><span id="tmBadge" class="badge">LOADING</span></div>
+        <div class="metrics compact">
+          <article><label>Canonical expectancy</label><strong id="tmCanonicalExpectancy">0</strong></article>
+          <article><label>Best replay expectancy</label><strong id="tmBestExpectancy">0</strong></article>
+          <article><label>Baseline PF</label><strong id="tmBaselinePf">0</strong></article>
+          <article><label>Best replay PF</label><strong id="tmBestPf">0</strong></article>
+          <article><label>Avg winner baseline</label><strong id="tmAvgWinnerBaseline">0</strong></article>
+          <article><label>Avg winner best</label><strong id="tmAvgWinnerBest">0</strong></article>
+          <article><label>% +0.5R</label><strong id="tmReach05">0%</strong></article>
+          <article><label>% +1R</label><strong id="tmReach1">0%</strong></article>
+          <article><label>% +1.5R</label><strong id="tmReach15">0%</strong></article>
+          <article><label>% +2R</label><strong id="tmReach2">0%</strong></article>
+          <article><label>BE exit frequency</label><strong id="tmBeFreq">0%</strong></article>
+          <article><label>TP1-only frequency</label><strong id="tmTp1Freq">0%</strong></article>
+          <article><label>TP2 reach frequency</label><strong id="tmTp2Freq">0%</strong></article>
+          <article><label>TP3 reach frequency</label><strong id="tmTp3Freq">0%</strong></article>
+        </div>
+        <p class="muted">Replay results are counterfactual research, not actual paper performance.</p>
+      </article>
+      <article class="panel span2">
+        <div class="panel-title"><div><p class="muted">FORWARD A/B RESEARCH</p><h3>A/B Management Comparison</h3></div><span id="abBadge" class="badge">LOADING</span></div>
+        <div class="metrics compact">
+          <article><label>Paired completed</label><strong id="abPaired">0 / 100</strong></article>
+          <article><label>N Branch A</label><strong id="abNA">0</strong></article>
+          <article><label>N Branch B</label><strong id="abNB">0</strong></article>
+          <article><label>Expectancy A / B</label><strong id="abExpectancy">0 / 0</strong></article>
+          <article><label>Median R A / B</label><strong id="abMedian">0 / 0</strong></article>
+          <article><label>PF A / B</label><strong id="abPf">0 / 0</strong></article>
+          <article><label>Win rate A / B</label><strong id="abWinRate">0% / 0%</strong></article>
+          <article><label>Avg winner A / B</label><strong id="abAvgWinner">0 / 0</strong></article>
+          <article><label>Avg loser A / B</label><strong id="abAvgLoser">0 / 0</strong></article>
+          <article><label>Max DD A / B</label><strong id="abDrawdown">0 / 0</strong></article>
+          <article><label>TP1 freq A / B</label><strong id="abTp1">0% / 0%</strong></article>
+          <article><label>Runner contrib A / B</label><strong id="abRunner">0 / 0</strong></article>
+          <article><label>BE freq A / B</label><strong id="abBe">0% / 0%</strong></article>
+        </div>
+        <p class="muted">Forward A/B branches are paired research children of one setup event; they are not extra empirical setups.</p>
+      </article>
+      <article class="panel span2">
+        <div class="panel-title"><div><p class="muted">EDGE DISCOVERY</p><h3>Loss Attribution</h3></div><span id="edgeBadge" class="badge">LOADING</span></div>
+        <div class="metrics compact">
+          <article><label>Overall expectancy</label><strong id="edgeExpectancy">0</strong></article>
+          <article><label>Overall PF</label><strong id="edgePf">0</strong></article>
+          <article><label>Best preliminary subgroup</label><strong id="edgeBestSubgroup">—</strong></article>
+          <article><label>Worst subgroup</label><strong id="edgeWorstSubgroup">—</strong></article>
+          <article><label>Long expectancy</label><strong id="edgeLong">—</strong></article>
+          <article><label>Short expectancy</label><strong id="edgeShort">—</strong></article>
+          <article><label>Index ETF expectancy</label><strong id="edgeIndex">—</strong></article>
+          <article><label>Single-stock expectancy</label><strong id="edgeSingle">—</strong></article>
+          <article><label>Best level type</label><strong id="edgeBestLevel">—</strong></article>
+          <article><label>Worst level type</label><strong id="edgeWorstLevel">—</strong></article>
+          <article><label>Best time window</label><strong id="edgeBestTime">—</strong></article>
+          <article><label>Worst time window</label><strong id="edgeWorstTime">—</strong></article>
+          <article><label>Best score bucket</label><strong id="edgeBestScore">—</strong></article>
+          <article><label>Worst score bucket</label><strong id="edgeWorstScore">—</strong></article>
+          <article><label>Edge candidates</label><strong id="edgeCandidateCounts">0</strong></article>
+        </div>
+        <p class="muted">Discovery only. Candidate buckets are hypotheses and do not alter live scan gates or paper execution.</p>
+      </article>
+      <article class="panel span2">
+        <div class="panel-title"><div><p class="muted">FORWARD HOLDOUT</p><h3>Forward Edge Validation</h3></div><span id="forwardEdgeBadge" class="badge">LOADING</span></div>
+        <div class="metrics compact">
+          <article><label>LONG forward expectancy</label><strong id="forwardEdgeLong">—</strong></article>
+          <article><label>SHORT forward expectancy</label><strong id="forwardEdgeShort">—</strong></article>
+          <article><label>11:30–13:00 LONG</label><strong id="forwardEdgeWindowLong">—</strong></article>
+          <article><label>LONG GEX_NODE</label><strong id="forwardEdgeLongGex">—</strong></article>
+          <article><label>LONG GAMMA_FLIP</label><strong id="forwardEdgeLongGamma">—</strong></article>
+          <article><label>Best forward cohort</label><strong id="forwardEdgeBest">—</strong></article>
+          <article><label>Cohort sample size</label><strong id="forwardEdgeN">0</strong></article>
+          <article><label>Robustness status</label><strong id="forwardEdgeRobustness">—</strong></article>
+        </div>
+        <p class="muted">Prospective only. Phase 2D.5 data is discovery; new setup events after 2D.6 activation are the forward holdout sample.</p>
+      </article>
+      <article class="panel span2">
+        <div class="panel-title"><div><p class="muted">MULTI-TIMEFRAME OPTIONS EDGE RESEARCH</p><h3>Phase 4A research branches</h3></div><span id="phase4aBadge" class="badge">LOADING</span></div>
+        <div class="metrics compact">
+          <article><label>Variant A expectancy</label><strong id="phase4aA">—</strong></article>
+          <article><label>Variant B expectancy</label><strong id="phase4aB">—</strong></article>
+          <article><label>Variant C expectancy</label><strong id="phase4aC">—</strong></article>
+          <article><label>Variant D expectancy</label><strong id="phase4aD">—</strong></article>
+          <article><label>5m confirmation</label><strong id="phase4a5m">—</strong></article>
+          <article><label>15m confirmation</label><strong id="phase4a15m">—</strong></article>
+          <article><label>Persistent levels</label><strong id="phase4aPersistent">—</strong></article>
+          <article><label>Raw levels</label><strong id="phase4aRaw">—</strong></article>
+          <article><label>LONG / SHORT</label><strong id="phase4aLongShort">—</strong></article>
+          <article><label>Reclaim / rejection</label><strong id="phase4aReclaimReject">—</strong></article>
+          <article><label>Options / controls</label><strong id="phase4aControls">—</strong></article>
+          <article><label>Best research variant</label><strong id="phase4aBest">—</strong></article>
+          <article><label>Unique days</label><strong id="phase4aDays">0</strong></article>
+          <article><label>Sample status</label><strong id="phase4aSample">—</strong></article>
+        </div>
+        <p class="muted">Research-only parent events and branches. They do not create paper trades or modify canonical setup counts.</p>
+      </article>
+      <article class="panel span2">
+        <div class="panel-title"><div><p class="muted">EDGE DECOMPOSITION</p><h3>Phase 4B.1 diagnostics</h3></div><span id="phase4b1Badge" class="badge">LOADING</span></div>
+        <div class="metrics compact">
+          <article><label>Raw directional edge</label><strong id="phase4b1RawEdge">—</strong></article>
+          <article><label>Canonical expectancy</label><strong id="phase4b1Canonical">—</strong></article>
+          <article><label>% +0.5R before loss</label><strong id="phase4b1Loss05">—</strong></article>
+          <article><label>% +0.7R before loss</label><strong id="phase4b1Loss07">—</strong></article>
+          <article><label>% +1R before loss</label><strong id="phase4b1Loss1">—</strong></article>
+          <article><label>Median winner MAE</label><strong id="phase4b1WinnerMae">—</strong></article>
+          <article><label>Median MFE</label><strong id="phase4b1MedianMfe">—</strong></article>
+          <article><label>Median time-to-MFE</label><strong id="phase4b1TimeMfe">—</strong></article>
+          <article><label>Stop-too-tight rate</label><strong id="phase4b1StopTight">—</strong></article>
+          <article><label>Stop-then-recovery rate</label><strong id="phase4b1StopRecovery">—</strong></article>
+          <article><label>Giveback rate</label><strong id="phase4b1Giveback">—</strong></article>
+          <article><label>BE-then-target rate</label><strong id="phase4b1BeTarget">—</strong></article>
+          <article><label>Direction classifier accuracy</label><strong id="phase4b1Classifier">—</strong></article>
+          <article><label>Structure-confirmed expectancy</label><strong id="phase4b1Structure">—</strong></article>
+          <article><label>Biggest loss source</label><strong id="phase4b1LossSource">—</strong></article>
+        </div>
+        <p class="muted">Diagnostic artifacts only. This section decomposes level, direction, structure, entry, stop, target, BE, and management effects without changing canonical trading.</p>
+      </article>
+      <article class="panel span2">
+        <div class="panel-title"><div><p class="muted">PROSPECTIVE EXECUTION VALIDATION</p><h3>Phase 4B.2 experiments</h3></div><span id="phase4b2Badge" class="badge">LOADING</span></div>
+          <div class="metrics compact">
+            <article><label>Parent events</label><strong id="phase4b2Parents">0</strong></article>
+            <article><label>Qualified branches</label><strong id="phase4b2Qualified">0</strong></article>
+            <article><label>Lifecycle</label><strong id="phase4b2Lifecycle">—</strong></article>
+            <article><label>Unique days</label><strong id="phase4b2Days">0</strong></article>
+          <article><label>S0/S1/S2/S3 expectancy</label><strong id="phase4b2Stops">—</strong></article>
+          <article><label>Best invalidation</label><strong id="phase4b2BestStop">—</strong></article>
+          <article><label>M0/M1/M2/M3/M4 expectancy</label><strong id="phase4b2Mgmt">—</strong></article>
+          <article><label>Best protection</label><strong id="phase4b2BestMgmt">—</strong></article>
+          <article><label>P0 structure-only</label><strong id="phase4b2P0">—</strong></article>
+          <article><label>P4 options+structure</label><strong id="phase4b2P4">—</strong></article>
+          <article><label>P4 - P0</label><strong id="phase4b2P4Delta">—</strong></article>
+          <article><label>BAD_STOP causality</label><strong id="phase4b2BadStop">—</strong></article>
+          <article><label>Profit protection</label><strong id="phase4b2ProfitStatus">—</strong></article>
+          <article><label>Options value</label><strong id="phase4b2OptionsStatus">—</strong></article>
+        </div>
+        <p class="muted">Forward-only frozen experiments. Branches share one parent event and do not alter canonical paper behavior.</p>
+      </article>
+      <article class="panel span2">
+        <div class="panel-title"><div><p class="muted">Latest signal</p><h3>Reclaim candidate</h3></div><span id="signalBadge" class="badge">WAITING</span></div>
+        <div id="signalEmpty" class="empty">No signal loaded. Run the deterministic demo scan to exercise the full pipeline without placing any real order.</div>
+        <div id="signal" class="hidden">
+          <div class="score"><strong id="score">0</strong><span>/100</span></div>
+          <div><h3 id="setupType"></h3><p id="reasons" class="reason"></p></div>
+          <div class="trade-plan"><span>Entry <b id="entry"></b></span><span>Stop <b id="stop"></b></span><span>Targets <b id="targets"></b></span><span>Primary R:R <b id="rr"></b></span></div>
+          <div id="blockers" class="blockers"></div>
+        </div>
+      </article>
+      <article class="panel">
+        <p class="muted">Data status</p><h3>Source adapters</h3><div id="sources" class="list"></div>
+        <p id="configStatus" class="muted"></p>
+      </article>
+      <article class="panel span2">
+        <div class="panel-title"><div><p class="muted">EXPANDED WATCHLIST</p><h3>Symbol readiness</h3></div><span id="watchlistCount" class="badge">0 SYMBOLS</span></div>
+        <div class="table-wrap"><table><thead><tr><th>Symbol</th><th>Tier</th><th>Status</th><th>Last outcome</th><th>Failures</th></tr></thead><tbody id="watchlistRows"></tbody></table></div>
+      </article>
+      <article class="panel">
+        <p class="muted">Upcoming</p><h3>Macro events</h3><div id="events" class="list"></div>
+      </article>
+      <article class="panel span2">
+        <div class="panel-title"><div><p class="muted">Journal · FREE VALIDATION ONLY</p><h3>Free Validation Paper performance</h3></div><button class="secondary" id="exportButton">Export research data</button></div>
+        <div class="metrics compact">
+          <article><label>Closed trades</label><strong id="sampleSize">0</strong></article>
+          <article><label>Expectancy</label><strong id="expectancy">0R</strong></article>
+          <article><label>Win rate</label><strong id="winRate">0%</strong></article>
+          <article><label>Max drawdown</label><strong id="drawdown">0R</strong></article>
+        </div>
+        <p id="exportStatus" class="muted"></p>
+      </article>
+    </section>
+  </main>
+  <footer>Gamma data attribution: <a href="https://algoxflow.com" target="_blank">AlgoX Flow</a> when its adapter is enabled. Paper observation only; no live-order path exists. Research output is not financial advice.</footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>

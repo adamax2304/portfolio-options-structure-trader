@@ -1,0 +1,1678 @@
+{
+  "schema_version": "historical_data_manifest.v2",
+  "generated_at_utc": "2026-09-04T17:43:02.155196+00:00",
+  "phase": "3C_FREE_HISTORICAL_EOD_OPTION_CHAIN_RECONSTRUCTION",
+  "symbols": [
+    "SPY",
+    "QQQ",
+    "IWM"
+  ],
+  "requested_window": {
+    "start": "2024-01-01",
+    "end": "2025-12-16"
+  },
+  "parser_version": "phase3c_eod_parser_v1",
+  "normalizer_version": "phase3c_eod_normalizer_v1",
+  "gex_formula_version": "phase3c_gex_eod_v2_near_spot_gamma_flip_proxy",
+  "level_snapshot_version": "phase3c_d1_to_d_levels_v1",
+  "backtest_version": "phase3c_replay_blocked_no_5m_v1",
+  "raw_files": [
+    {
+      "source": "SaidBahaDev/options-dataset-hist",
+      "symbol": "SPY",
+      "dataset": "SPY_underlying.parquet",
+      "url": "https://media.githubusercontent.com/media/SaidBahaDev/options-dataset-hist/main/data/parquet_spy/underlying_prices.parquet",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\data\\historical\\phase3c\\raw\\options_dataset_hist\\SPY\\SPY_underlying.parquet",
+      "size_bytes": 252066,
+      "sha256": "847e60a441eb10969d87cd4a6da604257b782d9076168f68d5730b84096c79db",
+      "downloaded_at_utc": "2026-09-04T17:41:17.643423+00:00"
+    },
+    {
+      "source": "SaidBahaDev/options-dataset-hist",
+      "symbol": "SPY",
+      "dataset": "options_2024.parquet",
+      "url": "https://media.githubusercontent.com/media/SaidBahaDev/options-dataset-hist/main/data/parquet_spy/options_2024.parquet",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\data\\historical\\phase3c\\raw\\options_dataset_hist\\SPY\\options_2024.parquet",
+      "size_bytes": 56948550,
+      "sha256": "d9bf7c14b5bfb01cf03bc413773d30eee14026afc377e2daf3d0691a92a0b38d",
+      "downloaded_at_utc": "2026-09-04T17:41:18.302613+00:00"
+    },
+    {
+      "source": "SaidBahaDev/options-dataset-hist",
+      "symbol": "SPY",
+      "dataset": "options_2025.parquet",
+      "url": "https://media.githubusercontent.com/media/SaidBahaDev/options-dataset-hist/main/data/parquet_spy/options_2025.parquet",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\data\\historical\\phase3c\\raw\\options_dataset_hist\\SPY\\options_2025.parquet",
+      "size_bytes": 58216546,
+      "sha256": "77def9302fec018a926b270841a6507bfd69a5e46b3680fbb78267f73efb611e",
+      "downloaded_at_utc": "2026-09-04T17:41:18.941776+00:00"
+    },
+    {
+      "source": "SaidBahaDev/options-dataset-hist",
+      "symbol": "QQQ",
+      "dataset": "QQQ_underlying.parquet",
+      "url": "https://media.githubusercontent.com/media/SaidBahaDev/options-dataset-hist/main/data/parquet_qqq/underlying_prices.parquet",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\data\\historical\\phase3c\\raw\\options_dataset_hist\\QQQ\\QQQ_underlying.parquet",
+      "size_bytes": 332454,
+      "sha256": "78c015fd7fa9d493cd798d5ae81b3c2ae6dc3b8176e25e7bb90cd4114b103351",
+      "downloaded_at_utc": "2026-09-04T17:41:19.546461+00:00"
+    },
+    {
+      "source": "SaidBahaDev/options-dataset-hist",
+      "symbol": "QQQ",
+      "dataset": "options_2024.parquet",
+      "url": "https://media.githubusercontent.com/media/SaidBahaDev/options-dataset-hist/main/data/parquet_qqq/options_2024.parquet",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\data\\historical\\phase3c\\raw\\options_dataset_hist\\QQQ\\options_2024.parquet",
+      "size_bytes": 82434832,
+      "sha256": "50083a030d573088d91939d996b5290f54c22d65ca6e567af9e06bf760ad535b",
+      "downloaded_at_utc": "2026-09-04T17:41:20.245684+00:00"
+    },
+    {
+      "source": "SaidBahaDev/options-dataset-hist",
+      "symbol": "QQQ",
+      "dataset": "options_2025.parquet",
+      "url": "https://media.githubusercontent.com/media/SaidBahaDev/options-dataset-hist/main/data/parquet_qqq/options_2025.parquet",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\data\\historical\\phase3c\\raw\\options_dataset_hist\\QQQ\\options_2025.parquet",
+      "size_bytes": 85765453,
+      "sha256": "5fdda2f2814c2a9282c67bcad8a1c67a14e2173735c4833c547e43ef10f52291",
+      "downloaded_at_utc": "2026-09-04T17:41:20.913639+00:00"
+    },
+    {
+      "source": "SaidBahaDev/options-dataset-hist",
+      "symbol": "IWM",
+      "dataset": "IWM_underlying.parquet",
+      "url": "https://media.githubusercontent.com/media/SaidBahaDev/options-dataset-hist/main/data/parquet_iwm/underlying_prices.parquet",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\data\\historical\\phase3c\\raw\\options_dataset_hist\\IWM\\IWM_underlying.parquet",
+      "size_bytes": 257707,
+      "sha256": "e980f50473a8c346ba9ac8b05dcf3da691581dae742f649cb3608d0efe2ef940",
+      "downloaded_at_utc": "2026-09-04T17:41:21.535935+00:00"
+    },
+    {
+      "source": "SaidBahaDev/options-dataset-hist",
+      "symbol": "IWM",
+      "dataset": "options_2024.parquet",
+      "url": "https://media.githubusercontent.com/media/SaidBahaDev/options-dataset-hist/main/data/parquet_iwm/options_2024.parquet",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\data\\historical\\phase3c\\raw\\options_dataset_hist\\IWM\\options_2024.parquet",
+      "size_bytes": 46366769,
+      "sha256": "6cdafbac916d827e6cbb813d1f72d8b646f8e9c2d802fbf819a01d97ea892f3c",
+      "downloaded_at_utc": "2026-09-04T17:41:22.170884+00:00"
+    },
+    {
+      "source": "SaidBahaDev/options-dataset-hist",
+      "symbol": "IWM",
+      "dataset": "options_2025.parquet",
+      "url": "https://media.githubusercontent.com/media/SaidBahaDev/options-dataset-hist/main/data/parquet_iwm/options_2025.parquet",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\data\\historical\\phase3c\\raw\\options_dataset_hist\\IWM\\options_2025.parquet",
+      "size_bytes": 43819833,
+      "sha256": "f3ecb3e6fef169168cf05943d451f3ad47d163c6558449a00099c2b9384a054e",
+      "downloaded_at_utc": "2026-09-04T17:41:22.861827+00:00"
+    }
+  ],
+  "source_probes": {
+    "generated_at_utc": "2026-09-04T17:40:36.924155+00:00",
+    "repos": {
+      "SaidBahaDev/options-data": {
+        "url": "https://github.com/SaidBahaDev/options-data",
+        "latest_commit": "4d72fba7302d03a6b7f560409081395e8ebd4174"
+      },
+      "SaidBahaDev/options-dataset-hist": {
+        "url": "https://github.com/SaidBahaDev/options-dataset-hist",
+        "latest_commit": "60bc6a0def53f6abb68dae6624a9ba928634eddb"
+      },
+      "lambdaclass/options_portfolio_backtester": {
+        "url": "https://github.com/lambdaclass/options_portfolio_backtester",
+        "latest_commit": "e53ef86928777de6ee0721424762ea3dc133f993"
+      }
+    },
+    "primary_options_data_cloudflare": {
+      "options.parquet": {
+        "head": {
+          "url": "https://static.philippdubach.com/data/options/spy/options.parquet",
+          "status_code": 404,
+          "content_length": 0,
+          "content_type": "text/plain;charset=UTF-8",
+          "accept_ranges": null,
+          "latency_ms": 927.5
+        },
+        "range": {
+          "status_code": 404,
+          "bytes_returned": 9,
+          "first_four_bytes": "Not ",
+          "content_range": null
+        }
+      },
+      "underlying.parquet": {
+        "head": {
+          "url": "https://static.philippdubach.com/data/options/spy/underlying.parquet",
+          "status_code": 404,
+          "content_length": 0,
+          "content_type": "text/plain;charset=UTF-8",
+          "accept_ranges": null,
+          "latency_ms": 845.6
+        },
+        "range": {
+          "status_code": 404,
+          "bytes_returned": 9,
+          "first_four_bytes": "Not ",
+          "content_range": null
+        }
+      }
+    },
+    "secondary_options_dataset_hist": {
+      "SPY": {
+        "underlying": {
+          "head": {
+            "url": "https://media.githubusercontent.com/media/SaidBahaDev/options-dataset-hist/main/data/parquet_spy/underlying_prices.parquet",
+            "status_code": 200,
+            "content_length": 252066,
+            "content_type": "application/octet-stream",
+            "accept_ranges": "bytes",
+            "latency_ms": 597.9
+          },
+          "range": {
+            "status_code": 206,
+            "bytes_returned": 8,
+            "first_four_bytes": "PAR1",
+            "content_range": "bytes 0-7/252066"
+          }
+        },
+        "options": {
+          "2024": {
+            "head": {
+              "url": "https://media.githubusercontent.com/media/SaidBahaDev/options-dataset-hist/main/data/parquet_spy/options_2024.parquet",
+              "status_code": 200,
+              "content_length": 56948550,
+              "content_type": "application/octet-stream",
+              "accept_ranges": "bytes",
+              "latency_ms": 734.2
+            },
+            "range": {
+              "status_code": 206,
+              "bytes_returned": 8,
+              "first_four_bytes": "PAR1",
+              "content_range": "bytes 0-7/56948550"
+            }
+          },
+          "2025": {
+            "head": {
+              "url": "https://media.githubusercontent.com/media/SaidBahaDev/options-dataset-hist/main/data/parquet_spy/options_2025.parquet",
+              "status_code": 200,
+              "content_length": 58216546,
+              "content_type": "application/octet-stream",
+              "accept_ranges": "bytes",
+              "latency_ms": 657.6
+            },
+            "range": {
+              "status_code": 206,
+              "bytes_returned": 8,
+              "first_four_bytes": "PAR1",
+              "content_range": "bytes 0-7/58216546"
+            }
+          }
+        }
+      },
+      "QQQ": {
+        "underlying": {
+          "head": {
+            "url": "https://media.githubusercontent.com/media/SaidBahaDev/options-dataset-hist/main/data/parquet_qqq/underlying_prices.parquet",
+            "status_code": 200,
+            "content_length": 332454,
+            "content_type": "application/octet-stream",
+            "accept_ranges": "bytes",
+            "latency_ms": 727.1
+          },
+          "range": {
+            "status_code": 206,
+            "bytes_returned": 8,
+            "first_four_bytes": "PAR1",
+            "content_range": "bytes 0-7/332454"
+          }
+        },
+        "options": {
+          "2024": {
+            "head": {
+              "url": "https://media.githubusercontent.com/media/SaidBahaDev/options-dataset-hist/main/data/parquet_qqq/options_2024.parquet",
+              "status_code": 200,
+              "content_length": 82434832,
+              "content_type": "application/octet-stream",
+              "accept_ranges": "bytes",
+              "latency_ms": 762.8
+            },
+            "range": {
+              "status_code": 206,
+              "bytes_returned": 8,
+              "first_four_bytes": "PAR1",
+              "content_range": "bytes 0-7/82434832"
+            }
+          },
+          "2025": {
+            "head": {
+              "url": "https://media.githubusercontent.com/media/SaidBahaDev/options-dataset-hist/main/data/parquet_qqq/options_2025.parquet",
+              "status_code": 200,
+              "content_length": 85765453,
+              "content_type": "application/octet-stream",
+              "accept_ranges": "bytes",
+              "latency_ms": 582.3
+            },
+            "range": {
+              "status_code": 206,
+              "bytes_returned": 8,
+              "first_four_bytes": "PAR1",
+              "content_range": "bytes 0-7/85765453"
+            }
+          }
+        }
+      },
+      "IWM": {
+        "underlying": {
+          "head": {
+            "url": "https://media.githubusercontent.com/media/SaidBahaDev/options-dataset-hist/main/data/parquet_iwm/underlying_prices.parquet",
+            "status_code": 200,
+            "content_length": 257707,
+            "content_type": "application/octet-stream",
+            "accept_ranges": "bytes",
+            "latency_ms": 846.9
+          },
+          "range": {
+            "status_code": 206,
+            "bytes_returned": 8,
+            "first_four_bytes": "PAR1",
+            "content_range": "bytes 0-7/257707"
+          }
+        },
+        "options": {
+          "2024": {
+            "head": {
+              "url": "https://media.githubusercontent.com/media/SaidBahaDev/options-dataset-hist/main/data/parquet_iwm/options_2024.parquet",
+              "status_code": 200,
+              "content_length": 46366769,
+              "content_type": "application/octet-stream",
+              "accept_ranges": "bytes",
+              "latency_ms": 681.6
+            },
+            "range": {
+              "status_code": 206,
+              "bytes_returned": 8,
+              "first_four_bytes": "PAR1",
+              "content_range": "bytes 0-7/46366769"
+            }
+          },
+          "2025": {
+            "head": {
+              "url": "https://media.githubusercontent.com/media/SaidBahaDev/options-dataset-hist/main/data/parquet_iwm/options_2025.parquet",
+              "status_code": 200,
+              "content_length": 43819833,
+              "content_type": "application/octet-stream",
+              "accept_ranges": "bytes",
+              "latency_ms": 778.6
+            },
+            "range": {
+              "status_code": 206,
+              "bytes_returned": 8,
+              "first_four_bytes": "PAR1",
+              "content_range": "bytes 0-7/43819833"
+            }
+          }
+        }
+      }
+    },
+    "lambdaclass_release": {
+      "SPY": {
+        "underlying": {
+          "head": {
+            "url": "https://github.com/lambdaclass/options_portfolio_backtester/releases/download/data-v1/SPY_underlying.parquet",
+            "status_code": 200,
+            "content_length": 252066,
+            "content_type": "application/octet-stream",
+            "accept_ranges": "bytes",
+            "latency_ms": 1647.1
+          },
+          "range": {
+            "status_code": 206,
+            "bytes_returned": 8,
+            "first_four_bytes": "PAR1",
+            "content_range": "bytes 0-7/252066"
+          }
+        },
+        "options": {
+          "head": {
+            "url": "https://github.com/lambdaclass/options_portfolio_backtester/releases/download/data-v1/SPY_options.parquet",
+            "status_code": 200,
+            "content_length": 631738559,
+            "content_type": "application/octet-stream",
+            "accept_ranges": "bytes",
+            "latency_ms": 1449.4
+          },
+          "range": {
+            "status_code": 206,
+            "bytes_returned": 8,
+            "first_four_bytes": "PAR1",
+            "content_range": "bytes 0-7/631738559"
+          }
+        }
+      },
+      "QQQ": {
+        "underlying": {
+          "head": {
+            "url": "https://github.com/lambdaclass/options_portfolio_backtester/releases/download/data-v1/QQQ_underlying.parquet",
+            "status_code": 200,
+            "content_length": 332454,
+            "content_type": "application/octet-stream",
+            "accept_ranges": "bytes",
+            "latency_ms": 1685.2
+          },
+          "range": {
+            "status_code": 206,
+            "bytes_returned": 8,
+            "first_four_bytes": "PAR1",
+            "content_range": "bytes 0-7/332454"
+          }
+        },
+        "options": {
+          "head": {
+            "url": "https://github.com/lambdaclass/options_portfolio_backtester/releases/download/data-v1/QQQ_options.parquet",
+            "status_code": 200,
+            "content_length": 387476183,
+            "content_type": "application/octet-stream",
+            "accept_ranges": "bytes",
+            "latency_ms": 1273.8
+          },
+          "range": {
+            "status_code": 206,
+            "bytes_returned": 8,
+            "first_four_bytes": "PAR1",
+            "content_range": "bytes 0-7/387476183"
+          }
+        }
+      },
+      "IWM": {
+        "underlying": {
+          "head": {
+            "url": "https://github.com/lambdaclass/options_portfolio_backtester/releases/download/data-v1/IWM_underlying.parquet",
+            "status_code": 200,
+            "content_length": 257707,
+            "content_type": "application/octet-stream",
+            "accept_ranges": "bytes",
+            "latency_ms": 1608.9
+          },
+          "range": {
+            "status_code": 206,
+            "bytes_returned": 8,
+            "first_four_bytes": "PAR1",
+            "content_range": "bytes 0-7/257707"
+          }
+        },
+        "options": {
+          "head": {
+            "url": "https://github.com/lambdaclass/options_portfolio_backtester/releases/download/data-v1/IWM_options.parquet",
+            "status_code": 200,
+            "content_length": 308766441,
+            "content_type": "application/octet-stream",
+            "accept_ranges": "bytes",
+            "latency_ms": 1454.1
+          },
+          "range": {
+            "status_code": 206,
+            "bytes_returned": 8,
+            "first_four_bytes": "PAR1",
+            "content_range": "bytes 0-7/308766441"
+          }
+        }
+      }
+    },
+    "stooq_5m_probe": {
+      "url": "https://stooq.com/q/d/l/?s=spy.us&i=5&d1=20240102&d2=20240105",
+      "head_or_get": {
+        "url": "https://stooq.com/q/d/l/?s=spy.us&i=5&d1=20240102&d2=20240105",
+        "status_code": 200,
+        "content_length": 0,
+        "content_type": "text/html; charset=utf-8",
+        "accept_ranges": null,
+        "latency_ms": 751.8
+      },
+      "range": {
+        "status_code": 200,
+        "bytes_returned": 796,
+        "first_four_bytes": "<!DO",
+        "content_range": null
+      },
+      "status": "BLOCKED_BY_BROWSER_VERIFICATION_OR_NON_CSV_RESPONSE"
+    },
+    "piekstra_market_data_probe": {
+      "url": "https://github.com/piekstra/market-data",
+      "parquet_files": 17055,
+      "tree_truncated": false,
+      "symbols": [
+        "AMUU",
+        "AMZU",
+        "BTCL",
+        "CURE",
+        "DPST",
+        "DRN",
+        "FAS",
+        "GGLL",
+        "LABU",
+        "METU",
+        "NAIL",
+        "NVDX",
+        "RETL",
+        "ROBN",
+        "SOXL",
+        "SPXL",
+        "TQQQ",
+        "TSLT"
+      ],
+      "spy_files": 0,
+      "qqq_files": 0,
+      "iwm_files": 0,
+      "status": "NO_SPY_QQQ_IWM_COMMITTED_FILES"
+    },
+    "kaggle_spy_probe": {
+      "url": "https://www.kaggle.com/datasets/dudesurfin/spy-options-eod-volatility-surface-2010-2023",
+      "status": "DOCUMENTED_ONLY",
+      "downloaded": false,
+      "reason": "Kaggle access requires account/API credentials; no automatic signup or purchase was performed."
+    }
+  },
+  "option_metrics": {
+    "SPY": {
+      "schema": [
+        {
+          "column_name": "contract_id",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "symbol",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "expiration",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "strike",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "type",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "last",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "mark",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "bid",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "bid_size",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "ask",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "ask_size",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "volume",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "open_interest",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "date",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "implied_volatility",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "delta",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "gamma",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "theta",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "vega",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "rho",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "in_the_money",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "filename",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "filename_1",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        }
+      ],
+      "coverage": {
+        "rows": 4612996,
+        "unique_dates": 491,
+        "earliest": "2024-01-02",
+        "latest": "2025-12-12",
+        "unique_contracts": 151222
+      },
+      "contracts_per_day_distribution": {
+        "min_contracts_per_day": 2.0,
+        "p25_contracts_per_day": 8850.0,
+        "median_contracts_per_day": 9370.0,
+        "p75_contracts_per_day": 9925.0,
+        "max_contracts_per_day": 12392.0
+      },
+      "expirations_and_strikes_per_day": {
+        "min_expirations_per_day": 1.0,
+        "median_expirations_per_day": 35.0,
+        "max_expirations_per_day": 51.0,
+        "min_strikes_per_day": 1.0,
+        "median_strikes_per_day": 356.0,
+        "max_strikes_per_day": 449.0
+      },
+      "missing_rates": {
+        "oi_missing_pct": 0.0,
+        "iv_missing_pct": 0.0,
+        "gamma_missing_pct": 0.0,
+        "bid_missing_pct": 0.0,
+        "ask_missing_pct": 0.0,
+        "volume_missing_pct": 0.0
+      },
+      "logical_bad_rows": {
+        "expiration_before_quote": 0.0,
+        "nonpositive_strike": 0.0,
+        "negative_oi": 0.0,
+        "negative_volume": 0.0,
+        "bid_gt_ask": 0.0,
+        "negative_gamma": 0.0,
+        "implausible_iv": 0.0
+      },
+      "duplicates": {
+        "duplicate_contract_date_keys": 0
+      },
+      "thin_dates": [
+        {
+          "date": "2024-01-15",
+          "rows": 2,
+          "expirations": 1,
+          "strikes": 1,
+          "total_oi": 8000.0
+        }
+      ],
+      "files": [
+        {
+          "filename": "C:/Users/adama/Documents/my ai projects/options-structure-trader/data/historical/phase3c/raw/options_dataset_hist/SPY/options_2024.parquet",
+          "rows": 2292800,
+          "earliest": "2024-01-02",
+          "latest": "2024-12-31"
+        },
+        {
+          "filename": "C:/Users/adama/Documents/my ai projects/options-structure-trader/data/historical/phase3c/raw/options_dataset_hist/SPY/options_2025.parquet",
+          "rows": 2320196,
+          "earliest": "2025-01-02",
+          "latest": "2025-12-12"
+        }
+      ]
+    },
+    "QQQ": {
+      "schema": [
+        {
+          "column_name": "id",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "contract_id",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "symbol",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "expiration",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "strike",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "type",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "last",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "mark",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "bid",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "bid_size",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "ask",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "ask_size",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "volume",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "open_interest",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "date",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "implied_volatility",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "delta",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "gamma",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "theta",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "vega",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "rho",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "in_the_money",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "created_at",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "filename",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "filename_1",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        }
+      ],
+      "coverage": {
+        "rows": 3959760,
+        "unique_dates": 491,
+        "earliest": "2024-01-02",
+        "latest": "2025-12-15",
+        "unique_contracts": 151050
+      },
+      "contracts_per_day_distribution": {
+        "min_contracts_per_day": 6526.0,
+        "p25_contracts_per_day": 7397.0,
+        "median_contracts_per_day": 8154.0,
+        "p75_contracts_per_day": 8590.0,
+        "max_contracts_per_day": 12206.0
+      },
+      "expirations_and_strikes_per_day": {
+        "min_expirations_per_day": 27.0,
+        "median_expirations_per_day": 32.0,
+        "max_expirations_per_day": 38.0,
+        "min_strikes_per_day": 343.0,
+        "median_strikes_per_day": 391.0,
+        "max_strikes_per_day": 593.0
+      },
+      "missing_rates": {
+        "oi_missing_pct": 0.0,
+        "iv_missing_pct": 0.0,
+        "gamma_missing_pct": 0.0,
+        "bid_missing_pct": 0.0,
+        "ask_missing_pct": 0.0,
+        "volume_missing_pct": 0.0
+      },
+      "logical_bad_rows": {
+        "expiration_before_quote": 0.0,
+        "nonpositive_strike": 0.0,
+        "negative_oi": 0.0,
+        "negative_volume": 0.0,
+        "bid_gt_ask": 54.0,
+        "negative_gamma": 0.0,
+        "implausible_iv": 0.0
+      },
+      "duplicates": {
+        "duplicate_contract_date_keys": 0
+      },
+      "thin_dates": [],
+      "files": [
+        {
+          "filename": "C:/Users/adama/Documents/my ai projects/options-structure-trader/data/historical/phase3c/raw/options_dataset_hist/QQQ/options_2024.parquet",
+          "rows": 1958960,
+          "earliest": "2024-01-02",
+          "latest": "2024-12-31"
+        },
+        {
+          "filename": "C:/Users/adama/Documents/my ai projects/options-structure-trader/data/historical/phase3c/raw/options_dataset_hist/QQQ/options_2025.parquet",
+          "rows": 2000800,
+          "earliest": "2025-01-02",
+          "latest": "2025-12-15"
+        }
+      ]
+    },
+    "IWM": {
+      "schema": [
+        {
+          "column_name": "id",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "contract_id",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "symbol",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "expiration",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "strike",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "type",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "last",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "mark",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "bid",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "bid_size",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "ask",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "ask_size",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "volume",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "open_interest",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "date",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "implied_volatility",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "delta",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "gamma",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "theta",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "vega",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "rho",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "in_the_money",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "created_at",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "filename",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "filename_1",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        }
+      ],
+      "coverage": {
+        "rows": 2335096,
+        "unique_dates": 490,
+        "earliest": "2024-01-02",
+        "latest": "2025-12-15",
+        "unique_contracts": 77364
+      },
+      "contracts_per_day_distribution": {
+        "min_contracts_per_day": 3926.0,
+        "p25_contracts_per_day": 4532.5,
+        "median_contracts_per_day": 4742.0,
+        "p75_contracts_per_day": 4979.5,
+        "max_contracts_per_day": 5832.0
+      },
+      "expirations_and_strikes_per_day": {
+        "min_expirations_per_day": 27.0,
+        "median_expirations_per_day": 32.0,
+        "max_expirations_per_day": 35.0,
+        "min_strikes_per_day": 127.0,
+        "median_strikes_per_day": 176.0,
+        "max_strikes_per_day": 212.0
+      },
+      "missing_rates": {
+        "oi_missing_pct": 0.0,
+        "iv_missing_pct": 0.0,
+        "gamma_missing_pct": 0.0,
+        "bid_missing_pct": 0.0,
+        "ask_missing_pct": 0.0,
+        "volume_missing_pct": 0.0
+      },
+      "logical_bad_rows": {
+        "expiration_before_quote": 0.0,
+        "nonpositive_strike": 0.0,
+        "negative_oi": 0.0,
+        "negative_volume": 0.0,
+        "bid_gt_ask": 93.0,
+        "negative_gamma": 0.0,
+        "implausible_iv": 0.0
+      },
+      "duplicates": {
+        "duplicate_contract_date_keys": 0
+      },
+      "thin_dates": [],
+      "files": [
+        {
+          "filename": "C:/Users/adama/Documents/my ai projects/options-structure-trader/data/historical/phase3c/raw/options_dataset_hist/IWM/options_2024.parquet",
+          "rows": 1188822,
+          "earliest": "2024-01-02",
+          "latest": "2024-12-31"
+        },
+        {
+          "filename": "C:/Users/adama/Documents/my ai projects/options-structure-trader/data/historical/phase3c/raw/options_dataset_hist/IWM/options_2025.parquet",
+          "rows": 1146274,
+          "earliest": "2025-01-02",
+          "latest": "2025-12-15"
+        }
+      ]
+    }
+  },
+  "underlying_metrics": {
+    "SPY": {
+      "schema": [
+        {
+          "column_name": "id",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "symbol",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "date",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "open",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "high",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "low",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "close",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "adjusted_close",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "volume",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "dividend_amount",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "split_coefficient",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "created_at",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        }
+      ],
+      "coverage": {
+        "rows": 6570,
+        "unique_dates": 6570,
+        "earliest": "1999-11-01",
+        "latest": "2025-12-12"
+      },
+      "target_window": {
+        "rows": 490,
+        "earliest": "2024-01-02",
+        "latest": "2025-12-12"
+      }
+    },
+    "QQQ": {
+      "schema": [
+        {
+          "column_name": "id",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "symbol",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "date",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "open",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "high",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "low",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "close",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "adjusted_close",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "volume",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "dividend_amount",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "split_coefficient",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "created_at",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        }
+      ],
+      "coverage": {
+        "rows": 6571,
+        "unique_dates": 6571,
+        "earliest": "1999-11-01",
+        "latest": "2025-12-15"
+      },
+      "target_window": {
+        "rows": 491,
+        "earliest": "2024-01-02",
+        "latest": "2025-12-15"
+      }
+    },
+    "IWM": {
+      "schema": [
+        {
+          "column_name": "id",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "symbol",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "date",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "open",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "high",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "low",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "close",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "adjusted_close",
+          "column_type": "INTEGER",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "volume",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "dividend_amount",
+          "column_type": "INTEGER",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "split_coefficient",
+          "column_type": "INTEGER",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "created_at",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        }
+      ],
+      "coverage": {
+        "rows": 6427,
+        "unique_dates": 6427,
+        "earliest": "2000-05-26",
+        "latest": "2025-12-15"
+      },
+      "target_window": {
+        "rows": 491,
+        "earliest": "2024-01-02",
+        "latest": "2025-12-15"
+      }
+    }
+  },
+  "cross_source_validation": {
+    "SPY": {
+      "local_rows": 2292800,
+      "remote_rows": 2292800,
+      "joined_rows": 2292800,
+      "local_not_remote": 0,
+      "remote_not_local": 0,
+      "oi_diff_rows": 0.0,
+      "bid_diff_rows": 0.0,
+      "ask_diff_rows": 0.0,
+      "max_gamma_diff": 5.397796631889662e-08,
+      "max_iv_diff": 4.0557861247236815e-07,
+      "assessment": "MIRROR_OR_SAME_UPSTREAM_FLOAT_PRECISION_DIFFERENCES_ONLY"
+    },
+    "QQQ": {
+      "local_rows": 1958960,
+      "remote_rows": 1958960,
+      "joined_rows": 1958960,
+      "local_not_remote": 0,
+      "remote_not_local": 0,
+      "oi_diff_rows": 0.0,
+      "bid_diff_rows": 0.0,
+      "ask_diff_rows": 0.0,
+      "max_gamma_diff": 5.905151367890937e-08,
+      "max_iv_diff": 4.660034171877214e-07,
+      "assessment": "MIRROR_OR_SAME_UPSTREAM_FLOAT_PRECISION_DIFFERENCES_ONLY"
+    },
+    "IWM": {
+      "local_rows": 1188822,
+      "remote_rows": 1188822,
+      "joined_rows": 1188822,
+      "local_not_remote": 0,
+      "remote_not_local": 0,
+      "oi_diff_rows": 0.0,
+      "bid_diff_rows": 0.0,
+      "ask_diff_rows": 0.0,
+      "max_gamma_diff": 1.1863708504478154e-07,
+      "max_iv_diff": 2.3803710913483656e-07,
+      "assessment": "MIRROR_OR_SAME_UPSTREAM_FLOAT_PRECISION_DIFFERENCES_ONLY"
+    }
+  },
+  "level_snapshot_stats": {
+    "IWM": {
+      "level_rows": 1467,
+      "trading_days": 489,
+      "source_chain_dates": 489,
+      "h2_rows": 1467,
+      "h3_rows": 0,
+      "lookahead_safe_rows": 1467,
+      "model_versions": [
+        "GEX_MODEL_A_CALL_POSITIVE_PUT_NEGATIVE",
+        "GEX_MODEL_B_CALL_NEGATIVE_PUT_POSITIVE",
+        "GEX_MODEL_C_ABSOLUTE_GAMMA_CONCENTRATION"
+      ]
+    },
+    "QQQ": {
+      "level_rows": 1470,
+      "trading_days": 490,
+      "source_chain_dates": 490,
+      "h2_rows": 1470,
+      "h3_rows": 0,
+      "lookahead_safe_rows": 1470,
+      "model_versions": [
+        "GEX_MODEL_A_CALL_POSITIVE_PUT_NEGATIVE",
+        "GEX_MODEL_B_CALL_NEGATIVE_PUT_POSITIVE",
+        "GEX_MODEL_C_ABSOLUTE_GAMMA_CONCENTRATION"
+      ]
+    },
+    "SPY": {
+      "level_rows": 1467,
+      "trading_days": 489,
+      "source_chain_dates": 489,
+      "h2_rows": 1467,
+      "h3_rows": 0,
+      "lookahead_safe_rows": 1467,
+      "model_versions": [
+        "GEX_MODEL_A_CALL_POSITIVE_PUT_NEGATIVE",
+        "GEX_MODEL_B_CALL_NEGATIVE_PUT_POSITIVE",
+        "GEX_MODEL_C_ABSOLUTE_GAMMA_CONCENTRATION"
+      ]
+    }
+  },
+  "known_limitations": [
+    "Primary SaidBahaDev/options-data README Cloudflare URLs returned 404 for SPY test files.",
+    "Pilot data uses SaidBahaDev/options-dataset-hist and lambdaclass mirrors of the same undocumented upstream.",
+    "SPY 2024 contains a suspicious 2024-01-15 holiday/two-row chain; anomaly is documented and excluded by D-1 trading-day mapping.",
+    "Exact upstream sourcing and publication timing are not documented, so this is not authoritative exchange data.",
+    "No validated free 2024-2025 5-minute intraday OHLCV source for SPY/QQQ/IWM was found in this run."
+  ]
+}

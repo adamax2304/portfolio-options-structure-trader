@@ -1,0 +1,172 @@
+{
+  "schema_version": "historical_data_manifest.v1",
+  "created_at_utc": "2026-09-04T00:00:51.611601+00:00",
+  "started_at_utc": "2026-09-03T23:58:41.440480+00:00",
+  "parser_version": "historical_parser_v1",
+  "normalization_version": "historical_normalization_v1",
+  "greeks_model_version": "black_scholes_recompute_v1",
+  "gex_model_version": "historical_gex_v1",
+  "replay_engine_version": "historical_replay_v1",
+  "historical_data_tiers": {
+    "TIER_H1_FULL_INTRADAY": "Timestamped historical option-chain snapshots with intraday OI/Greeks/IV where available, plus underlying intraday OHLCV.",
+    "TIER_H2_DAILY_CHAIN": "One option chain/OI snapshot per day. Levels are static for the next session and must be known before the tested intraday decision.",
+    "TIER_H3_PARTIAL_CHAIN": "Incomplete chain or structure snapshot. Missing OI/Greeks/expiries are explicit; usable only for exploratory reconstruction.",
+    "TIER_H4_PRICE_ONLY_CONTROL": "Underlying-only control with no option-derived structure."
+  },
+  "source_probes": {
+    "generated_at_utc": "2026-09-03T23:58:41.440480+00:00",
+    "yfinance": {
+      "status": "AVAILABLE",
+      "underlying_5m_available": true,
+      "underlying_rows": 390,
+      "first_underlying_bar": "2026-08-28 09:30:00-04:00",
+      "last_underlying_bar": "2026-09-03 15:55:00-04:00",
+      "expiration_count": 28,
+      "current_chain_available": true,
+      "sample_expiration": "2026-09-03",
+      "sample_call_rows": 90,
+      "has_open_interest": true,
+      "has_implied_volatility": true,
+      "has_greeks": false,
+      "historical_chain_snapshots_available": false,
+      "latency_ms": 1915
+    },
+    "alpha_vantage": {
+      "status": "ENTITLEMENT_OR_PREMIUM_LIMIT",
+      "configured": true,
+      "authenticated": true,
+      "http_status": 200,
+      "historical_options_rows": 0,
+      "message_type": "Information",
+      "latency_ms": 1005
+    },
+    "finnhub": {
+      "status": "AUTH_OR_ENTITLEMENT_FAILED",
+      "configured": true,
+      "authenticated": false,
+      "http_status": 401,
+      "expiration_count": 0,
+      "option_chain_rows": 0,
+      "latency_ms": 958
+    }
+  },
+  "artifacts": [
+    {
+      "name": "historical_option_chains.parquet",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_option_chains.parquet",
+      "rows": 0,
+      "source": "generated",
+      "downloaded_at_utc": "2026-09-04T00:00:18.014168+00:00",
+      "checksum_sha256": "b48a5cff2a931b1bf2a68c2dec80ce7bf07cca7ec0e107ea2e17d372a24eaf81",
+      "parser_version": "historical_parser_v1",
+      "normalization_version": "historical_normalization_v1"
+    },
+    {
+      "name": "historical_gex_levels.parquet",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_gex_levels.parquet",
+      "rows": 95068,
+      "source": "generated",
+      "downloaded_at_utc": "2026-09-04T00:00:18.348988+00:00",
+      "checksum_sha256": "24d5fcae4e9af29f64b23e4f58df06907f43d22dddd7f62c2a0af65a91d5de3a",
+      "parser_version": "historical_parser_v1",
+      "normalization_version": "historical_normalization_v1"
+    },
+    {
+      "name": "historical_underlying_5m.parquet",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_underlying_5m.parquet",
+      "rows": 18720,
+      "source": "generated",
+      "downloaded_at_utc": "2026-09-04T00:00:18.426995+00:00",
+      "checksum_sha256": "e9b889a22715d63a1be85d4d2a4aacf1e3985f557d76623ca47f5387ab9a7135",
+      "parser_version": "historical_parser_v1",
+      "normalization_version": "historical_normalization_v1"
+    },
+    {
+      "name": "historical_replay_trades.parquet",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_replay_trades.parquet",
+      "rows": 12904,
+      "source": "generated",
+      "downloaded_at_utc": "2026-09-04T00:00:18.474172+00:00",
+      "checksum_sha256": "cef762ea142bcf421e32edbafa3ef5d5a45f1e1994494ec9b45289248dae9ef2",
+      "parser_version": "historical_parser_v1",
+      "normalization_version": "historical_normalization_v1"
+    },
+    {
+      "name": "historical_results_by_day.csv",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_results_by_day.csv",
+      "rows": 19,
+      "source": "generated",
+      "downloaded_at_utc": "2026-09-04T00:00:49.577509+00:00",
+      "checksum_sha256": "a3c5f0c7c86a96e49ec5048de6edee37191526bdaa8e46065f60a3421659bd6a",
+      "parser_version": "historical_parser_v1",
+      "normalization_version": "historical_normalization_v1"
+    },
+    {
+      "name": "historical_results_by_symbol.csv",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_results_by_symbol.csv",
+      "rows": 12,
+      "source": "generated",
+      "downloaded_at_utc": "2026-09-04T00:00:49.583515+00:00",
+      "checksum_sha256": "3ef3bef857f76746e62eadf73fd3b994dc861e56688fb7852f6af8cdf0ee1a3a",
+      "parser_version": "historical_parser_v1",
+      "normalization_version": "historical_normalization_v1"
+    },
+    {
+      "name": "historical_results_by_direction.csv",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_results_by_direction.csv",
+      "rows": 2,
+      "source": "generated",
+      "downloaded_at_utc": "2026-09-04T00:00:49.588512+00:00",
+      "checksum_sha256": "08443de6e49905eb77462b4950b01767c6d1893231ac351d0f6d92075309c3ea",
+      "parser_version": "historical_parser_v1",
+      "normalization_version": "historical_normalization_v1"
+    },
+    {
+      "name": "historical_results_by_level_type.csv",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_results_by_level_type.csv",
+      "rows": 4,
+      "source": "generated",
+      "downloaded_at_utc": "2026-09-04T00:00:49.594512+00:00",
+      "checksum_sha256": "1a59bf6812ad09015a33a540354b65ebfe4c3511b9e22d48cbf6e313ce672b17",
+      "parser_version": "historical_parser_v1",
+      "normalization_version": "historical_normalization_v1"
+    },
+    {
+      "name": "historical_management_comparison.csv",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_management_comparison.csv",
+      "rows": 6,
+      "source": "generated",
+      "downloaded_at_utc": "2026-09-04T00:00:49.598514+00:00",
+      "checksum_sha256": "b4fb9e7c98a62abc248ad9ec2c080557ae79b7997f656e8cdaa277c0b6f4e02b",
+      "parser_version": "historical_parser_v1",
+      "normalization_version": "historical_normalization_v1"
+    },
+    {
+      "name": "historical_holdout_results.csv",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_holdout_results.csv",
+      "rows": 2,
+      "source": "generated",
+      "downloaded_at_utc": "2026-09-04T00:00:49.609507+00:00",
+      "checksum_sha256": "845c2bdf9942becd7949382ab084775889c4f4c18da75304d6978a865b71056e",
+      "parser_version": "historical_parser_v1",
+      "normalization_version": "historical_normalization_v1"
+    },
+    {
+      "name": "historical_control_comparison.csv",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_control_comparison.csv",
+      "rows": 5,
+      "source": "generated",
+      "downloaded_at_utc": "2026-09-04T00:00:49.614508+00:00",
+      "checksum_sha256": "a2b55222133e73e32c5d0186490a10b213fc8fc2c69da9528ad1475428715978",
+      "parser_version": "historical_parser_v1",
+      "normalization_version": "historical_normalization_v1"
+    }
+  ],
+  "limitations": [
+    "No free/no-signup source returned timestamp-correct historical US option-chain snapshots.",
+    "Alpha Vantage HISTORICAL_OPTIONS was probed with the configured key and did not return chain rows.",
+    "Finnhub option-chain endpoint returned auth/entitlement failure for the configured key.",
+    "Yahoo/yfinance is usable for recent underlying 5m candles and current chains, not historical chain snapshots.",
+    "Local live archive covers only dates already collected by the daemon and is not a full historical OPRA replay."
+  ]
+}

@@ -1,0 +1,257 @@
+system:
+  mode: paper
+  timezone: America/New_York
+  base_currency: USD
+  service_name: options_structure_trader
+  strategy_module: options_structure_trader
+  signal_family: OPTIONS_STRUCTURE
+  runtime_mode: free_only_paper_validation
+  isolated_standalone_mvp: true
+  live_auto_enabled: false
+
+database:
+  path: data/options_structure_trader.db
+
+sources:
+  demo_fixture:
+    enabled: true
+  algox:
+    enabled: true
+    base_url: https://algoxflow.com
+    refresh_minutes: 15
+    production_eligible: false
+    free_validation_eligible: true
+  alpaca:
+    enabled: false
+    feed: iex
+    production_eligible: true
+    free_validation_eligible: true
+    optional: true
+  yfinance:
+    enabled: true
+    production_eligible: false
+    free_validation_eligible: true
+    unofficial_source: true
+    cache_seconds: 60
+  alpha_vantage:
+    enabled: true
+    api_key_env: ALPHA_VANTAGE_API_KEY
+    production_eligible: false
+    free_validation_eligible: true
+    optional: true
+    minimum_request_interval_seconds: 12
+    per_minute_limit: 5
+    daily_limit: 25
+  finnhub:
+    enabled: true
+    api_key_env: FINNHUB_API_KEY
+    production_eligible: false
+    free_validation_eligible: true
+    optional: true
+    cache_seconds: 30
+  gammagrid:
+    enabled: false
+    sqlite_path: ""
+    database_url_env: GAMMAGRID_DATABASE_URL
+    refresh_minutes: 15
+    production_eligible: true
+    free_validation_eligible: true
+    min_oi_coverage: 0.80
+    min_iv_coverage: 0.80
+    min_greeks_coverage: 0.80
+  finra:
+    enabled: false
+  unusual_whales:
+    enabled: false
+    api_key_env: UW_API_KEY
+  quantdata:
+    enabled: false
+    api_key_env: QUANTDATA_API_KEY
+  macro_calendar:
+    enabled: true
+    yaml_path: config/macro_calendar.yaml
+    production_eligible: false
+    free_validation_allow_unknown: true
+    note: Approval is derived from the manual YAML and cannot be inferred from event presence alone.
+
+  structure_source_preference: [gammagrid, algox]
+
+scanner:
+  refresh_seconds: 60
+  watchlist: [SPY, QQQ, IWM, NVDA, TSLA, PLTR, OKLO, AMD, HOOD, CRWV, ETN]
+  supported_tickers: [SPY, QQQ, IWM, NVDA, TSLA, PLTR, OKLO, AMD, HOOD, CRWV, ETN]
+  rth_only: true
+  production_from_fixture: false
+  price_source_preference: [yfinance, alpha_vantage, alpaca]
+
+watchlist:
+  path: config/watchlist.yaml
+  status_path: data/watchlist_status.json
+
+scheduler:
+  enabled: true
+  timezone: America/New_York
+  rth_only: true
+  free_validation_outside_rth: false
+  scan_interval_minutes: 5
+  warmup_after_open_minutes: 10
+  stop_before_close_minutes: 5
+  generate_daily_report_after_close: true
+  report_after_close_minutes: 15
+  max_provider_errors_before_pause: 5
+  retry_backoff_seconds: 60
+  heartbeat_interval_seconds: 60
+  status_path: data/daemon_status.json
+  pid_path: data/daemon.pid
+  log_path: logs/daemon.log
+
+storage:
+  # Replaceable provider/ablation cache only. Canonical trades, scans,
+  # research branches, reports and historical datasets are never pruned here.
+  transient_retention_enabled: true
+  transient_retention_days: 30
+
+scan:
+  max_symbols_per_cycle: 100
+  interval_minutes: 5
+  provider_cache_ttl_seconds: 240
+  failed_symbol_cooldown_minutes: 30
+  max_failures_per_symbol_per_day: 5
+  priority_mode: true
+  provider_requests_per_minute:
+    algox: 60
+    gammagrid: 120
+    yfinance: 60
+    alpha_vantage: 5
+    alpaca: 120
+
+freshness:
+  price_max_seconds: 120
+  gex_max_seconds: 1200
+  free_validation_price_max_seconds: 420
+  free_validation_gex_max_seconds: 1200
+  completed_bar_grace_seconds: 60
+  retry_after_seconds: 20
+  max_retries: 3
+  flow_max_seconds: 300
+  conflict_pct_of_spot: 0.01
+  conflict_atr_multiplier: 0.5
+
+session:
+  calendar: XNYS
+  require_regular_session_for_production: true
+
+observation:
+  target_real_scans: 50
+  target_free_validation_scans: 50
+  target_natural_paper_trades_min: 10
+  target_natural_paper_trades_max: 20
+  interval_seconds: 60
+  open_paper: true
+  default_mode: free-validation
+  rth_only: true
+  premarket_postmarket_shadow_only: true
+  no_parameter_optimization_before_trades: 100
+  target_phase2d_free_validation_scans: 500
+  target_phase2d_tier1_scans: 50
+  target_phase2d_valid_symbols: 20
+
+setup_families:
+  production_enabled:
+    LEVEL_RECLAIM_LONG: true
+    LEVEL_RECLAIM_SHORT: true
+  shadow_enabled_all: true
+
+entry:
+  setup_tf: 15m
+  entry_tf: 5m
+  micro_tf: 1m
+  require_closed_candle: true
+  allow_aggressive_entry: false
+  require_retest: false
+
+risk:
+  paper_equity: 100000
+  base_risk_per_trade: 0.0025
+  max_risk_per_trade: 0.005
+  max_open_positions: 3
+  max_same_ticker_positions: 1
+  min_primary_RR: 1.8
+  max_stop_atr: 4.0
+  minimum_shares: 1
+
+stops:
+  baseline_atr_buffer: 0.30
+  spread_multiplier: 2.0
+  minimum_tick_buffer: 0.01
+  variants: [0.15, 0.30, 0.50, 0.75]
+
+targets:
+  default_logic: partials_next_nodes
+  logic_variants: [next_gex_node, fixed_R_1_2_3, partials_next_nodes, dynamic_flow_exit]
+  partials: [0.33, 0.33, 0.34]
+  breakeven_default: after_TP1
+  breakeven_variants: [none, after_1R, after_TP1, after_TP1_plus_retest]
+
+scores:
+  reject_below: 50
+  watch_threshold: 60
+  production_threshold: 75
+  high_confidence_threshold: 85
+  free_validation_threshold: 60
+  free_validation_min_confidence: 0.35
+  production_min_confidence: 0.80
+  missing_data_adjustment_floor: 0.75
+  active_score_model: score_v0_baseline_manual
+  weights:
+    dealer_positioning: 25
+    options_flow: 20
+    oi_confirmation: 10
+    big_trades_dark_pool: 10
+    price_structure: 20
+    volatility_liquidity: 10
+    data_quality_event_guard: 5
+
+macro_event_guard:
+  enabled: true
+  high_impact_block_before_minutes: 60
+  high_impact_block_after_minutes: 30
+  medium_impact_block_before_minutes: 15
+  medium_impact_block_after_minutes: 10
+  earnings_block_before_days: 1
+  earnings_block_after_minutes: 60
+  opex_guard_enabled: true
+  allow_shadow_inside_blocked_windows: true
+
+execution:
+  slippage_bps:
+    high: 1.0
+    medium: 3.0
+    low: 8.0
+  commission_per_share: 0.0
+  conservative_limit_fill: true
+  conservative_same_bar_resolution: true
+  intraday_flat_minutes_before_close: 15
+  pending_order_expiry_bars: 3
+
+alerts:
+  console_enabled: true
+  telegram_enabled: false
+  production_only: true
+
+phase4a:
+  enabled: true
+  research_only: true
+  activation_id: phase_4a_multitimeframe_intraday_options_edge
+  level_strength_model_version: level_strength_score_v1_research_only
+  branch_matrix_version: phase4a_focused_forward_matrix_v2
+  clustering_atr_widths: [0.10, 0.20, 0.30, 0.50]
+  default_cluster_atr_width: 0.30
+  minimum_persistence_snapshots: 3
+  strength_tiers:
+    S: 0.85
+    A: 0.70
+    B: 0.55
+    C: 0.00
+  report_path: PHASE_4A_MULTITIMEFRAME_EDGE_REPORT.md
+  milestone_days: [5, 10, 20]

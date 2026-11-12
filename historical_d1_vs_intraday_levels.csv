@@ -1,0 +1,4 @@
+symbol,status,historical_trade_start,historical_trade_end,algox_snapshot_start,algox_snapshot_end,overlapping_trade_days,level_persistence_rate,gamma_flip_median_abs_deviation,call_wall_median_abs_deviation,put_wall_median_abs_deviation,note
+SPY,NO_OVERLAPPING_ALGOX_INTRADAY_ARCHIVE,2024-01-03,2025-12-12,2026-09-01,2026-09-04,0,,,,,Historical replay covers 2024-2025; local AlgoX archive currently starts in 2026 for these symbols.
+QQQ,NO_OVERLAPPING_ALGOX_INTRADAY_ARCHIVE,2024-01-03,2025-12-15,2026-09-01,2026-09-04,0,,,,,Historical replay covers 2024-2025; local AlgoX archive currently starts in 2026 for these symbols.
+IWM,NO_OVERLAPPING_ALGOX_INTRADAY_ARCHIVE,2024-01-03,2025-12-15,2026-09-01,2026-09-04,0,,,,,Historical replay covers 2024-2025; local AlgoX archive currently starts in 2026 for these symbols.

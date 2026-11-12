@@ -1,0 +1,7 @@
+parent_setup_id,symbol,timestamp,SPY_direction,QQQ_direction,gamma_regime,distance_to_gamma_flip_R,time_of_day,against_higher_timeframe_trend,market_alignment,price_first_reached_plus_0_5R,price_first_reached_plus_1R,later_reversed_to_stop,canonical_R,TM_V3_R,canonical_status,TM_V3_status
+setup_f8bdd82b3c7e4859a9ccaf12fe2e2b17,SOXX,2026-09-03T16:05:00Z,NEUTRAL,BULLISH,NEGATIVE_GAMMA,,11:30-13:00,False,UNKNOWN,,,False,,0.0,pending,pending
+setup_d44aae7f01134e5886fe5d2180b4167e,ARKK,2026-09-03T16:05:00Z,NEUTRAL,BULLISH,NEGATIVE_GAMMA,0.5305,11:30-13:00,False,UNKNOWN,,,False,,0.0,pending,pending
+setup_b2f0102a866a4164878a1197b5d2a097,SMR,2026-09-03T16:05:00Z,NEUTRAL,BULLISH,POSITIVE_GAMMA,0.1984,11:30-13:00,False,UNKNOWN,,,False,,0.0,pending,pending
+setup_877a03bd77eb4373acc6f98b21471192,CRWV,2026-09-03T16:05:00Z,NEUTRAL,BULLISH,NEGATIVE_GAMMA,,11:30-13:00,False,UNKNOWN,,,False,,0.0,pending,pending
+setup_e301f1904b39494bab84fe8a9ec7871c,CLSK,2026-09-03T16:00:00Z,NEUTRAL,BULLISH,POSITIVE_GAMMA,7.6279,11:30-13:00,False,UNKNOWN,,,False,,0.0,pending,pending
+setup_c7c6da50158d47c2abaf2cd1e91af4cd,SNOW,2026-09-03T16:00:00Z,NEUTRAL,BULLISH,POSITIVE_GAMMA,12.0636,11:30-13:00,False,UNKNOWN,,,False,,0.0,pending,pending

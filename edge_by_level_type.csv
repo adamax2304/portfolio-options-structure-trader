@@ -1,0 +1,5 @@
+N,open_or_unresolved_N,total_R,expectancy,median_R,profit_factor,win_rate,average_winner,average_loser,avg_MFE,avg_MAE,max_drawdown,prob_plus_0_5R_before_minus_1R,prob_plus_1R_before_minus_1R,sample_label,sample_scope,dimension,bucket
+46,5,-6.3058,-0.1371,0.0,0.3486,0.3696,0.1985,-0.7447,0.4108,0.5764,6.3058,0.6304,0.5227,EXPLORATORY,cumulative,reclaimed_level_type,GAMMA_FLIP
+519,49,-38.0317,-0.0733,0.0,0.7404,0.4355,0.4801,-0.9901,0.8475,0.6417,39.6565,0.6072,0.5054,STRONGER_EVIDENCE,cumulative,reclaimed_level_type,GEX_NODE
+36,5,-4.0671,-0.113,0.0,0.3667,0.3889,0.1682,-0.6422,0.3795,0.549,4.3251,0.6389,0.5294,EXPLORATORY,today,reclaimed_level_type,GAMMA_FLIP
+278,48,-33.1243,-0.1192,0.0,0.5648,0.4065,0.3804,-0.9634,0.4847,0.5092,33.8807,0.5882,0.4881,STRONGER_EVIDENCE,today,reclaimed_level_type,GEX_NODE

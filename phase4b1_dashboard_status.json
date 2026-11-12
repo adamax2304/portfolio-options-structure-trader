@@ -1,0 +1,90 @@
+{
+  "generated_at_utc": "2026-09-05T13:21:05.028232+00:00",
+  "status": "GENERATED",
+  "research_only": true,
+  "canonical_strategy_unchanged": true,
+  "live_trading_disabled": true,
+  "portfolio_os_isolated": true,
+  "parent_events": 8975,
+  "counterfactual_branches": 336065,
+  "raw_directional_edge": 1.9098,
+  "canonical_expectancy": -0.1505,
+  "canonical_profit_factor": 0.6036,
+  "loser_reached_0_5R_rate": 0.3698,
+  "loser_reached_0_7R_rate": 0.2859,
+  "loser_reached_1R_rate": 0.1948,
+  "median_winner_MAE": 0.8057,
+  "median_MFE": 0.3696,
+  "median_time_to_MFE": 80.0,
+  "stop_too_tight_rate": 0.2916,
+  "stop_then_recovery_rate": 0.0,
+  "giveback_rate": 0.8856,
+  "BE_then_target_rate": null,
+  "direction_classifier_accuracy": 0.4626,
+  "structure_confirmed_expectancy": -0.201,
+  "current_biggest_loss_source": "BAD_STOP",
+  "component_scorecard": {
+    "OPTIONS_LEVEL_SELECTION": {
+      "status": "FAIL",
+      "evidence": "N=37262; expectancy=-0.1532; base_expectancy=-0.1505."
+    },
+    "DIRECTION_CLASSIFICATION": {
+      "status": "FAIL",
+      "evidence": "N=35447; expectancy=-0.1571; base_expectancy=-0.1505."
+    },
+    "MARKET_STRUCTURE": {
+      "status": "FAIL",
+      "evidence": "N=18623; expectancy=-0.201; base_expectancy=-0.1505."
+    },
+    "ENTRY_TIMING": {
+      "status": "WEAK",
+      "evidence": "N=16932; expectancy=-0.1442; base_expectancy=-0.1505."
+    },
+    "STOP_LOGIC": {
+      "status": "WEAK",
+      "evidence": "Stop variants are diagnostic only; stopped-trade recovery requires lower-timeframe/post-stop tracking."
+    },
+    "TARGET_LOGIC": {
+      "status": "WEAK",
+      "evidence": "MFE reach rates exceed realized capture in several loss/giveback buckets."
+    },
+    "BREAKEVEN_LOGIC": {
+      "status": "UNKNOWN",
+      "evidence": "Current artifacts do not reliably store post-BE path continuation."
+    },
+    "MANAGEMENT": {
+      "status": "WEAK",
+      "evidence": "Canonical diagnostic expectancy -0.1505."
+    },
+    "DATA_QUALITY": {
+      "status": "PASS",
+      "evidence": "59730 branches have usable diagnostic data-quality labels."
+    }
+  },
+  "outputs": {
+    "phase4b1_direction_classifier.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_direction_classifier.csv",
+    "phase4b1_structure_analysis.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_structure_analysis.csv",
+    "phase4b1_entry_analysis.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_entry_analysis.csv",
+    "phase4b1_raw_excursion.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_raw_excursion.csv",
+    "phase4b1_giveback_analysis.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_giveback_analysis.csv",
+    "phase4b1_stop_efficiency.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_stop_efficiency.csv",
+    "phase4b1_stop_recovery.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_stop_recovery.csv",
+    "phase4b1_target_efficiency.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_target_efficiency.csv",
+    "phase4b1_breakeven_analysis.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_breakeven_analysis.csv",
+    "phase4b1_holding_horizon.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_holding_horizon.csv",
+    "phase4b1_management_capture.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_management_capture.csv",
+    "phase4b1_level_role_analysis.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_level_role_analysis.csv",
+    "phase4b1_loss_attribution.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_loss_attribution.csv",
+    "phase4b1_winner_analysis.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_winner_analysis.csv",
+    "phase4b1_counterfactual_rescue.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_counterfactual_rescue.csv",
+    "phase4b1_score_audit.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_score_audit.csv",
+    "phase4b1_manual_audit_best_trades.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_manual_audit_best_trades.csv",
+    "phase4b1_manual_audit_worst_trades.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_manual_audit_worst_trades.csv",
+    "phase4b1_manual_audit_stop_then_recovery.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_manual_audit_stop_then_recovery.csv",
+    "phase4b1_manual_audit_large_giveback.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_manual_audit_large_giveback.csv",
+    "phase4b1_manual_audit_wrong_direction.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_manual_audit_wrong_direction.csv",
+    "phase4b1_manual_audit_structure_misread.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_manual_audit_structure_misread.csv",
+    "phase4b1_structure_label_validation_sample.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_structure_label_validation_sample.csv",
+    "phase4b1_options_level_validation_sample.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\phase4b1_options_level_validation_sample.csv"
+  }
+}

@@ -1,0 +1,60 @@
+watchlist:
+  tier_1_core:
+    - {symbol: SPY, priority: 100, sector_theme: broad_market, min_price: 10, min_avg_volume: 1000000}
+    - QQQ
+    - IWM
+    - NVDA
+    - TSLA
+    - AMD
+    - PLTR
+    - OKLO
+    - HOOD
+
+  tier_2_liquid_growth:
+    - AAPL
+    - MSFT
+    - META
+    - AMZN
+    - GOOGL
+    - AVGO
+    - SMCI
+    - COIN
+    - MSTR
+    - CRWD
+    - NET
+    - SNOW
+    - DDOG
+    - ARM
+    - MU
+    - TSM
+    - INTC
+
+  tier_3_high_beta_theme:
+    - RKLB
+    - SOFI
+    - RIVN
+    - MARA
+    - RIOT
+    - CLSK
+    - BE
+    - CRWV
+    - ETN
+    - VRT
+    - CEG
+    - NNE
+    - SMR
+    - IONQ
+    - RGTI
+    - QBTS
+
+  tier_4_etfs_macro:
+    - XLK
+    - XLF
+    - XLE
+    - XLI
+    - XLV
+    - XLU
+    - ARKK
+    - SOXX
+    - XBI
+    - KRE

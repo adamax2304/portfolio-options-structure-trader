@@ -1,0 +1,91 @@
+{
+  "phase": "4B.3",
+  "namespace": "PHASE_4B3_FORWARD_VALIDATION_FREEZE",
+  "generated_at_utc": "2026-09-07T04:35:00Z",
+  "research_only": true,
+  "canonical_strategy_unchanged": true,
+  "historical_findings_frozen": true,
+  "broad_retrospective_optimization_allowed": false,
+  "prospective_phase4b2_remains_active": true,
+  "live_trading_disabled": true,
+  "portfolio_os_isolated": true,
+  "hypotheses": {
+    "H1_STOP_INVALIDATION": {
+      "hypothesis": "Current stop may be inside normal adverse excursion.",
+      "branches": [
+        "S0_CANONICAL_STOP",
+        "S1_FULL_OPTIONS_LEVEL_ZONE_INVALIDATION",
+        "S2_15M_STRUCTURAL_INVALIDATION",
+        "S3_LAST_CONFIRMED_HL_LH_INVALIDATION"
+      ]
+    },
+    "H2_TIMEFRAME": {
+      "hypothesis": "15m confirmation may reduce 5m noise.",
+      "comparisons": [
+        "5m_confirmation_5m_execution",
+        "15m_confirmation_5m_execution"
+      ]
+    },
+    "H3_PROFIT_PROTECTION": {
+      "hypothesis": "Current management may give back meaningful favorable excursion.",
+      "branches": [
+        "M0_CURRENT_MANAGEMENT",
+        "M1_HALF_0_5R_RUNNER",
+        "M2_HALF_0_7R_RUNNER",
+        "M3_PROTECT_AFTER_1R_NO_PARTIAL",
+        "M4_STRUCTURE_TRAIL_NO_IMMEDIATE_BE"
+      ]
+    },
+    "P0_P4_OPTIONS_VALUE": {
+      "critical_question": "Does OPTIONS + STRUCTURE outperform STRUCTURE ONLY?",
+      "branches": [
+        "P0_STRUCTURE_ONLY",
+        "P1_STRUCTURE_PLUS_STRONG_OPTIONS",
+        "P2_STRUCTURE_PLUS_PERSISTENT_OPTIONS",
+        "P3_OPTIONS_PLUS_DIRECTION_CLASSIFIER",
+        "P4_OPTIONS_PLUS_DIRECTION_CLASSIFIER_PLUS_15M_CONFIRMATION"
+      ],
+      "P2_note": "Forward-only; not historically reconstructable from static D-1 options data."
+    }
+  },
+  "pre_rth_verification": {
+    "verification_date": "2026-09-07",
+    "us_market_session_context": "CLOSED_WEEKEND_OR_HOLIDAY",
+    "next_rth_open_utc": "2026-09-08T13:30:00Z",
+    "next_scan_utc": "2026-09-08T13:40:00Z",
+    "windows_task_scheduler_entry": "OptionsStructureTraderDaemon",
+    "task_state": "Running",
+    "task_trigger": "enabled_logon_trigger",
+    "restart_on_failure": true,
+    "daemon_pid": 7520,
+    "sqlite_quick_check": "ok",
+    "branch_definitions_loaded": true,
+    "stop_recovery_fields_present": true,
+    "giveback_fields_present": true,
+    "timeframe_structure_fields_present": true,
+    "p0_p4_pairing_present": true,
+    "dedup_one_parent_event_logic_present": true
+  },
+  "milestones": [
+    {
+      "name": "first_rth_session",
+      "action": "instrumentation_audit_only"
+    },
+    {
+      "name": "5_independent_rth_days",
+      "action": "exploratory_report"
+    },
+    {
+      "name": "10_independent_rth_days",
+      "action": "preliminary_report"
+    },
+    {
+      "name": "20_independent_rth_days",
+      "action": "primary_decision_report"
+    }
+  ],
+  "automation": {
+    "codex_heartbeat_id": "phase-4b-3-forward-validation-milestone-checks",
+    "purpose": "post-RTH milestone checking without strategy changes"
+  }
+}

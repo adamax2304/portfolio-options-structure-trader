@@ -1,0 +1,24 @@
+sample_scope,dimension,bucket,N,expectancy_ci_low,expectancy_ci_high,profit_factor_ci_low,profit_factor_ci_high,win_rate_ci_low,win_rate_ci_high,prob_plus_0_5R_ci_low,prob_plus_0_5R_ci_high,prob_plus_1R_ci_low,prob_plus_1R_ci_high
+cumulative,overall,ALL,565,-0.1353,-0.0212,0.5519,0.913,0.3929,0.4708,0.573,0.651,0.4678,0.5512
+cumulative,symbol,MSTR,20,-0.1465,0.2005,0.2951,2169.9163,0.25,0.7,0.5,0.9,0.45,0.85
+cumulative,symbol,OKLO,36,-0.0797,0.5879,0.8313,3.761,0.4167,0.7222,0.5833,0.8611,0.4706,0.7879
+cumulative,symbol,TSLA,29,-0.2034,0.3357,0.4564,4.941,0.4138,0.7931,0.4615,0.8008,0.2956,0.7273
+cumulative,direction,LONG,336,-0.0545,0.0888,0.7693,1.5058,0.4315,0.5238,0.6283,0.7277,0.5428,0.6492
+cumulative,asset_class,NUCLEAR_ENERGY,66,-0.0736,0.3231,0.7646,3.1182,0.3333,0.5758,0.5909,0.8182,0.4688,0.7258
+cumulative,time_bucket,11:30-13:00,108,-0.1106,0.2406,0.7,2.1878,0.3796,0.5741,0.4857,0.6699,0.3641,0.5707
+cumulative,score_bucket,65-69,36,-0.199,0.2579,0.4221,3.4432,0.3465,0.6667,0.4167,0.75,0.3673,0.6903
+cumulative,rr_bucket,1.5-2,46,-0.0727,0.5338,0.8151,3.8414,0.1957,0.4565,0.5,0.7778,0.4356,0.7273
+cumulative,gamma_distance_bucket,UNKNOWN,119,-0.1363,0.2036,0.6023,1.947,0.3025,0.475,0.5508,0.7223,0.4764,0.6683
+cumulative,direction_x_gamma_regime,LONG × NEGATIVE_GAMMA,210,-0.0459,0.1422,0.796,1.9049,0.4048,0.5286,0.6161,0.739,0.5264,0.6595
+cumulative,direction_x_market_trend,LONG × COUNTER_TREND,28,-0.1337,0.2245,0.3869,5.8655,0.25,0.6429,0.6786,0.9643,0.5654,0.8929
+cumulative,direction_x_market_trend,LONG × UNKNOWN,153,-0.0591,0.1993,0.7996,2.0527,0.3922,0.549,0.5753,0.7286,0.4764,0.6402
+cumulative,level_type_x_direction,GEX_NODE × LONG,309,-0.0499,0.1046,0.788,1.5929,0.4287,0.5372,0.642,0.745,0.5519,0.6667
+cumulative,score_bucket_x_direction,55-59 × LONG,148,0.0181,0.2694,1.0924,3.1578,0.3919,0.5405,0.6245,0.7727,0.5364,0.6827
+cumulative,score_bucket_x_level_type,65-69 × GEX_NODE,36,-0.199,0.2579,0.4221,3.4432,0.3465,0.6667,0.4167,0.75,0.3673,0.6903
+cumulative,time_bucket_x_direction,11:30-13:00 × LONG,61,-0.0686,0.4334,0.8056,3.9367,0.377,0.623,0.4649,0.7241,0.3402,0.6203
+cumulative,time_bucket_x_direction,14:30-15:30 × LONG,22,-0.3036,0.352,0.1449,4.2958,0.1818,0.6148,0.3942,0.8183,0.2857,0.75
+cumulative,asset_class_x_direction,CRYPTO_RELATED × LONG,29,-0.0259,0.7438,0.8493,6487.4444,0.2414,0.5862,0.6716,0.9655,0.6136,0.9286
+cumulative,asset_class_x_direction,NUCLEAR_ENERGY × LONG,33,-0.1518,0.47,0.4978,5.0236,0.303,0.6364,0.4848,0.8038,0.3333,0.6875
+cumulative,asset_class_x_direction,NUCLEAR_ENERGY × SHORT,33,-0.212,0.3284,0.4432,3.5391,0.2424,0.6061,0.6061,0.9091,0.5161,0.8462
+cumulative,asset_class_x_direction,SINGLE_STOCK × LONG,44,-0.1274,0.2683,0.5616,3.5864,0.4653,0.75,0.4939,0.7768,0.3333,0.647
+cumulative,asset_class_x_direction,SMALL_CAP_SPECULATIVE × LONG,39,-0.0701,0.3683,0.7482,7.223,0.3077,0.5897,0.5556,0.8421,0.4722,0.7919

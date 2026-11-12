@@ -1,0 +1,3 @@
+cohort,management_version,parent_setup_count,resolved_N,unresolved_N,expectancy,profit_factor,win_rate,max_drawdown,avg_MFE,avg_MAE,bootstrap_expectancy_ci_low,bootstrap_expectancy_ci_high,top_symbol,top_symbol_share,symbol_dominated,top_day,top_day_share,day_dominated,remove_best_symbol_expectancy,remove_best_symbol_PF,remove_best_day_expectancy,remove_best_day_PF,promotion_status
+C_LONG_1130_1300,TM_V0_CURRENT,27,26,1,-0.0763,0.7617,0.4231,5.0797,0.5459,0.5037,-0.3853,0.1869,MSTR,0.1154,False,2026-09-03,1.0,True,-0.1549,0.5534,0.0,,REJECTED
+C_LONG_1130_1300,TM_V3_TP1_PLUS_RUNNER,27,25,2,0.0182,1.057,0.4,3.5295,0.7359,0.519,-0.3454,0.3539,MSTR,0.12,False,2026-09-03,1.0,True,-0.1655,0.545,0.0,,EXPLORATORY

@@ -1,0 +1,6 @@
+dimension,bucket,N,open_or_unresolved_N,total_R,expectancy,median_R,profit_factor,win_rate,average_winner,average_loser,avg_MFE,avg_MAE,max_drawdown,prob_plus_0_5R_before_minus_1R,prob_plus_1R_before_minus_1R,sample_label
+short_alignment_class,COUNTERTREND,60,0,-20.4195,-0.3403,0.0,0.2179,0.2833,0.3346,-1.0443,0.3851,0.9971,20.4195,,,PRELIMINARY
+short_alignment_class,FULLY_ALIGNED,5,0,-3.0481,-0.6096,-1.0186,0.0165,0.2,0.051,-1.033,0.0999,0.8388,3.0991,,,INSUFFICIENT_SAMPLE
+short_alignment_class,MARKET_ALIGNED,14,0,-2.8579,-0.2041,0.0,0.0734,0.3571,0.0453,-1.0281,0.1343,0.5144,2.8899,,,INSUFFICIENT_SAMPLE
+short_alignment_class,SYMBOL_ONLY,142,0,-24.3514,-0.1715,0.0,0.5439,0.4014,0.5094,-0.9707,0.6056,0.9535,25.1557,,,STRONGER_EVIDENCE
+short_alignment_class,UNKNOWN,10,0,-0.6768,-0.0677,0.0,0.6917,0.2,0.7594,-1.0978,0.3828,0.5293,2.1956,,,INSUFFICIENT_SAMPLE

@@ -1,0 +1,5147 @@
+{
+  "report_date_et": "2026-09-28",
+  "report_date_utc": "2026-09-28",
+  "generated_at_utc": "2026-09-28T20:19:09.994512+00:00",
+  "total_scans": 1404,
+  "scans_by_ticker": {
+    "INTC": 28,
+    "TSM": 28,
+    "MU": 28,
+    "ARM": 28,
+    "DDOG": 28,
+    "SNOW": 28,
+    "NET": 28,
+    "CRWD": 28,
+    "MSTR": 28,
+    "COIN": 28,
+    "SMCI": 28,
+    "AVGO": 28,
+    "GOOGL": 26,
+    "AMZN": 29,
+    "META": 29,
+    "MSFT": 29,
+    "AAPL": 29,
+    "HOOD": 51,
+    "OKLO": 51,
+    "PLTR": 51,
+    "AMD": 51,
+    "TSLA": 52,
+    "IWM": 52,
+    "QQQ": 52,
+    "SPY": 52,
+    "KRE": 19,
+    "XBI": 19,
+    "SOXX": 19,
+    "ARKK": 19,
+    "XLU": 19,
+    "XLV": 19,
+    "XLI": 19,
+    "XLE": 19,
+    "XLF": 19,
+    "XLK": 19,
+    "QBTS": 20,
+    "RGTI": 20,
+    "IONQ": 20,
+    "SMR": 20,
+    "NNE": 20,
+    "CEG": 19,
+    "VRT": 19,
+    "ETN": 19,
+    "CRWV": 19,
+    "BE": 19,
+    "CLSK": 19,
+    "RIOT": 21,
+    "MARA": 21,
+    "RIVN": 21,
+    "SOFI": 21,
+    "RKLB": 21,
+    "NVDA": 5
+  },
+  "scan_outcomes": {
+    "free_validation_valid_no_setup": 969,
+    "shadow_paper_trade": 170,
+    "shadow_only_no_setup": 109,
+    "shadow_candle_stale": 2,
+    "free_validation_paper_trade": 3,
+    "duplicate_setup_suppressed": 1,
+    "provider_error": 150
+  },
+  "valid_real_scans": 0,
+  "valid_free_validation_scans": 972,
+  "shadow_scans": 432,
+  "production_paper_trades": 0,
+  "free_validation_paper_trades": 3,
+  "shadow_paper_trades": 170,
+  "trades_opened": 173,
+  "trades_closed": 80,
+  "rejected_scans": 150,
+  "stale_incomplete_cases": 1252,
+  "rejected_scan_events": [
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_d2583f2e1a8b4131a5971e677326a947",
+      "observed_at_utc": "2026-09-28T15:19:19.517306+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_1d815b9c2d7144498febab4b065ff350",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for CEG: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_bef164ab31bc4b6eb8b395d0b5b00444",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "CEG"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_5b6b5f09423d420d8ecb79797cca3125",
+      "observed_at_utc": "2026-09-28T15:19:19.169439+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_e2d1289f75034051b9ea8c1f90c04810",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for VRT: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_bef164ab31bc4b6eb8b395d0b5b00444",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "VRT"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_c9a764abe62545edb628c754344f70cd",
+      "observed_at_utc": "2026-09-28T15:19:18.804791+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_3b89e82289c949839fcfe1281e7c6e8e",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for ETN: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_bef164ab31bc4b6eb8b395d0b5b00444",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "ETN"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_8c71f60674ac4da5a1a1f3bdafd4b7a0",
+      "observed_at_utc": "2026-09-28T15:19:18.484183+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_5e4a6262c79542d281d23f0d5d657430",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for CRWV: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_bef164ab31bc4b6eb8b395d0b5b00444",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "CRWV"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_bc24f1cd5a82465d9488bc8ef05f63e0",
+      "observed_at_utc": "2026-09-28T15:19:17.967913+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_58daee7cef614e09a808c92f0c796750",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for BE: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_bef164ab31bc4b6eb8b395d0b5b00444",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "BE"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_7261cf64afa04f55afbc2a48a1e1afd0",
+      "observed_at_utc": "2026-09-28T15:17:22.225849+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_7b873111b86d4c8293c49bc9a39e2801",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for CLSK: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_d1c394f6cf504ef4903a824b83cc60e6",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "CLSK"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_b3474c4390384834834c39fd4a8e8cf0",
+      "observed_at_utc": "2026-09-28T15:17:21.845152+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_b83263dbec9b48c7808347bf8af6d35d",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for HOOD: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_d1c394f6cf504ef4903a824b83cc60e6",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "HOOD"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_48a87e948cde4eb1aabdb7b7d6d7d124",
+      "observed_at_utc": "2026-09-28T15:17:21.416613+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_ee108db9984a4adbbbb7d655c90ea215",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for OKLO: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_d1c394f6cf504ef4903a824b83cc60e6",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "OKLO"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_a60de834a7194d9b8c7565c2ff79fff4",
+      "observed_at_utc": "2026-09-28T15:17:20.764593+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_b45a9e8098ba43c7bdc541ca1cf93ba5",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for PLTR: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_d1c394f6cf504ef4903a824b83cc60e6",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "PLTR"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_dab2f06e84e54b859a919b1dc8f33fa5",
+      "observed_at_utc": "2026-09-28T15:17:09.022981+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_3e92dac01b404443adab389acb4df97e",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for AMD: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_d1c394f6cf504ef4903a824b83cc60e6",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "AMD"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_e36f02a9982b4876a77e23014ea3e645",
+      "observed_at_utc": "2026-09-28T15:15:56.204304+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_7672d5ba06e14851abcc5756f2e89c58",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for TSLA: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_dc16e6a749c24797abab9acd526bf23d",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "TSLA"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_122fd24f7d6342b79c06f6eb1832109e",
+      "observed_at_utc": "2026-09-28T15:15:55.893013+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_a82b18b2be394831bd4fef050320bf1d",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for NVDA: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_dc16e6a749c24797abab9acd526bf23d",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "NVDA"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_7264f50c87cb453dbd45a44fdd4d39c9",
+      "observed_at_utc": "2026-09-28T15:15:55.530663+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_cfe8a70ea54e4ee093e2e6a80257648f",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for IWM: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_dc16e6a749c24797abab9acd526bf23d",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "IWM"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_b7f6ac6e94ea44bf996c15b717f32dcb",
+      "observed_at_utc": "2026-09-28T15:15:54.978341+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_c8b3b3af00e24e989b8d7310c03c22a5",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for QQQ: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_dc16e6a749c24797abab9acd526bf23d",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "QQQ"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_4decd61dfa9a4187a992720357630f96",
+      "observed_at_utc": "2026-09-28T15:15:52.612962+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_4458ae95eff8402f9cd4bd03e978920c",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for SPY: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_dc16e6a749c24797abab9acd526bf23d",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "SPY"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_c9e91fcfeeaf436fad5cadf5b0fb393c",
+      "observed_at_utc": "2026-09-28T15:10:41.038502+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_e67e2ab3de4a4cd5a900e143716cb9e3",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for INTC: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_731cffbbe49a4c6ca66fce6ce8fca745",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "INTC"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_31a2e90152964fe38f96050daf1117dd",
+      "observed_at_utc": "2026-09-28T15:10:40.719896+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_164438be058a4f9fa07ed5bc1f920f1a",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for TSM: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_731cffbbe49a4c6ca66fce6ce8fca745",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "TSM"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_d3a72be6c9984a3585dc8f32c0908e66",
+      "observed_at_utc": "2026-09-28T15:04:38.791176+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_be644c400ad849929a57309c77065967",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for KRE: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_8f7c7ebe01f140d49572884e5151c1ba",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "KRE"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_70d86585b24848689b5f55917db1609d",
+      "observed_at_utc": "2026-09-28T15:04:38.495065+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_5f76da57eb2c4bb3b7cabf72974d1c72",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for XBI: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_8f7c7ebe01f140d49572884e5151c1ba",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "XBI"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_0bb61c956b264dec90f991134ae1f087",
+      "observed_at_utc": "2026-09-28T15:04:38.181305+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_83706f6876534ff8ae6738c6bb1f02a4",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for SOXX: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_8f7c7ebe01f140d49572884e5151c1ba",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "SOXX"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_03b7385612eb45ca9605137405767dff",
+      "observed_at_utc": "2026-09-28T15:04:37.866209+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_e49b1f664d0a4fa9a734a8c28d5f08f6",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for ARKK: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_8f7c7ebe01f140d49572884e5151c1ba",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "ARKK"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_fa254c1df50d4186b88935bb8e06a792",
+      "observed_at_utc": "2026-09-28T15:04:37.566631+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_6173dbf4e1844faabbf3fec48bdb8e7b",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for XLU: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_8f7c7ebe01f140d49572884e5151c1ba",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "XLU"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_125f21cde78044ccacae279675ab36f7",
+      "observed_at_utc": "2026-09-28T15:03:37.108981+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_6e45a3493df5439ba361c6a5389502ba",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for MU: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_b0f29c1d809d41d0aa47330d9e06e9e1",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "MU"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_966b6ef671374d218af26f5bac196f14",
+      "observed_at_utc": "2026-09-28T15:03:36.824808+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_dc6671fc5eef4f808200c097cf95dc51",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for ARM: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_b0f29c1d809d41d0aa47330d9e06e9e1",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "ARM"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_5b756e4b41a84e2eb8fd4ba0cc225c68",
+      "observed_at_utc": "2026-09-28T15:03:36.539848+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_99f609a4188d4db6868892d5dcb11781",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for DDOG: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_b0f29c1d809d41d0aa47330d9e06e9e1",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "DDOG"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_a5f49f01f31e43de8a9083ed913b6b73",
+      "observed_at_utc": "2026-09-28T15:03:36.219436+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_14bad90b9e634c30857e7eff826602c1",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for SNOW: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_b0f29c1d809d41d0aa47330d9e06e9e1",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "SNOW"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_29cb711052e7457babadfc85ceb5f464",
+      "observed_at_utc": "2026-09-28T15:03:35.932810+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_83713a14d30e4a38932c9e1cf2a1cd14",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for NET: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_b0f29c1d809d41d0aa47330d9e06e9e1",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "NET"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_a1c35db17a944710bd812b101dc86423",
+      "observed_at_utc": "2026-09-28T15:02:35.581513+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_1ba355354629462abb921755497c8c81",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for CRWD: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_f5898439dbe74fed8431144a7c9cb506",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "CRWD"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_1e0dac3b9a674b57b533e5cf1d7a7e2c",
+      "observed_at_utc": "2026-09-28T15:02:35.271307+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_660f2c6d5bde4c569e7f4a6b62906ba4",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for MSTR: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_f5898439dbe74fed8431144a7c9cb506",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "MSTR"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_1b1b5e15d2b14549862c7d0788d63c24",
+      "observed_at_utc": "2026-09-28T15:02:34.961355+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_f1287f6ccb1744a1a84aa7ebcdfeed55",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for COIN: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_f5898439dbe74fed8431144a7c9cb506",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "COIN"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_ea60cf179cd943839f51af8e7c64ce6e",
+      "observed_at_utc": "2026-09-28T15:02:34.659482+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_e22d3381078b4dcc9422e50916cbcd41",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for SMCI: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_f5898439dbe74fed8431144a7c9cb506",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "SMCI"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_6f678f5d9abb4ac0864f68c4aa739f88",
+      "observed_at_utc": "2026-09-28T15:02:34.352322+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_ca7aa87f061049ff9d0ea4c5c7bf6123",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for AVGO: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_f5898439dbe74fed8431144a7c9cb506",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "AVGO"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_f602bbcf5ca04dc48c7d549cd78aae8e",
+      "observed_at_utc": "2026-09-28T15:01:33.959586+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_71b989a6d8a948e7aa7d365dac6c1447",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for XLV: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_238a77e905a24065aabfde53121a57e4",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "XLV"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_a721996a488346d488e09af8497684d7",
+      "observed_at_utc": "2026-09-28T15:01:33.631989+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_ded09977a4a34dfca97a1672c5d6c3a6",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for XLI: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_238a77e905a24065aabfde53121a57e4",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "XLI"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_b265f5db1ce04d14ada9d117adcc9fb9",
+      "observed_at_utc": "2026-09-28T15:01:33.283274+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_b86a50c830924f7d9073a5aea47fe2ca",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for XLE: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_238a77e905a24065aabfde53121a57e4",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "XLE"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_fcfff7d4dd924c93bd4bda545b572332",
+      "observed_at_utc": "2026-09-28T15:01:32.961108+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_e24efcac218541838b2053b1fdcbafe1",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for XLF: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_238a77e905a24065aabfde53121a57e4",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "XLF"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_d09add42745f4f8abbe484f57eed1241",
+      "observed_at_utc": "2026-09-28T15:01:32.629951+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_3b699e010a4640a9a3f9c5a2a3d331b4",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for XLK: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_238a77e905a24065aabfde53121a57e4",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "XLK"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_9b13308f93c743ab9ae135fe63aadb3f",
+      "observed_at_utc": "2026-09-28T15:00:32.255286+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_76c17e493f20433dab5fd9edfff0104b",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for GOOGL: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_0f2f29dca1754aef854387e493745d31",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "GOOGL"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_f4b1064984734d61a7f5d48774d1f281",
+      "observed_at_utc": "2026-09-28T15:00:31.954659+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_65ec5e11c8d74af488b5eb306108f16a",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for AMZN: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_0f2f29dca1754aef854387e493745d31",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "AMZN"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_e26771e672b2438ab44c3222196be6c2",
+      "observed_at_utc": "2026-09-28T15:00:31.643535+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_d1aae386cd264b658f0962a260f66ed3",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for META: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_0f2f29dca1754aef854387e493745d31",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "META"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_b2c020cd30ff4eb4b8cf12b79c93ac02",
+      "observed_at_utc": "2026-09-28T15:00:31.305679+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_a5d0d0d049ae4070a8db939b1f8f1122",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for MSFT: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_0f2f29dca1754aef854387e493745d31",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "MSFT"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_582f28b4f5b1480482b8e0a2ad287a3b",
+      "observed_at_utc": "2026-09-28T15:00:30.959825+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_87576e25d12547e9ba79fe0d774ea377",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for AAPL: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_0f2f29dca1754aef854387e493745d31",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "AAPL"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_c6c390d9819a40d496e6bca6459d9218",
+      "observed_at_utc": "2026-09-28T14:49:29.907302+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_4b368e626e2648beada371cfd8700911",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for QBTS: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_2600632ce4334adfa33c6c43304a8e6b",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "QBTS"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_4fe4b2a8afa046539c7b7b4f24ec0ca8",
+      "observed_at_utc": "2026-09-28T14:49:29.595413+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_5be9c27f02604f06824ee379cfc89398",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for RGTI: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_2600632ce4334adfa33c6c43304a8e6b",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "RGTI"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_cedd97b70cb04c73a31600bb44d79d89",
+      "observed_at_utc": "2026-09-28T14:49:29.280159+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_7be9af125d334599a8485bb3121b9950",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for IONQ: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_2600632ce4334adfa33c6c43304a8e6b",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "IONQ"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_948a4e2a41204fbc913c98bae901cd91",
+      "observed_at_utc": "2026-09-28T14:49:28.967195+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_8873464077d046eebe19cac79f83b56c",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for SMR: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_2600632ce4334adfa33c6c43304a8e6b",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "SMR"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_8f1c79c0fd5c4efd97264c6dddd86713",
+      "observed_at_utc": "2026-09-28T14:49:28.669363+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_59aba3b8b7a04e63a1238155ccff6904",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for NNE: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_2600632ce4334adfa33c6c43304a8e6b",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "NNE"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_a6b407e46b464db186c533d8bc621a29",
+      "observed_at_utc": "2026-09-28T14:48:28.306187+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_b652696469f3483384e669cd9a9ea45f",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for RIOT: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_6a3b11a74bb6459e95691e5e8091dbe7",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "RIOT"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_90193cbcb2f84865b252d8ba431147c0",
+      "observed_at_utc": "2026-09-28T14:48:27.984412+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_9c55387992fd4e4197f6e46b57337d29",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for MARA: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_6a3b11a74bb6459e95691e5e8091dbe7",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "MARA"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_8e5bfb62d276489ea2a162eb899c3ebd",
+      "observed_at_utc": "2026-09-28T14:48:27.663583+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_0ffc23823ce04e3bb80fa493163eeae9",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for RIVN: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_6a3b11a74bb6459e95691e5e8091dbe7",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "RIVN"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_310b017c787a4298aaf3a961c4fdfa12",
+      "observed_at_utc": "2026-09-28T14:48:27.358153+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_301f43b5e207454ebbcaacd94c0115c5",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for SOFI: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_6a3b11a74bb6459e95691e5e8091dbe7",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "SOFI"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_308ed354d24341229b6c3fe828e72733",
+      "observed_at_utc": "2026-09-28T14:48:27.065035+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_18972f26817f46718fd8da3fa48f31cc",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for RKLB: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_6a3b11a74bb6459e95691e5e8091dbe7",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "RKLB"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_df8bf4e72b534ddb94bf0af712c23db9",
+      "observed_at_utc": "2026-09-28T14:47:26.643278+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_2985c32bff0b45c99f2b2ea33df8cd29",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for CEG: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_39e1a1e0c76c47d2b8b3c376ef6bd955",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "CEG"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_9db64c7022ef43e28dc6045c0ea25a81",
+      "observed_at_utc": "2026-09-28T14:47:26.271392+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_53f1aa9af6214adfb2d52e81e81d67b0",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for VRT: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_39e1a1e0c76c47d2b8b3c376ef6bd955",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "VRT"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_9682c79d08234c3f9a8fcaa6389cf8ea",
+      "observed_at_utc": "2026-09-28T14:47:25.842216+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_031b0e1838e542c89c71ee1ea7e2c5a1",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for ETN: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_39e1a1e0c76c47d2b8b3c376ef6bd955",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "ETN"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_10938d4371144389bd2b7d77b33e4200",
+      "observed_at_utc": "2026-09-28T14:47:25.407799+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_a24d9cd1f9144a0c9f4d15405921de55",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for CRWV: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_39e1a1e0c76c47d2b8b3c376ef6bd955",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "CRWV"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_24d32810212f45e1a2d69cc2d295d61e",
+      "observed_at_utc": "2026-09-28T14:47:25.027561+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_c6f239bf6c294159a74d40a9f27bd388",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for BE: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_39e1a1e0c76c47d2b8b3c376ef6bd955",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "BE"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_7edda977d5114fccb7dc2c635981b9b4",
+      "observed_at_utc": "2026-09-28T14:46:24.657272+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_8c2073de146b4f4ca002124acd458763",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for CLSK: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_adae75dad1bc41cc9da0ba1aee22d2b5",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "CLSK"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_aa9d4c15b4c14a8fa4532394b05df1e7",
+      "observed_at_utc": "2026-09-28T14:46:24.301008+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_d517be504e4146748d79f2905a9896ba",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for HOOD: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_adae75dad1bc41cc9da0ba1aee22d2b5",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "HOOD"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_77a310f7ddd146adbf4b47dd6f0e7dfb",
+      "observed_at_utc": "2026-09-28T14:46:23.898826+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_03d92a9f6a484872b482e5e42aae1a62",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for OKLO: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_adae75dad1bc41cc9da0ba1aee22d2b5",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "OKLO"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_3bd571d8fc3346c683da5f3360b00eb4",
+      "observed_at_utc": "2026-09-28T14:46:23.511136+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_1f5d84193dda4f50be01522479e5d934",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for PLTR: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_adae75dad1bc41cc9da0ba1aee22d2b5",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "PLTR"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_7f9b43af8fc7491595568ec318c3f6ff",
+      "observed_at_utc": "2026-09-28T14:46:23.123423+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_1763869cdd3041c2a019f584d50d11b9",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for AMD: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_adae75dad1bc41cc9da0ba1aee22d2b5",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "AMD"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_fdb89ffb7242442bbefc18c3742913d4",
+      "observed_at_utc": "2026-09-28T14:45:22.389727+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_cd8fe082895642b5ad17e0106a269817",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for TSLA: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_4397f5814bf649f195953964363bbd83",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "TSLA"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_0d5aa2d89be64038bafe29185ed234b0",
+      "observed_at_utc": "2026-09-28T14:45:22.033564+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_8af8301a5fb44b4788eb4624f74a7acf",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for NVDA: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_4397f5814bf649f195953964363bbd83",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "NVDA"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_7dd0ad88d968474dabe605822c5e73d6",
+      "observed_at_utc": "2026-09-28T14:45:21.674629+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_d231e950f26c4424a767967b0592a3f8",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for IWM: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_4397f5814bf649f195953964363bbd83",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "IWM"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_09ac5cd8a63a479f9e831282708c3282",
+      "observed_at_utc": "2026-09-28T14:45:21.314375+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_13dc76ebaf04481a91ece12ea40c2805",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for QQQ: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_4397f5814bf649f195953964363bbd83",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "QQQ"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_2bf9bbb4983d4224a420114b1f9ec281",
+      "observed_at_utc": "2026-09-28T14:45:20.979660+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_9f5e683d702647b99569ac9a5d95b031",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for SPY: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_4397f5814bf649f195953964363bbd83",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "SPY"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_e82c22464eae4e74aa22651869d25440",
+      "observed_at_utc": "2026-09-28T14:40:22.826973+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_46e795acc83d4d9d87fb311bc9b00114",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for INTC: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_aca53b1e6b4944be9418ead78d4aab5b",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "INTC"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_03a197130709462a8a47cf58a97424fb",
+      "observed_at_utc": "2026-09-28T14:40:22.278691+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_f0f557228aa2471bb54a62efa7efaa0a",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for TSM: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_aca53b1e6b4944be9418ead78d4aab5b",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "TSM"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_98227a9f3e2049c1a8348e482df53d7f",
+      "observed_at_utc": "2026-09-28T14:34:09.918303+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_c24d466b8a29459ca81d6f184372804f",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for MU: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_8d1005a733b14c2482145da32ec5a01c",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "MU"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_385113eb1e9f43159dc911bb376ab881",
+      "observed_at_utc": "2026-09-28T14:34:09.542545+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_a07d77a0355e46e6a67364fe52574037",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for ARM: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_8d1005a733b14c2482145da32ec5a01c",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "ARM"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_ddb8872725b24b6fad9fbf075af33629",
+      "observed_at_utc": "2026-09-28T14:34:09.165403+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_a44cdba475334de5b54ba895a29ba38d",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for DDOG: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_8d1005a733b14c2482145da32ec5a01c",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "DDOG"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_ca8e74375455475ead5b4bedab15fc69",
+      "observed_at_utc": "2026-09-28T14:34:08.845221+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_4756004bc0d8449aaeeeefac4d561e0f",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for SNOW: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_8d1005a733b14c2482145da32ec5a01c",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "SNOW"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_acf8ff935f7344329161c09b394e69a7",
+      "observed_at_utc": "2026-09-28T14:34:08.456326+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_ddcd62a2124f4e90a95bfe3a0b7b92f2",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for NET: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_8d1005a733b14c2482145da32ec5a01c",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "NET"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_718f5911447748ddb07326d3b10e40f2",
+      "observed_at_utc": "2026-09-28T14:31:58.928218+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_f8a37874d5674eee9acee6bcdc48b207",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for CRWD: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_037490ac0fd040ebb4e7401e3467d267",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "CRWD"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_e818eb7bcc534110ac67aeab78c941fb",
+      "observed_at_utc": "2026-09-28T14:31:49.452996+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_257bb5e4af8543fe9fc61f7f6db479c9",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for MSTR: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_037490ac0fd040ebb4e7401e3467d267",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "MSTR"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_a760124712014b96a5f211e26c7ae375",
+      "observed_at_utc": "2026-09-28T14:31:48.582658+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_87f1190b48b6419e854bf21f92428245",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for COIN: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_037490ac0fd040ebb4e7401e3467d267",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "COIN"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_74c33a26c11b47839dfa0e3e13ac8c81",
+      "observed_at_utc": "2026-09-28T14:31:47.840324+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_0b4f2760998a407487b18f77e1e82e31",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for SMCI: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_037490ac0fd040ebb4e7401e3467d267",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "SMCI"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_e55bb1c6b90c4449bc5d215325e4d390",
+      "observed_at_utc": "2026-09-28T14:31:47.283576+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_4fbd35858e8f49e6b7605448f1cbee4b",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for AVGO: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_037490ac0fd040ebb4e7401e3467d267",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "AVGO"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_26b407fae36f4e7f8dcdd9ae120e0144",
+      "observed_at_utc": "2026-09-28T14:24:51.059328+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_1afe1736ad1943188177a1bea602eda7",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for GOOGL: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_453f64927c36454ebf69bd1d582d96d1",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "GOOGL"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_14f2d4c7160248a98f7064eda2c772cc",
+      "observed_at_utc": "2026-09-28T14:24:50.711734+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_11b04459fcac44538bcb8adb5863bcc6",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for AMZN: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_453f64927c36454ebf69bd1d582d96d1",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "AMZN"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_e6b7eef8e4b44581aa00db1c1a8e0629",
+      "observed_at_utc": "2026-09-28T14:24:50.325064+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_b8e67efb3ef247b5830e225a515dc117",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for META: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_453f64927c36454ebf69bd1d582d96d1",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "META"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_728ea3d12c2043ffbea15f1332df93fb",
+      "observed_at_utc": "2026-09-28T14:24:49.903413+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_2ac0017cad71499fb600627580717618",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for MSFT: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_453f64927c36454ebf69bd1d582d96d1",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "MSFT"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_f213c70c049e45158b0bd2f588ad53a6",
+      "observed_at_utc": "2026-09-28T14:24:48.821179+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_7eaedde812034c639e110c7451afbebe",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for AAPL: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_453f64927c36454ebf69bd1d582d96d1",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "AAPL"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_a82eca97c4444e33b6293050ca5e0238",
+      "observed_at_utc": "2026-09-28T14:18:14.194125+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_6066f562426f48189334aed7d0dac547",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for RIOT: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_d920778e1381415997c4d54018999eb5",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "RIOT"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_75fef1bb88554d04926afc1a44b5685e",
+      "observed_at_utc": "2026-09-28T14:18:13.874360+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_f4773507329b4ce9ba1459c267ed5370",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for MARA: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_d920778e1381415997c4d54018999eb5",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "MARA"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_ea2434544f1c49e8a709310ca14bd178",
+      "observed_at_utc": "2026-09-28T14:18:13.539286+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_05bde6d597d94418b6a93e3b99423f80",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for RIVN: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_d920778e1381415997c4d54018999eb5",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "RIVN"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_65c3871a92e542ad9898e89fbefbd87a",
+      "observed_at_utc": "2026-09-28T14:18:13.216594+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_6a1b4dcdd9054e8ab9c4b45c000d5ffb",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for SOFI: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_d920778e1381415997c4d54018999eb5",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "SOFI"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_e79acc0e8e2f4316bb500d17eff92bd4",
+      "observed_at_utc": "2026-09-28T14:18:12.918416+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_0e1cd9cfb6364b85b4b304ce51666992",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for RKLB: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_d920778e1381415997c4d54018999eb5",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "RKLB"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_86be47a7ad4a40148797de7e70ddf4eb",
+      "observed_at_utc": "2026-09-28T14:17:12.530379+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_703f225f8e4a48d9b1aab3c160aa11e7",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for KRE: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_6a16754f7fd0472d8c2436189b82041b",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "KRE"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_b425d1ab0f1f476c89e51eadf064973e",
+      "observed_at_utc": "2026-09-28T14:17:12.214686+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_9972a453ff0f4cf3afb6f934d684e97d",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for XBI: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_6a16754f7fd0472d8c2436189b82041b",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "XBI"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_83c24ca6f8d14c8fb7ed76ef4bb0df9a",
+      "observed_at_utc": "2026-09-28T14:17:11.920933+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_e49f8aa0a15b4b59a8750e17e07ed520",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for SOXX: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_6a16754f7fd0472d8c2436189b82041b",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "SOXX"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_623112709fe4463fac21e89ffd0f77f8",
+      "observed_at_utc": "2026-09-28T14:17:11.603645+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_9e3c326460654997b5f591ef7f8dff94",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for ARKK: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_6a16754f7fd0472d8c2436189b82041b",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "ARKK"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_7d8a4b8d679145f3a5cd44fb96ecb2dd",
+      "observed_at_utc": "2026-09-28T14:17:11.313461+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_8ca74f6568e345878ba4003b492f0714",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for XLU: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_6a16754f7fd0472d8c2436189b82041b",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "XLU"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_bed9b43db0ea4635a03e834cad9874cd",
+      "observed_at_utc": "2026-09-28T14:16:10.931284+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_3fbe26c572ac411ab5f8017d304a52a4",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for XLV: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_4b7d2bc77e434dcd8d8c0160463a8277",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "XLV"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_3bd743a58b714bfc816d9315fa169d06",
+      "observed_at_utc": "2026-09-28T14:16:10.624100+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_cc30272b92cb42b3bccf9f4d8325d5bb",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for HOOD: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_4b7d2bc77e434dcd8d8c0160463a8277",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "HOOD"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_96e52179fde64ff9b9c894962679c37b",
+      "observed_at_utc": "2026-09-28T14:16:10.295479+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_fe1bc60f64bd45389ff4a3a2102d403e",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for OKLO: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_4b7d2bc77e434dcd8d8c0160463a8277",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "OKLO"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_85b2649555374519a1b09948099c19a0",
+      "observed_at_utc": "2026-09-28T14:16:09.962357+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_67c67c259c48471a90b131e857ae905b",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for PLTR: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_4b7d2bc77e434dcd8d8c0160463a8277",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "PLTR"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_3e4af0e6ed2147bd933dc3228508bdbb",
+      "observed_at_utc": "2026-09-28T14:16:09.606171+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_468e035baec849a1b816e6696b1f1550",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for AMD: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_4b7d2bc77e434dcd8d8c0160463a8277",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "AMD"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_4db01943bc524dedbd86f1b6ccbb2f86",
+      "observed_at_utc": "2026-09-28T14:15:09.136248+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_da98f78af21c467cbe0c9edf0b675816",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for TSLA: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_a9ccfeb0527642f78c9d2bbf9a3b1bb7",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "TSLA"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_9f2d5d99c1f1427ba72aa96072566013",
+      "observed_at_utc": "2026-09-28T14:15:08.769514+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_daaf4da4b21b43088ea34964538db9c8",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for NVDA: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_a9ccfeb0527642f78c9d2bbf9a3b1bb7",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "NVDA"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_88ec50476c414887ba01ae33d76f5b44",
+      "observed_at_utc": "2026-09-28T14:15:08.394817+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_4955ac548ba0423f8cbf945f9bcc902f",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for IWM: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_a9ccfeb0527642f78c9d2bbf9a3b1bb7",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "IWM"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_aeb9f57f01cc4830ba4cbeee1d846c3a",
+      "observed_at_utc": "2026-09-28T14:15:08.039205+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_3c125ff6e8804fa98ae4985b48db2e55",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for QQQ: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_a9ccfeb0527642f78c9d2bbf9a3b1bb7",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "QQQ"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_df47ba8dc3e74befbe878d7a2afaf625",
+      "observed_at_utc": "2026-09-28T14:15:07.656005+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_68392918ee5d4ddd8e51eb07752ed472",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for SPY: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_a9ccfeb0527642f78c9d2bbf9a3b1bb7",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "SPY"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_111356255f0145e3bca983bc5217f951",
+      "observed_at_utc": "2026-09-28T14:04:06.476456+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_5126c7553b504b388abe8a6f658a88a6",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for XLI: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_d14fcb2d26a04154b2cd7c88d988d291",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "XLI"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_dda2fb8beaec4999856d4498a1df2f8a",
+      "observed_at_utc": "2026-09-28T14:04:06.120869+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_c55a45d4046d483882f6766b67bdf2a6",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for XLE: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_d14fcb2d26a04154b2cd7c88d988d291",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "XLE"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_53363e549bd544d68afbb95678d001de",
+      "observed_at_utc": "2026-09-28T14:04:05.807686+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_0fa2463125dd4d668ed8c0b3ed50a6b1",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for XLF: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_d14fcb2d26a04154b2cd7c88d988d291",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "XLF"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_88a4e514280e4222ac11a060a2fbc275",
+      "observed_at_utc": "2026-09-28T14:04:05.497011+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_8f8eccac5380465c9c9627122851a71d",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for XLK: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_d14fcb2d26a04154b2cd7c88d988d291",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "XLK"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_a1dc3f5289fc426bb07cfbbddf631f5f",
+      "observed_at_utc": "2026-09-28T14:04:05.208807+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_b54565d8b47c47bdb9afafe1ecb21835",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for QBTS: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_d14fcb2d26a04154b2cd7c88d988d291",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "QBTS"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_c60b966a629a4f14a309be5ecf66f6bd",
+      "observed_at_utc": "2026-09-28T14:03:04.854060+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_4b4f09489d10481ba06db42ee8781154",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for RGTI: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_14d2017cd05746888436c5e89ac1ce7e",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "RGTI"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_fdc53d3e7b5945dcbafa98483001a0ae",
+      "observed_at_utc": "2026-09-28T14:03:04.543408+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_a4142ae34dc445af814c339f2ecce087",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for IONQ: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_14d2017cd05746888436c5e89ac1ce7e",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "IONQ"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_3d537b3ef26640468a30e63adae4cb94",
+      "observed_at_utc": "2026-09-28T14:03:04.235700+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_767ef405ffd446489f55670498967ca4",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for SMR: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_14d2017cd05746888436c5e89ac1ce7e",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "SMR"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_f38a24200ec646dc93cfebebca060e41",
+      "observed_at_utc": "2026-09-28T14:03:03.927740+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_9cb0ed2f77884b028986cb89ff02d3e1",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for NNE: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_14d2017cd05746888436c5e89ac1ce7e",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "NNE"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_71703b940cc543e98f92a3c4ee7acbea",
+      "observed_at_utc": "2026-09-28T14:03:03.589643+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_4e8188959bf641d898a66c1eda43903f",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for CEG: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_14d2017cd05746888436c5e89ac1ce7e",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "CEG"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_b9d31342de024267a03deda1dfaf38d3",
+      "observed_at_utc": "2026-09-28T13:53:02.728663+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_48ad39444d93405793d27441a0c57473",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for INTC: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_5c87f3d168e741138124742097f403b4",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "INTC"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_01c52ba4642340af8ac910e1d18c90e2",
+      "observed_at_utc": "2026-09-28T13:52:02.258307+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_f4e282284b7e418394a65b36aee5cf7b",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for TSM: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_d553f2376fd44d6c838c2af87a0042be",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "TSM"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_034326d54ef4405893dcdced3e8dab28",
+      "observed_at_utc": "2026-09-28T13:52:01.943570+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_dc23dff857ac4fa8b2e494451131a14a",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for MU: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_d553f2376fd44d6c838c2af87a0042be",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "MU"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_856f8c8634324d92aa60cfc5bf962223",
+      "observed_at_utc": "2026-09-28T13:52:01.622928+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_bfb9c5ad53744d6098ea79545278218f",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for ARM: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_d553f2376fd44d6c838c2af87a0042be",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "ARM"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_d97579ac1206475595bc35d9948bcd0f",
+      "observed_at_utc": "2026-09-28T13:52:01.326468+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_1523614dde1840d7ac2a64dc26459aff",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for DDOG: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_d553f2376fd44d6c838c2af87a0042be",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "DDOG"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_f21ee7b46df74b3d96dc3d96f6f86244",
+      "observed_at_utc": "2026-09-28T13:52:01.005855+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_849926e8d67a441f887fe0d0209552b3",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for SNOW: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_d553f2376fd44d6c838c2af87a0042be",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "SNOW"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_41c4d3f882664d28970439e6a0c51756",
+      "observed_at_utc": "2026-09-28T13:51:00.568874+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_eeb828a231d146ce8d0f69288bd5e4df",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for NET: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_c810dada03a14645adb324521dd57735",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "NET"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_3a7156d8ce044fd981207631667666d7",
+      "observed_at_utc": "2026-09-28T13:51:00.235979+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_b6d063d1e9524c659d0923d9876c6e12",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for CRWD: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_c810dada03a14645adb324521dd57735",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "CRWD"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_c60b02b9dbc9457a990fc0b199bdea8e",
+      "observed_at_utc": "2026-09-28T13:50:59.925859+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_049435c2630b42e9adc7982ec1e94aac",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for MSTR: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_c810dada03a14645adb324521dd57735",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "MSTR"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_8c7452f09d554fc1bcbcb9cbc1a8cd19",
+      "observed_at_utc": "2026-09-28T13:50:59.453827+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_bf3ba9d73d42417cb9131f49d1048021",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for COIN: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_c810dada03a14645adb324521dd57735",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "COIN"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_eac5fc1103924273b707f29d70266ac7",
+      "observed_at_utc": "2026-09-28T13:50:59.080551+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_f0110e6beea9440d80da32a65adecebb",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for SMCI: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_c810dada03a14645adb324521dd57735",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "SMCI"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_f6544732ec404f53ab2ec5d9f49c49ee",
+      "observed_at_utc": "2026-09-28T13:49:58.588045+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_e74fd40258f04c7fbae98d74e46ca873",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for VRT: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_3050df323a4645be9cf3041278cfa9dc",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "VRT"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_a21c8e4d5e48497d8d9712298ea56ba2",
+      "observed_at_utc": "2026-09-28T13:49:58.271423+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_af18e7f9d4ac4912a61edf7621994775",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for ETN: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_3050df323a4645be9cf3041278cfa9dc",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "ETN"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_dd79f848c6884c0ebe0975e8199dd62d",
+      "observed_at_utc": "2026-09-28T13:49:57.884294+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_e195bd59a6ed42aaa01ca1f4ea5d8792",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for CRWV: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_3050df323a4645be9cf3041278cfa9dc",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "CRWV"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_1bc37f9322414d9e9c4a48135cd8843e",
+      "observed_at_utc": "2026-09-28T13:49:57.440237+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_c3568f0cff8a420a89ab36b6d64e6edb",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for BE: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_3050df323a4645be9cf3041278cfa9dc",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "BE"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_e00676cdc63e4315892617492ff58093",
+      "observed_at_utc": "2026-09-28T13:49:57.083618+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_6572a95d29524422a418ef7ccedc5c3c",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for CLSK: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_3050df323a4645be9cf3041278cfa9dc",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "CLSK"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_f8c279f12033475faa0682ba3b8d1f8a",
+      "observed_at_utc": "2026-09-28T13:48:55.141732+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_81b34276c2e84b29811e0c36865b9e6f",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for RIOT: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_07a91509211241b1bf6faf686b1cc915",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "RIOT"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_31ffb85c175e4228bbd0cfdb6299216a",
+      "observed_at_utc": "2026-09-28T13:48:54.423926+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_4beef7c50f094c3eacc696b18c0455b0",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for MARA: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_07a91509211241b1bf6faf686b1cc915",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "MARA"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_f3abe63cce454ed696ec15097ba1e80d",
+      "observed_at_utc": "2026-09-28T13:48:53.825424+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_0b0f922faecb4174b15efe8431484997",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for RIVN: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_07a91509211241b1bf6faf686b1cc915",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "RIVN"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_73dd5336aa484c118a1a51e7a1197890",
+      "observed_at_utc": "2026-09-28T13:48:50.501135+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_f77f62525afd4ee59797dd53c87b1217",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for SOFI: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_07a91509211241b1bf6faf686b1cc915",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "SOFI"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_b11d8e81efff46bb9a795205d58fafdd",
+      "observed_at_utc": "2026-09-28T13:48:49.965167+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_13784216197949f3b53a197815a626ef",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for RKLB: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_07a91509211241b1bf6faf686b1cc915",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "RKLB"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_eaf6cb9c4fbe435f972a265eaecf5b91",
+      "observed_at_utc": "2026-09-28T13:46:46.418029+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_4b49eab91d624cd090a605f4d77347a2",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for AVGO: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_9e4b2c7df97745cab1cfaa7368d0e6d4",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "AVGO"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_e987aee789054a79bb42b1e40e532162",
+      "observed_at_utc": "2026-09-28T13:46:46.052168+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_8eec98dff45a42ed8e16c2accd680c9b",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for GOOGL: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_9e4b2c7df97745cab1cfaa7368d0e6d4",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "GOOGL"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_d023904c28c1483183e8e2b71429ef0c",
+      "observed_at_utc": "2026-09-28T13:46:45.698563+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_f02110a24a6d4e94bb92dd787ad82fc8",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for AMZN: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_9e4b2c7df97745cab1cfaa7368d0e6d4",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "AMZN"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_0adfb80e60c04f8ba79f242580a6d118",
+      "observed_at_utc": "2026-09-28T13:46:32.508078+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_65e71ea0ac8940c89d07e9d3261c4a50",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for META: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_9e4b2c7df97745cab1cfaa7368d0e6d4",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "META"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_5a2e549bd26149b981bb3882e6af823c",
+      "observed_at_utc": "2026-09-28T13:46:18.214021+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_bc6c9d9ae50a455990731e3deb844a6d",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for MSFT: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_9e4b2c7df97745cab1cfaa7368d0e6d4",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "MSFT"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_87f62e6bad5742c58f9e560b9832ad1c",
+      "observed_at_utc": "2026-09-28T13:43:53.005587+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_6460372637c646228d67e21ed11eb933",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for AAPL: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_0d54f36f27bc491e8fe2736d20454c71",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "AAPL"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_eedeebb5b80a4b1983944106f0d0d081",
+      "observed_at_utc": "2026-09-28T13:43:52.565859+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_1e055f8768394a3292d923b3a60952e4",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for HOOD: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_0d54f36f27bc491e8fe2736d20454c71",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "HOOD"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_d6d7eff2fd224e50baf91e7fdbf30d56",
+      "observed_at_utc": "2026-09-28T13:43:52.007421+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_47da074b565d45d0a767737489ddeff1",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for OKLO: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_0d54f36f27bc491e8fe2736d20454c71",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "OKLO"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_5aa954c3bc214a8cb4c3aa00d35e4de8",
+      "observed_at_utc": "2026-09-28T13:43:51.439383+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_e937412ca3d74d63964ee5f47e8ba1c1",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for PLTR: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_0d54f36f27bc491e8fe2736d20454c71",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "PLTR"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_53a0a8f1684c41a8891450e1da06126c",
+      "observed_at_utc": "2026-09-28T13:43:50.244601+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_229bf527dcbb492081835315e6f72887",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for AMD: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_0d54f36f27bc491e8fe2736d20454c71",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "AMD"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_e0737a5738304e91b3709edf781c7ea3",
+      "observed_at_utc": "2026-09-28T13:41:38.905472+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_2a44f5b436464299be66f2950b618e07",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for TSLA: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_9ae14dff638941e1944c00916d2acb40",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "TSLA"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_e9ad4ef7da9040b88c4469b73d819ac3",
+      "observed_at_utc": "2026-09-28T13:41:38.192018+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_6c7a90ce0e304b02b5015879504e75a2",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for NVDA: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_9ae14dff638941e1944c00916d2acb40",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "NVDA"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_b696ee9f53204455aa2d497c34a89a92",
+      "observed_at_utc": "2026-09-28T13:41:37.357675+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_76c994e0ec1145debe8ff15424451c1d",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for IWM: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_9ae14dff638941e1944c00916d2acb40",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "IWM"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_8c6d5b1e102f40f99e5d2b2b64d6da0e",
+      "observed_at_utc": "2026-09-28T13:41:36.572335+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_37cd98c09309413194a939a61376723c",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for QQQ: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_9ae14dff638941e1944c00916d2acb40",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "QQQ"
+    },
+    {
+      "candle_end_utc": null,
+      "data_mode": "REAL",
+      "data_quality": {},
+      "free_validation_eligible": false,
+      "lane": "shadow_paper",
+      "observation_id": "obs_7c65019093194c82b32e20c8c63b15d8",
+      "observed_at_utc": "2026-09-28T13:41:26.918691+00:00",
+      "outcome": "provider_error",
+      "payload": {},
+      "production_eligible": false,
+      "providers": {
+        "failure_id": "failure_b722b9fe15284281b24b68c14ca49dae",
+        "structure": "algox"
+      },
+      "reasons": [
+        "AlgoX fetch failed for SPY: [Errno 11001] getaddrinfo failed"
+      ],
+      "run_id": "daemon_9ae14dff638941e1944c00916d2acb40",
+      "score_total": null,
+      "setup_event_id": null,
+      "ticker": "SPY"
+    }
+  ],
+  "shadow_only_events": [],
+  "macro_guard_blocks": 0,
+  "missing_oi_greeks_count": 1252,
+  "average_score": 66.032,
+  "score_distribution": {
+    "0-49": 0,
+    "50-59": 63,
+    "60-74": 83,
+    "75-84": 27,
+    "85-100": 0
+  },
+  "closed_trade_results": {
+    "sample_size": 80,
+    "average_R": -0.2076,
+    "median_MFE_R": 0.5476,
+    "median_MAE_R": 0.6523,
+    "average_time_to_TP1_minutes": 20.5319,
+    "average_time_to_exit_minutes": 46.0625,
+    "best_ticker": "MSFT",
+    "worst_ticker": "TSM",
+    "ticker_expectancy_R": {
+      "INTC": -0.2259,
+      "NET": -0.5509,
+      "COIN": -0.3703,
+      "META": 0.2073,
+      "AMD": 0.0413,
+      "QQQ": -0.5078,
+      "IONQ": -0.4226,
+      "SMR": -1.035,
+      "BE": -1.0626,
+      "CLSK": -0.2701,
+      "RIOT": -1.0213,
+      "SNOW": 0.1632,
+      "SMCI": -0.1967,
+      "SPY": -0.5434,
+      "TSM": -1.0955,
+      "OKLO": 0.0523,
+      "ARKK": 0.4212,
+      "VRT": 0.4039,
+      "MU": -0.5138,
+      "MSFT": 1.0098,
+      "HOOD": -0.6272,
+      "DDOG": 1.0064,
+      "PLTR": 0.5561,
+      "CRWV": -1.0394,
+      "GOOGL": -0.0266,
+      "CRWD": 0.1725,
+      "TSLA": -1.0784,
+      "QBTS": 0.2316,
+      "RGTI": -0.2189,
+      "KRE": -1.082,
+      "XBI": -1.0638,
+      "XLE": -1.0706,
+      "ETN": -1.0737,
+      "IWM": 0.0717
+    },
+    "best_setup": "LEVEL_RECLAIM_SHORT",
+    "worst_setup": "LEVEL_RECLAIM_LONG",
+    "setup_expectancy_R": {
+      "LEVEL_RECLAIM_LONG": -0.2635,
+      "LEVEL_RECLAIM_SHORT": -0.128
+    }
+  },
+  "provider_failures": {
+    "count": 150,
+    "events": [
+      {
+        "error_message": "AlgoX fetch failed for CEG: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_1d815b9c2d7144498febab4b065ff350",
+        "occurred_at_utc": "2026-09-28T15:19:19.508297+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_bef164ab31bc4b6eb8b395d0b5b00444",
+        "ticker": "CEG"
+      },
+      {
+        "error_message": "AlgoX fetch failed for VRT: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_e2d1289f75034051b9ea8c1f90c04810",
+        "occurred_at_utc": "2026-09-28T15:19:19.153428+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_bef164ab31bc4b6eb8b395d0b5b00444",
+        "ticker": "VRT"
+      },
+      {
+        "error_message": "AlgoX fetch failed for ETN: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_3b89e82289c949839fcfe1281e7c6e8e",
+        "occurred_at_utc": "2026-09-28T15:19:18.783804+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_bef164ab31bc4b6eb8b395d0b5b00444",
+        "ticker": "ETN"
+      },
+      {
+        "error_message": "AlgoX fetch failed for CRWV: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_5e4a6262c79542d281d23f0d5d657430",
+        "occurred_at_utc": "2026-09-28T15:19:18.476099+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_bef164ab31bc4b6eb8b395d0b5b00444",
+        "ticker": "CRWV"
+      },
+      {
+        "error_message": "AlgoX fetch failed for BE: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_58daee7cef614e09a808c92f0c796750",
+        "occurred_at_utc": "2026-09-28T15:19:17.944923+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_bef164ab31bc4b6eb8b395d0b5b00444",
+        "ticker": "BE"
+      },
+      {
+        "error_message": "AlgoX fetch failed for CLSK: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_7b873111b86d4c8293c49bc9a39e2801",
+        "occurred_at_utc": "2026-09-28T15:17:22.210849+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_d1c394f6cf504ef4903a824b83cc60e6",
+        "ticker": "CLSK"
+      },
+      {
+        "error_message": "AlgoX fetch failed for HOOD: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_b83263dbec9b48c7808347bf8af6d35d",
+        "occurred_at_utc": "2026-09-28T15:17:21.836156+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_d1c394f6cf504ef4903a824b83cc60e6",
+        "ticker": "HOOD"
+      },
+      {
+        "error_message": "AlgoX fetch failed for OKLO: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_ee108db9984a4adbbbb7d655c90ea215",
+        "occurred_at_utc": "2026-09-28T15:17:21.288516+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_d1c394f6cf504ef4903a824b83cc60e6",
+        "ticker": "OKLO"
+      },
+      {
+        "error_message": "AlgoX fetch failed for PLTR: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_b45a9e8098ba43c7bdc541ca1cf93ba5",
+        "occurred_at_utc": "2026-09-28T15:17:20.665068+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_d1c394f6cf504ef4903a824b83cc60e6",
+        "ticker": "PLTR"
+      },
+      {
+        "error_message": "AlgoX fetch failed for AMD: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_3e92dac01b404443adab389acb4df97e",
+        "occurred_at_utc": "2026-09-28T15:17:07.783858+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_d1c394f6cf504ef4903a824b83cc60e6",
+        "ticker": "AMD"
+      },
+      {
+        "error_message": "AlgoX fetch failed for TSLA: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_7672d5ba06e14851abcc5756f2e89c58",
+        "occurred_at_utc": "2026-09-28T15:15:56.196777+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_dc16e6a749c24797abab9acd526bf23d",
+        "ticker": "TSLA"
+      },
+      {
+        "error_message": "AlgoX fetch failed for NVDA: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_a82b18b2be394831bd4fef050320bf1d",
+        "occurred_at_utc": "2026-09-28T15:15:55.884006+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_dc16e6a749c24797abab9acd526bf23d",
+        "ticker": "NVDA"
+      },
+      {
+        "error_message": "AlgoX fetch failed for IWM: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_cfe8a70ea54e4ee093e2e6a80257648f",
+        "occurred_at_utc": "2026-09-28T15:15:55.522677+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_dc16e6a749c24797abab9acd526bf23d",
+        "ticker": "IWM"
+      },
+      {
+        "error_message": "AlgoX fetch failed for QQQ: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_c8b3b3af00e24e989b8d7310c03c22a5",
+        "occurred_at_utc": "2026-09-28T15:15:54.970357+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_dc16e6a749c24797abab9acd526bf23d",
+        "ticker": "QQQ"
+      },
+      {
+        "error_message": "AlgoX fetch failed for SPY: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_4458ae95eff8402f9cd4bd03e978920c",
+        "occurred_at_utc": "2026-09-28T15:15:52.588450+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_dc16e6a749c24797abab9acd526bf23d",
+        "ticker": "SPY"
+      },
+      {
+        "error_message": "AlgoX fetch failed for INTC: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_e67e2ab3de4a4cd5a900e143716cb9e3",
+        "occurred_at_utc": "2026-09-28T15:10:41.019505+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_731cffbbe49a4c6ca66fce6ce8fca745",
+        "ticker": "INTC"
+      },
+      {
+        "error_message": "AlgoX fetch failed for TSM: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_164438be058a4f9fa07ed5bc1f920f1a",
+        "occurred_at_utc": "2026-09-28T15:10:40.694908+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_731cffbbe49a4c6ca66fce6ce8fca745",
+        "ticker": "TSM"
+      },
+      {
+        "error_message": "AlgoX fetch failed for KRE: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_be644c400ad849929a57309c77065967",
+        "occurred_at_utc": "2026-09-28T15:04:38.784176+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_8f7c7ebe01f140d49572884e5151c1ba",
+        "ticker": "KRE"
+      },
+      {
+        "error_message": "AlgoX fetch failed for XBI: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_5f76da57eb2c4bb3b7cabf72974d1c72",
+        "occurred_at_utc": "2026-09-28T15:04:38.487044+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_8f7c7ebe01f140d49572884e5151c1ba",
+        "ticker": "XBI"
+      },
+      {
+        "error_message": "AlgoX fetch failed for SOXX: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_83706f6876534ff8ae6738c6bb1f02a4",
+        "occurred_at_utc": "2026-09-28T15:04:38.173309+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_8f7c7ebe01f140d49572884e5151c1ba",
+        "ticker": "SOXX"
+      },
+      {
+        "error_message": "AlgoX fetch failed for ARKK: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_e49b1f664d0a4fa9a734a8c28d5f08f6",
+        "occurred_at_utc": "2026-09-28T15:04:37.858210+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_8f7c7ebe01f140d49572884e5151c1ba",
+        "ticker": "ARKK"
+      },
+      {
+        "error_message": "AlgoX fetch failed for XLU: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_6173dbf4e1844faabbf3fec48bdb8e7b",
+        "occurred_at_utc": "2026-09-28T15:04:37.544095+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_8f7c7ebe01f140d49572884e5151c1ba",
+        "ticker": "XLU"
+      },
+      {
+        "error_message": "AlgoX fetch failed for MU: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_6e45a3493df5439ba361c6a5389502ba",
+        "occurred_at_utc": "2026-09-28T15:03:37.101984+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_b0f29c1d809d41d0aa47330d9e06e9e1",
+        "ticker": "MU"
+      },
+      {
+        "error_message": "AlgoX fetch failed for ARM: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_dc6671fc5eef4f808200c097cf95dc51",
+        "occurred_at_utc": "2026-09-28T15:03:36.817816+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_b0f29c1d809d41d0aa47330d9e06e9e1",
+        "ticker": "ARM"
+      },
+      {
+        "error_message": "AlgoX fetch failed for DDOG: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_99f609a4188d4db6868892d5dcb11781",
+        "occurred_at_utc": "2026-09-28T15:03:36.531843+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_b0f29c1d809d41d0aa47330d9e06e9e1",
+        "ticker": "DDOG"
+      },
+      {
+        "error_message": "AlgoX fetch failed for SNOW: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_14bad90b9e634c30857e7eff826602c1",
+        "occurred_at_utc": "2026-09-28T15:03:36.212437+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_b0f29c1d809d41d0aa47330d9e06e9e1",
+        "ticker": "SNOW"
+      },
+      {
+        "error_message": "AlgoX fetch failed for NET: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_83713a14d30e4a38932c9e1cf2a1cd14",
+        "occurred_at_utc": "2026-09-28T15:03:35.931802+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_b0f29c1d809d41d0aa47330d9e06e9e1",
+        "ticker": "NET"
+      },
+      {
+        "error_message": "AlgoX fetch failed for CRWD: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_1ba355354629462abb921755497c8c81",
+        "occurred_at_utc": "2026-09-28T15:02:35.573531+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_f5898439dbe74fed8431144a7c9cb506",
+        "ticker": "CRWD"
+      },
+      {
+        "error_message": "AlgoX fetch failed for MSTR: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_660f2c6d5bde4c569e7f4a6b62906ba4",
+        "occurred_at_utc": "2026-09-28T15:02:35.257320+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_f5898439dbe74fed8431144a7c9cb506",
+        "ticker": "MSTR"
+      },
+      {
+        "error_message": "AlgoX fetch failed for COIN: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_f1287f6ccb1744a1a84aa7ebcdfeed55",
+        "occurred_at_utc": "2026-09-28T15:02:34.953343+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_f5898439dbe74fed8431144a7c9cb506",
+        "ticker": "COIN"
+      },
+      {
+        "error_message": "AlgoX fetch failed for SMCI: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_e22d3381078b4dcc9422e50916cbcd41",
+        "occurred_at_utc": "2026-09-28T15:02:34.651465+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_f5898439dbe74fed8431144a7c9cb506",
+        "ticker": "SMCI"
+      },
+      {
+        "error_message": "AlgoX fetch failed for AVGO: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_ca7aa87f061049ff9d0ea4c5c7bf6123",
+        "occurred_at_utc": "2026-09-28T15:02:34.349325+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_f5898439dbe74fed8431144a7c9cb506",
+        "ticker": "AVGO"
+      },
+      {
+        "error_message": "AlgoX fetch failed for XLV: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_71b989a6d8a948e7aa7d365dac6c1447",
+        "occurred_at_utc": "2026-09-28T15:01:33.949582+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_238a77e905a24065aabfde53121a57e4",
+        "ticker": "XLV"
+      },
+      {
+        "error_message": "AlgoX fetch failed for XLI: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_ded09977a4a34dfca97a1672c5d6c3a6",
+        "occurred_at_utc": "2026-09-28T15:01:33.620991+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_238a77e905a24065aabfde53121a57e4",
+        "ticker": "XLI"
+      },
+      {
+        "error_message": "AlgoX fetch failed for XLE: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_b86a50c830924f7d9073a5aea47fe2ca",
+        "occurred_at_utc": "2026-09-28T15:01:33.275263+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_238a77e905a24065aabfde53121a57e4",
+        "ticker": "XLE"
+      },
+      {
+        "error_message": "AlgoX fetch failed for XLF: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_e24efcac218541838b2053b1fdcbafe1",
+        "occurred_at_utc": "2026-09-28T15:01:32.952099+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_238a77e905a24065aabfde53121a57e4",
+        "ticker": "XLF"
+      },
+      {
+        "error_message": "AlgoX fetch failed for XLK: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_3b699e010a4640a9a3f9c5a2a3d331b4",
+        "occurred_at_utc": "2026-09-28T15:01:32.628952+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_238a77e905a24065aabfde53121a57e4",
+        "ticker": "XLK"
+      },
+      {
+        "error_message": "AlgoX fetch failed for GOOGL: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_76c17e493f20433dab5fd9edfff0104b",
+        "occurred_at_utc": "2026-09-28T15:00:32.244711+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_0f2f29dca1754aef854387e493745d31",
+        "ticker": "GOOGL"
+      },
+      {
+        "error_message": "AlgoX fetch failed for AMZN: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_65ec5e11c8d74af488b5eb306108f16a",
+        "occurred_at_utc": "2026-09-28T15:00:31.941121+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_0f2f29dca1754aef854387e493745d31",
+        "ticker": "AMZN"
+      },
+      {
+        "error_message": "AlgoX fetch failed for META: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_d1aae386cd264b658f0962a260f66ed3",
+        "occurred_at_utc": "2026-09-28T15:00:31.633520+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_0f2f29dca1754aef854387e493745d31",
+        "ticker": "META"
+      },
+      {
+        "error_message": "AlgoX fetch failed for MSFT: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_a5d0d0d049ae4070a8db939b1f8f1122",
+        "occurred_at_utc": "2026-09-28T15:00:31.294668+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_0f2f29dca1754aef854387e493745d31",
+        "ticker": "MSFT"
+      },
+      {
+        "error_message": "AlgoX fetch failed for AAPL: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_87576e25d12547e9ba79fe0d774ea377",
+        "occurred_at_utc": "2026-09-28T15:00:30.947302+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_0f2f29dca1754aef854387e493745d31",
+        "ticker": "AAPL"
+      },
+      {
+        "error_message": "AlgoX fetch failed for QBTS: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_4b368e626e2648beada371cfd8700911",
+        "occurred_at_utc": "2026-09-28T14:49:29.899302+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_2600632ce4334adfa33c6c43304a8e6b",
+        "ticker": "QBTS"
+      },
+      {
+        "error_message": "AlgoX fetch failed for RGTI: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_5be9c27f02604f06824ee379cfc89398",
+        "occurred_at_utc": "2026-09-28T14:49:29.587882+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_2600632ce4334adfa33c6c43304a8e6b",
+        "ticker": "RGTI"
+      },
+      {
+        "error_message": "AlgoX fetch failed for IONQ: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_7be9af125d334599a8485bb3121b9950",
+        "occurred_at_utc": "2026-09-28T14:49:29.272157+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_2600632ce4334adfa33c6c43304a8e6b",
+        "ticker": "IONQ"
+      },
+      {
+        "error_message": "AlgoX fetch failed for SMR: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_8873464077d046eebe19cac79f83b56c",
+        "occurred_at_utc": "2026-09-28T14:49:28.960182+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_2600632ce4334adfa33c6c43304a8e6b",
+        "ticker": "SMR"
+      },
+      {
+        "error_message": "AlgoX fetch failed for NNE: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_59aba3b8b7a04e63a1238155ccff6904",
+        "occurred_at_utc": "2026-09-28T14:49:28.668366+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_2600632ce4334adfa33c6c43304a8e6b",
+        "ticker": "NNE"
+      },
+      {
+        "error_message": "AlgoX fetch failed for RIOT: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_b652696469f3483384e669cd9a9ea45f",
+        "occurred_at_utc": "2026-09-28T14:48:28.297170+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_6a3b11a74bb6459e95691e5e8091dbe7",
+        "ticker": "RIOT"
+      },
+      {
+        "error_message": "AlgoX fetch failed for MARA: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_9c55387992fd4e4197f6e46b57337d29",
+        "occurred_at_utc": "2026-09-28T14:48:27.953417+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_6a3b11a74bb6459e95691e5e8091dbe7",
+        "ticker": "MARA"
+      },
+      {
+        "error_message": "AlgoX fetch failed for RIVN: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_0ffc23823ce04e3bb80fa493163eeae9",
+        "occurred_at_utc": "2026-09-28T14:48:27.656580+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_6a3b11a74bb6459e95691e5e8091dbe7",
+        "ticker": "RIVN"
+      },
+      {
+        "error_message": "AlgoX fetch failed for SOFI: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_301f43b5e207454ebbcaacd94c0115c5",
+        "occurred_at_utc": "2026-09-28T14:48:27.350159+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_6a3b11a74bb6459e95691e5e8091dbe7",
+        "ticker": "SOFI"
+      },
+      {
+        "error_message": "AlgoX fetch failed for RKLB: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_18972f26817f46718fd8da3fa48f31cc",
+        "occurred_at_utc": "2026-09-28T14:48:27.051031+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_6a3b11a74bb6459e95691e5e8091dbe7",
+        "ticker": "RKLB"
+      },
+      {
+        "error_message": "AlgoX fetch failed for CEG: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_2985c32bff0b45c99f2b2ea33df8cd29",
+        "occurred_at_utc": "2026-09-28T14:47:26.634282+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_39e1a1e0c76c47d2b8b3c376ef6bd955",
+        "ticker": "CEG"
+      },
+      {
+        "error_message": "AlgoX fetch failed for VRT: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_53f1aa9af6214adfb2d52e81e81d67b0",
+        "occurred_at_utc": "2026-09-28T14:47:26.263403+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_39e1a1e0c76c47d2b8b3c376ef6bd955",
+        "ticker": "VRT"
+      },
+      {
+        "error_message": "AlgoX fetch failed for ETN: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_031b0e1838e542c89c71ee1ea7e2c5a1",
+        "occurred_at_utc": "2026-09-28T14:47:25.834216+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_39e1a1e0c76c47d2b8b3c376ef6bd955",
+        "ticker": "ETN"
+      },
+      {
+        "error_message": "AlgoX fetch failed for CRWV: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_a24d9cd1f9144a0c9f4d15405921de55",
+        "occurred_at_utc": "2026-09-28T14:47:25.395799+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_39e1a1e0c76c47d2b8b3c376ef6bd955",
+        "ticker": "CRWV"
+      },
+      {
+        "error_message": "AlgoX fetch failed for BE: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_c6f239bf6c294159a74d40a9f27bd388",
+        "occurred_at_utc": "2026-09-28T14:47:25.025554+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_39e1a1e0c76c47d2b8b3c376ef6bd955",
+        "ticker": "BE"
+      },
+      {
+        "error_message": "AlgoX fetch failed for CLSK: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_8c2073de146b4f4ca002124acd458763",
+        "occurred_at_utc": "2026-09-28T14:46:24.647274+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_adae75dad1bc41cc9da0ba1aee22d2b5",
+        "ticker": "CLSK"
+      },
+      {
+        "error_message": "AlgoX fetch failed for HOOD: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_d517be504e4146748d79f2905a9896ba",
+        "occurred_at_utc": "2026-09-28T14:46:24.289994+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_adae75dad1bc41cc9da0ba1aee22d2b5",
+        "ticker": "HOOD"
+      },
+      {
+        "error_message": "AlgoX fetch failed for OKLO: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_03d92a9f6a484872b482e5e42aae1a62",
+        "occurred_at_utc": "2026-09-28T14:46:23.889832+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_adae75dad1bc41cc9da0ba1aee22d2b5",
+        "ticker": "OKLO"
+      },
+      {
+        "error_message": "AlgoX fetch failed for PLTR: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_1f5d84193dda4f50be01522479e5d934",
+        "occurred_at_utc": "2026-09-28T14:46:23.499130+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_adae75dad1bc41cc9da0ba1aee22d2b5",
+        "ticker": "PLTR"
+      },
+      {
+        "error_message": "AlgoX fetch failed for AMD: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_1763869cdd3041c2a019f584d50d11b9",
+        "occurred_at_utc": "2026-09-28T14:46:22.949850+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_adae75dad1bc41cc9da0ba1aee22d2b5",
+        "ticker": "AMD"
+      },
+      {
+        "error_message": "AlgoX fetch failed for TSLA: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_cd8fe082895642b5ad17e0106a269817",
+        "occurred_at_utc": "2026-09-28T14:45:22.379707+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_4397f5814bf649f195953964363bbd83",
+        "ticker": "TSLA"
+      },
+      {
+        "error_message": "AlgoX fetch failed for NVDA: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_8af8301a5fb44b4788eb4624f74a7acf",
+        "occurred_at_utc": "2026-09-28T14:45:22.024560+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_4397f5814bf649f195953964363bbd83",
+        "ticker": "NVDA"
+      },
+      {
+        "error_message": "AlgoX fetch failed for IWM: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_d231e950f26c4424a767967b0592a3f8",
+        "occurred_at_utc": "2026-09-28T14:45:21.665627+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_4397f5814bf649f195953964363bbd83",
+        "ticker": "IWM"
+      },
+      {
+        "error_message": "AlgoX fetch failed for QQQ: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_13dc76ebaf04481a91ece12ea40c2805",
+        "occurred_at_utc": "2026-09-28T14:45:21.302373+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_4397f5814bf649f195953964363bbd83",
+        "ticker": "QQQ"
+      },
+      {
+        "error_message": "AlgoX fetch failed for SPY: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_9f5e683d702647b99569ac9a5d95b031",
+        "occurred_at_utc": "2026-09-28T14:45:20.974657+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_4397f5814bf649f195953964363bbd83",
+        "ticker": "SPY"
+      },
+      {
+        "error_message": "AlgoX fetch failed for INTC: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_46e795acc83d4d9d87fb311bc9b00114",
+        "occurred_at_utc": "2026-09-28T14:40:22.803979+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_aca53b1e6b4944be9418ead78d4aab5b",
+        "ticker": "INTC"
+      },
+      {
+        "error_message": "AlgoX fetch failed for TSM: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_f0f557228aa2471bb54a62efa7efaa0a",
+        "occurred_at_utc": "2026-09-28T14:40:22.240633+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_aca53b1e6b4944be9418ead78d4aab5b",
+        "ticker": "TSM"
+      },
+      {
+        "error_message": "AlgoX fetch failed for MU: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_c24d466b8a29459ca81d6f184372804f",
+        "occurred_at_utc": "2026-09-28T14:34:09.910782+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_8d1005a733b14c2482145da32ec5a01c",
+        "ticker": "MU"
+      },
+      {
+        "error_message": "AlgoX fetch failed for ARM: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_a07d77a0355e46e6a67364fe52574037",
+        "occurred_at_utc": "2026-09-28T14:34:09.532555+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_8d1005a733b14c2482145da32ec5a01c",
+        "ticker": "ARM"
+      },
+      {
+        "error_message": "AlgoX fetch failed for DDOG: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_a44cdba475334de5b54ba895a29ba38d",
+        "occurred_at_utc": "2026-09-28T14:34:09.157407+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_8d1005a733b14c2482145da32ec5a01c",
+        "ticker": "DDOG"
+      },
+      {
+        "error_message": "AlgoX fetch failed for SNOW: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_4756004bc0d8449aaeeeefac4d561e0f",
+        "occurred_at_utc": "2026-09-28T14:34:08.825229+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_8d1005a733b14c2482145da32ec5a01c",
+        "ticker": "SNOW"
+      },
+      {
+        "error_message": "AlgoX fetch failed for NET: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_ddcd62a2124f4e90a95bfe3a0b7b92f2",
+        "occurred_at_utc": "2026-09-28T14:34:08.428341+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_8d1005a733b14c2482145da32ec5a01c",
+        "ticker": "NET"
+      },
+      {
+        "error_message": "AlgoX fetch failed for CRWD: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_f8a37874d5674eee9acee6bcdc48b207",
+        "occurred_at_utc": "2026-09-28T14:31:58.887885+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_037490ac0fd040ebb4e7401e3467d267",
+        "ticker": "CRWD"
+      },
+      {
+        "error_message": "AlgoX fetch failed for MSTR: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_257bb5e4af8543fe9fc61f7f6db479c9",
+        "occurred_at_utc": "2026-09-28T14:31:49.390995+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_037490ac0fd040ebb4e7401e3467d267",
+        "ticker": "MSTR"
+      },
+      {
+        "error_message": "AlgoX fetch failed for COIN: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_87f1190b48b6419e854bf21f92428245",
+        "occurred_at_utc": "2026-09-28T14:31:48.490604+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_037490ac0fd040ebb4e7401e3467d267",
+        "ticker": "COIN"
+      },
+      {
+        "error_message": "AlgoX fetch failed for SMCI: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_0b4f2760998a407487b18f77e1e82e31",
+        "occurred_at_utc": "2026-09-28T14:31:47.829321+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_037490ac0fd040ebb4e7401e3467d267",
+        "ticker": "SMCI"
+      },
+      {
+        "error_message": "AlgoX fetch failed for AVGO: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_4fbd35858e8f49e6b7605448f1cbee4b",
+        "occurred_at_utc": "2026-09-28T14:31:47.186562+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_037490ac0fd040ebb4e7401e3467d267",
+        "ticker": "AVGO"
+      },
+      {
+        "error_message": "AlgoX fetch failed for GOOGL: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_1afe1736ad1943188177a1bea602eda7",
+        "occurred_at_utc": "2026-09-28T14:24:51.050326+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_453f64927c36454ebf69bd1d582d96d1",
+        "ticker": "GOOGL"
+      },
+      {
+        "error_message": "AlgoX fetch failed for AMZN: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_11b04459fcac44538bcb8adb5863bcc6",
+        "occurred_at_utc": "2026-09-28T14:24:50.704736+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_453f64927c36454ebf69bd1d582d96d1",
+        "ticker": "AMZN"
+      },
+      {
+        "error_message": "AlgoX fetch failed for META: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_b8e67efb3ef247b5830e225a515dc117",
+        "occurred_at_utc": "2026-09-28T14:24:50.307062+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_453f64927c36454ebf69bd1d582d96d1",
+        "ticker": "META"
+      },
+      {
+        "error_message": "AlgoX fetch failed for MSFT: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_2ac0017cad71499fb600627580717618",
+        "occurred_at_utc": "2026-09-28T14:24:49.788323+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_453f64927c36454ebf69bd1d582d96d1",
+        "ticker": "MSFT"
+      },
+      {
+        "error_message": "AlgoX fetch failed for AAPL: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_7eaedde812034c639e110c7451afbebe",
+        "occurred_at_utc": "2026-09-28T14:24:48.531517+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_453f64927c36454ebf69bd1d582d96d1",
+        "ticker": "AAPL"
+      },
+      {
+        "error_message": "AlgoX fetch failed for RIOT: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_6066f562426f48189334aed7d0dac547",
+        "occurred_at_utc": "2026-09-28T14:18:14.187109+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_d920778e1381415997c4d54018999eb5",
+        "ticker": "RIOT"
+      },
+      {
+        "error_message": "AlgoX fetch failed for MARA: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_f4773507329b4ce9ba1459c267ed5370",
+        "occurred_at_utc": "2026-09-28T14:18:13.867374+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_d920778e1381415997c4d54018999eb5",
+        "ticker": "MARA"
+      },
+      {
+        "error_message": "AlgoX fetch failed for RIVN: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_05bde6d597d94418b6a93e3b99423f80",
+        "occurred_at_utc": "2026-09-28T14:18:13.532284+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_d920778e1381415997c4d54018999eb5",
+        "ticker": "RIVN"
+      },
+      {
+        "error_message": "AlgoX fetch failed for SOFI: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_6a1b4dcdd9054e8ab9c4b45c000d5ffb",
+        "occurred_at_utc": "2026-09-28T14:18:13.204586+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_d920778e1381415997c4d54018999eb5",
+        "ticker": "SOFI"
+      },
+      {
+        "error_message": "AlgoX fetch failed for RKLB: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_0e1cd9cfb6364b85b4b304ce51666992",
+        "occurred_at_utc": "2026-09-28T14:18:12.917416+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_d920778e1381415997c4d54018999eb5",
+        "ticker": "RKLB"
+      },
+      {
+        "error_message": "AlgoX fetch failed for KRE: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_703f225f8e4a48d9b1aab3c160aa11e7",
+        "occurred_at_utc": "2026-09-28T14:17:12.523377+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_6a16754f7fd0472d8c2436189b82041b",
+        "ticker": "KRE"
+      },
+      {
+        "error_message": "AlgoX fetch failed for XBI: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_9972a453ff0f4cf3afb6f934d684e97d",
+        "occurred_at_utc": "2026-09-28T14:17:12.207683+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_6a16754f7fd0472d8c2436189b82041b",
+        "ticker": "XBI"
+      },
+      {
+        "error_message": "AlgoX fetch failed for SOXX: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_e49f8aa0a15b4b59a8750e17e07ed520",
+        "occurred_at_utc": "2026-09-28T14:17:11.909949+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_6a16754f7fd0472d8c2436189b82041b",
+        "ticker": "SOXX"
+      },
+      {
+        "error_message": "AlgoX fetch failed for ARKK: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_9e3c326460654997b5f591ef7f8dff94",
+        "occurred_at_utc": "2026-09-28T14:17:11.597658+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_6a16754f7fd0472d8c2436189b82041b",
+        "ticker": "ARKK"
+      },
+      {
+        "error_message": "AlgoX fetch failed for XLU: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_8ca74f6568e345878ba4003b492f0714",
+        "occurred_at_utc": "2026-09-28T14:17:11.312461+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_6a16754f7fd0472d8c2436189b82041b",
+        "ticker": "XLU"
+      },
+      {
+        "error_message": "AlgoX fetch failed for XLV: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_3fbe26c572ac411ab5f8017d304a52a4",
+        "occurred_at_utc": "2026-09-28T14:16:10.922750+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_4b7d2bc77e434dcd8d8c0160463a8277",
+        "ticker": "XLV"
+      },
+      {
+        "error_message": "AlgoX fetch failed for HOOD: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_cc30272b92cb42b3bccf9f4d8325d5bb",
+        "occurred_at_utc": "2026-09-28T14:16:10.610086+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_4b7d2bc77e434dcd8d8c0160463a8277",
+        "ticker": "HOOD"
+      },
+      {
+        "error_message": "AlgoX fetch failed for OKLO: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_fe1bc60f64bd45389ff4a3a2102d403e",
+        "occurred_at_utc": "2026-09-28T14:16:10.287479+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_4b7d2bc77e434dcd8d8c0160463a8277",
+        "ticker": "OKLO"
+      },
+      {
+        "error_message": "AlgoX fetch failed for PLTR: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_67c67c259c48471a90b131e857ae905b",
+        "occurred_at_utc": "2026-09-28T14:16:09.953352+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_4b7d2bc77e434dcd8d8c0160463a8277",
+        "ticker": "PLTR"
+      },
+      {
+        "error_message": "AlgoX fetch failed for AMD: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_468e035baec849a1b816e6696b1f1550",
+        "occurred_at_utc": "2026-09-28T14:16:09.605171+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_4b7d2bc77e434dcd8d8c0160463a8277",
+        "ticker": "AMD"
+      },
+      {
+        "error_message": "AlgoX fetch failed for TSLA: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_da98f78af21c467cbe0c9edf0b675816",
+        "occurred_at_utc": "2026-09-28T14:15:09.126242+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_a9ccfeb0527642f78c9d2bbf9a3b1bb7",
+        "ticker": "TSLA"
+      },
+      {
+        "error_message": "AlgoX fetch failed for NVDA: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_daaf4da4b21b43088ea34964538db9c8",
+        "occurred_at_utc": "2026-09-28T14:15:08.760504+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_a9ccfeb0527642f78c9d2bbf9a3b1bb7",
+        "ticker": "NVDA"
+      },
+      {
+        "error_message": "AlgoX fetch failed for IWM: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_4955ac548ba0423f8cbf945f9bcc902f",
+        "occurred_at_utc": "2026-09-28T14:15:08.384288+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_a9ccfeb0527642f78c9d2bbf9a3b1bb7",
+        "ticker": "IWM"
+      },
+      {
+        "error_message": "AlgoX fetch failed for QQQ: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_3c125ff6e8804fa98ae4985b48db2e55",
+        "occurred_at_utc": "2026-09-28T14:15:08.031204+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_a9ccfeb0527642f78c9d2bbf9a3b1bb7",
+        "ticker": "QQQ"
+      },
+      {
+        "error_message": "AlgoX fetch failed for SPY: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_68392918ee5d4ddd8e51eb07752ed472",
+        "occurred_at_utc": "2026-09-28T14:15:07.635011+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_a9ccfeb0527642f78c9d2bbf9a3b1bb7",
+        "ticker": "SPY"
+      },
+      {
+        "error_message": "AlgoX fetch failed for XLI: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_5126c7553b504b388abe8a6f658a88a6",
+        "occurred_at_utc": "2026-09-28T14:04:06.467453+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_d14fcb2d26a04154b2cd7c88d988d291",
+        "ticker": "XLI"
+      },
+      {
+        "error_message": "AlgoX fetch failed for XLE: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_c55a45d4046d483882f6766b67bdf2a6",
+        "occurred_at_utc": "2026-09-28T14:04:06.112881+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_d14fcb2d26a04154b2cd7c88d988d291",
+        "ticker": "XLE"
+      },
+      {
+        "error_message": "AlgoX fetch failed for XLF: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_0fa2463125dd4d668ed8c0b3ed50a6b1",
+        "occurred_at_utc": "2026-09-28T14:04:05.800699+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_d14fcb2d26a04154b2cd7c88d988d291",
+        "ticker": "XLF"
+      },
+      {
+        "error_message": "AlgoX fetch failed for XLK: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_8f8eccac5380465c9c9627122851a71d",
+        "occurred_at_utc": "2026-09-28T14:04:05.489955+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_d14fcb2d26a04154b2cd7c88d988d291",
+        "ticker": "XLK"
+      },
+      {
+        "error_message": "AlgoX fetch failed for QBTS: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_b54565d8b47c47bdb9afafe1ecb21835",
+        "occurred_at_utc": "2026-09-28T14:04:05.207808+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_d14fcb2d26a04154b2cd7c88d988d291",
+        "ticker": "QBTS"
+      },
+      {
+        "error_message": "AlgoX fetch failed for RGTI: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_4b4f09489d10481ba06db42ee8781154",
+        "occurred_at_utc": "2026-09-28T14:03:04.847038+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_14d2017cd05746888436c5e89ac1ce7e",
+        "ticker": "RGTI"
+      },
+      {
+        "error_message": "AlgoX fetch failed for IONQ: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_a4142ae34dc445af814c339f2ecce087",
+        "occurred_at_utc": "2026-09-28T14:03:04.536408+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_14d2017cd05746888436c5e89ac1ce7e",
+        "ticker": "IONQ"
+      },
+      {
+        "error_message": "AlgoX fetch failed for SMR: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_767ef405ffd446489f55670498967ca4",
+        "occurred_at_utc": "2026-09-28T14:03:04.224627+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_14d2017cd05746888436c5e89ac1ce7e",
+        "ticker": "SMR"
+      },
+      {
+        "error_message": "AlgoX fetch failed for NNE: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_9cb0ed2f77884b028986cb89ff02d3e1",
+        "occurred_at_utc": "2026-09-28T14:03:03.921750+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_14d2017cd05746888436c5e89ac1ce7e",
+        "ticker": "NNE"
+      },
+      {
+        "error_message": "AlgoX fetch failed for CEG: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_4e8188959bf641d898a66c1eda43903f",
+        "occurred_at_utc": "2026-09-28T14:03:03.587647+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_14d2017cd05746888436c5e89ac1ce7e",
+        "ticker": "CEG"
+      },
+      {
+        "error_message": "AlgoX fetch failed for INTC: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_48ad39444d93405793d27441a0c57473",
+        "occurred_at_utc": "2026-09-28T13:53:02.726660+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_5c87f3d168e741138124742097f403b4",
+        "ticker": "INTC"
+      },
+      {
+        "error_message": "AlgoX fetch failed for TSM: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_f4e282284b7e418394a65b36aee5cf7b",
+        "occurred_at_utc": "2026-09-28T13:52:02.251309+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_d553f2376fd44d6c838c2af87a0042be",
+        "ticker": "TSM"
+      },
+      {
+        "error_message": "AlgoX fetch failed for MU: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_dc23dff857ac4fa8b2e494451131a14a",
+        "occurred_at_utc": "2026-09-28T13:52:01.935567+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_d553f2376fd44d6c838c2af87a0042be",
+        "ticker": "MU"
+      },
+      {
+        "error_message": "AlgoX fetch failed for ARM: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_bfb9c5ad53744d6098ea79545278218f",
+        "occurred_at_utc": "2026-09-28T13:52:01.614927+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_d553f2376fd44d6c838c2af87a0042be",
+        "ticker": "ARM"
+      },
+      {
+        "error_message": "AlgoX fetch failed for DDOG: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_1523614dde1840d7ac2a64dc26459aff",
+        "occurred_at_utc": "2026-09-28T13:52:01.319461+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_d553f2376fd44d6c838c2af87a0042be",
+        "ticker": "DDOG"
+      },
+      {
+        "error_message": "AlgoX fetch failed for SNOW: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_849926e8d67a441f887fe0d0209552b3",
+        "occurred_at_utc": "2026-09-28T13:52:01.004854+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_d553f2376fd44d6c838c2af87a0042be",
+        "ticker": "SNOW"
+      },
+      {
+        "error_message": "AlgoX fetch failed for NET: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_eeb828a231d146ce8d0f69288bd5e4df",
+        "occurred_at_utc": "2026-09-28T13:51:00.560864+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_c810dada03a14645adb324521dd57735",
+        "ticker": "NET"
+      },
+      {
+        "error_message": "AlgoX fetch failed for CRWD: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_b6d063d1e9524c659d0923d9876c6e12",
+        "occurred_at_utc": "2026-09-28T13:51:00.227979+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_c810dada03a14645adb324521dd57735",
+        "ticker": "CRWD"
+      },
+      {
+        "error_message": "AlgoX fetch failed for MSTR: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_049435c2630b42e9adc7982ec1e94aac",
+        "occurred_at_utc": "2026-09-28T13:50:59.916856+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_c810dada03a14645adb324521dd57735",
+        "ticker": "MSTR"
+      },
+      {
+        "error_message": "AlgoX fetch failed for COIN: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_bf3ba9d73d42417cb9131f49d1048021",
+        "occurred_at_utc": "2026-09-28T13:50:59.443817+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_c810dada03a14645adb324521dd57735",
+        "ticker": "COIN"
+      },
+      {
+        "error_message": "AlgoX fetch failed for SMCI: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_f0110e6beea9440d80da32a65adecebb",
+        "occurred_at_utc": "2026-09-28T13:50:59.078550+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_c810dada03a14645adb324521dd57735",
+        "ticker": "SMCI"
+      },
+      {
+        "error_message": "AlgoX fetch failed for VRT: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_e74fd40258f04c7fbae98d74e46ca873",
+        "occurred_at_utc": "2026-09-28T13:49:58.580048+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_3050df323a4645be9cf3041278cfa9dc",
+        "ticker": "VRT"
+      },
+      {
+        "error_message": "AlgoX fetch failed for ETN: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_af18e7f9d4ac4912a61edf7621994775",
+        "occurred_at_utc": "2026-09-28T13:49:58.258423+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_3050df323a4645be9cf3041278cfa9dc",
+        "ticker": "ETN"
+      },
+      {
+        "error_message": "AlgoX fetch failed for CRWV: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_e195bd59a6ed42aaa01ca1f4ea5d8792",
+        "occurred_at_utc": "2026-09-28T13:49:57.877284+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_3050df323a4645be9cf3041278cfa9dc",
+        "ticker": "CRWV"
+      },
+      {
+        "error_message": "AlgoX fetch failed for BE: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_c3568f0cff8a420a89ab36b6d64e6edb",
+        "occurred_at_utc": "2026-09-28T13:49:57.433236+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_3050df323a4645be9cf3041278cfa9dc",
+        "ticker": "BE"
+      },
+      {
+        "error_message": "AlgoX fetch failed for CLSK: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_6572a95d29524422a418ef7ccedc5c3c",
+        "occurred_at_utc": "2026-09-28T13:49:57.068617+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_3050df323a4645be9cf3041278cfa9dc",
+        "ticker": "CLSK"
+      },
+      {
+        "error_message": "AlgoX fetch failed for RIOT: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_81b34276c2e84b29811e0c36865b9e6f",
+        "occurred_at_utc": "2026-09-28T13:48:55.128724+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_07a91509211241b1bf6faf686b1cc915",
+        "ticker": "RIOT"
+      },
+      {
+        "error_message": "AlgoX fetch failed for MARA: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_4beef7c50f094c3eacc696b18c0455b0",
+        "occurred_at_utc": "2026-09-28T13:48:54.415941+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_07a91509211241b1bf6faf686b1cc915",
+        "ticker": "MARA"
+      },
+      {
+        "error_message": "AlgoX fetch failed for RIVN: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_0b0f922faecb4174b15efe8431484997",
+        "occurred_at_utc": "2026-09-28T13:48:53.818422+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_07a91509211241b1bf6faf686b1cc915",
+        "ticker": "RIVN"
+      },
+      {
+        "error_message": "AlgoX fetch failed for SOFI: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_f77f62525afd4ee59797dd53c87b1217",
+        "occurred_at_utc": "2026-09-28T13:48:50.494153+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_07a91509211241b1bf6faf686b1cc915",
+        "ticker": "SOFI"
+      },
+      {
+        "error_message": "AlgoX fetch failed for RKLB: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_13784216197949f3b53a197815a626ef",
+        "occurred_at_utc": "2026-09-28T13:48:49.927166+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_07a91509211241b1bf6faf686b1cc915",
+        "ticker": "RKLB"
+      },
+      {
+        "error_message": "AlgoX fetch failed for AVGO: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_4b49eab91d624cd090a605f4d77347a2",
+        "occurred_at_utc": "2026-09-28T13:46:46.411044+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_9e4b2c7df97745cab1cfaa7368d0e6d4",
+        "ticker": "AVGO"
+      },
+      {
+        "error_message": "AlgoX fetch failed for GOOGL: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_8eec98dff45a42ed8e16c2accd680c9b",
+        "occurred_at_utc": "2026-09-28T13:46:46.044166+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_9e4b2c7df97745cab1cfaa7368d0e6d4",
+        "ticker": "GOOGL"
+      },
+      {
+        "error_message": "AlgoX fetch failed for AMZN: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_f02110a24a6d4e94bb92dd787ad82fc8",
+        "occurred_at_utc": "2026-09-28T13:46:45.690562+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_9e4b2c7df97745cab1cfaa7368d0e6d4",
+        "ticker": "AMZN"
+      },
+      {
+        "error_message": "AlgoX fetch failed for META: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_65e71ea0ac8940c89d07e9d3261c4a50",
+        "occurred_at_utc": "2026-09-28T13:46:31.821599+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_9e4b2c7df97745cab1cfaa7368d0e6d4",
+        "ticker": "META"
+      },
+      {
+        "error_message": "AlgoX fetch failed for MSFT: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_bc6c9d9ae50a455990731e3deb844a6d",
+        "occurred_at_utc": "2026-09-28T13:46:14.042857+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_9e4b2c7df97745cab1cfaa7368d0e6d4",
+        "ticker": "MSFT"
+      },
+      {
+        "error_message": "AlgoX fetch failed for AAPL: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_6460372637c646228d67e21ed11eb933",
+        "occurred_at_utc": "2026-09-28T13:43:52.997575+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_0d54f36f27bc491e8fe2736d20454c71",
+        "ticker": "AAPL"
+      },
+      {
+        "error_message": "AlgoX fetch failed for HOOD: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_1e055f8768394a3292d923b3a60952e4",
+        "occurred_at_utc": "2026-09-28T13:43:52.557861+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_0d54f36f27bc491e8fe2736d20454c71",
+        "ticker": "HOOD"
+      },
+      {
+        "error_message": "AlgoX fetch failed for OKLO: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_47da074b565d45d0a767737489ddeff1",
+        "occurred_at_utc": "2026-09-28T13:43:52.000418+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_0d54f36f27bc491e8fe2736d20454c71",
+        "ticker": "OKLO"
+      },
+      {
+        "error_message": "AlgoX fetch failed for PLTR: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_e937412ca3d74d63964ee5f47e8ba1c1",
+        "occurred_at_utc": "2026-09-28T13:43:51.430382+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_0d54f36f27bc491e8fe2736d20454c71",
+        "ticker": "PLTR"
+      },
+      {
+        "error_message": "AlgoX fetch failed for AMD: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_229bf527dcbb492081835315e6f72887",
+        "occurred_at_utc": "2026-09-28T13:43:50.080541+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_0d54f36f27bc491e8fe2736d20454c71",
+        "ticker": "AMD"
+      },
+      {
+        "error_message": "AlgoX fetch failed for TSLA: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_2a44f5b436464299be66f2950b618e07",
+        "occurred_at_utc": "2026-09-28T13:41:38.898467+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_9ae14dff638941e1944c00916d2acb40",
+        "ticker": "TSLA"
+      },
+      {
+        "error_message": "AlgoX fetch failed for NVDA: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_6c7a90ce0e304b02b5015879504e75a2",
+        "occurred_at_utc": "2026-09-28T13:41:38.183621+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_9ae14dff638941e1944c00916d2acb40",
+        "ticker": "NVDA"
+      },
+      {
+        "error_message": "AlgoX fetch failed for IWM: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_76c994e0ec1145debe8ff15424451c1d",
+        "occurred_at_utc": "2026-09-28T13:41:37.347672+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_9ae14dff638941e1944c00916d2acb40",
+        "ticker": "IWM"
+      },
+      {
+        "error_message": "AlgoX fetch failed for QQQ: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_37cd98c09309413194a939a61376723c",
+        "occurred_at_utc": "2026-09-28T13:41:36.484301+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_9ae14dff638941e1944c00916d2acb40",
+        "ticker": "QQQ"
+      },
+      {
+        "error_message": "AlgoX fetch failed for SPY: [Errno 11001] getaddrinfo failed",
+        "error_type": "AdapterError",
+        "failure_id": "failure_b722b9fe15284281b24b68c14ca49dae",
+        "occurred_at_utc": "2026-09-28T13:41:26.317328+00:00",
+        "provider": "algox",
+        "retryable": true,
+        "run_id": "daemon_9ae14dff638941e1944c00916d2acb40",
+        "ticker": "SPY"
+      }
+    ]
+  },
+  "real_data_ablation": {
+    "model_average_scores": {
+      "price_only_shadow": 35.3717,
+      "no_oi_no_greeks": 47.3018,
+      "free_gex_price_macro": 58.2632,
+      "free_gex_price_only": 51.1553,
+      "no_macro_filter": 44.6495,
+      "no_dark_pool": 47.3018,
+      "no_oi": 47.3018,
+      "no_gex": 40.6722,
+      "no_flow": 47.3018,
+      "options_only": 56.3979,
+      "price_action_only": 35.3717,
+      "equal_weight": 51.9011,
+      "baseline_manual": 47.3018,
+      "baseline_full": 47.3018
+    },
+    "variant_counts": {
+      "breakeven:after_TP1_plus_retest": 1251,
+      "breakeven:after_TP1": 1251,
+      "breakeven:after_1R": 1251,
+      "breakeven:none": 1251,
+      "tp_logic:dynamic_flow_exit": 1251,
+      "tp_logic:partials_next_nodes": 1251,
+      "tp_logic:fixed_R_1_2_3": 1251,
+      "tp_logic:next_gex_node": 1251,
+      "stop_buffer:0.75": 1251,
+      "stop_buffer:0.5": 1251,
+      "stop_buffer:0.3": 1251,
+      "stop_buffer:0.15": 1251,
+      "score_model:price_only_shadow": 1251,
+      "score_model:no_oi_no_greeks": 1251,
+      "score_model:free_gex_price_macro": 1251,
+      "score_model:free_gex_price_only": 1251,
+      "score_model:no_macro_filter": 1251,
+      "score_model:no_dark_pool": 1251,
+      "score_model:no_oi": 1251,
+      "score_model:no_gex": 1251,
+      "score_model:no_flow": 1251,
+      "score_model:options_only": 1251,
+      "score_model:price_action_only": 1251,
+      "score_model:equal_weight": 1251,
+      "score_model:baseline_manual": 1251,
+      "score_model:baseline_full": 1251
+    },
+    "optimization_performed": false,
+    "note": "Collection only; no production weights or parameters changed."
+  }
+}

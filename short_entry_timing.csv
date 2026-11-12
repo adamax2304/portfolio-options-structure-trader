@@ -1,0 +1,4 @@
+dimension,bucket,N,open_or_unresolved_N,total_R,expectancy,median_R,profit_factor,win_rate,average_winner,average_loser,avg_MFE,avg_MAE,max_drawdown,prob_plus_0_5R_before_minus_1R,prob_plus_1R_before_minus_1R,sample_label
+entry_delay_bucket,1_candle_after_reclaim,69,0,-16.3762,-0.2373,0.0086,0.5257,0.5217,0.5042,-1.0463,0.7913,1.1737,16.8008,,,PRELIMINARY
+entry_delay_bucket,2_plus_candles_after_reclaim,101,0,-34.9775,-0.3463,-1.0095,0.3443,0.4554,0.3994,-0.97,0.6011,1.2963,34.9775,,,STRONGER_EVIDENCE
+entry_delay_bucket,NO_FILL,61,0,0.0,0.0,0.0,,0.0,0.0,0.0,0.0,0.0,0.0,,,PRELIMINARY

@@ -1,0 +1,3 @@
+split,N,unique_trading_days,expectancy_R,profit_factor,win_rate,median_R,avg_winner,avg_loser,MFE,MAE,max_DD,positive_day_pct,remove_best_day_expectancy,remove_best_month_expectancy,remove_best_symbol_expectancy,day_block_bootstrap_low,day_block_bootstrap_high
+DISCOVERY_60PCT,28267,231,-0.2194,0.2965,0.4818,-0.004,0.192,-0.6019,0.5981,1.1348,6202.3849,0.1732,-0.2214,-0.2164,-0.2158,-0.2529,-0.1887
+HOLDOUT_40PCT,15436,154,-0.2353,0.2578,0.4478,-0.0146,0.1825,-0.5742,0.4799,1.313,3633.1843,0.1234,-0.2424,-0.2406,-0.2593,-0.2719,-0.1941

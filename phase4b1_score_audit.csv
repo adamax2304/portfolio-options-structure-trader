@@ -1,0 +1,17 @@
+score_component,outcome,N,spearman_rank_corr,status
+level_strength,result_R,8921,-0.034,SCORE_NOT_PREDICTIVE
+level_strength,MFE_R,8971,0.0975,WEAK_OR_NEEDS_MORE_DATA
+level_strength,MAE_R,8971,0.1242,WEAK_OR_NEEDS_MORE_DATA
+raw_score,result_R,565,-0.0911,WEAK_OR_NEEDS_MORE_DATA
+raw_score,MFE_R,615,-0.0358,SCORE_NOT_PREDICTIVE
+raw_score,MAE_R,615,0.0069,SCORE_NOT_PREDICTIVE
+adjusted_score,result_R,565,-0.0911,WEAK_OR_NEEDS_MORE_DATA
+adjusted_score,MFE_R,615,-0.0358,SCORE_NOT_PREDICTIVE
+adjusted_score,MAE_R,615,0.0069,SCORE_NOT_PREDICTIVE
+confidence_score,result_R,565,,WEAK_OR_NEEDS_MORE_DATA
+confidence_score,MFE_R,615,,WEAK_OR_NEEDS_MORE_DATA
+confidence_score,MAE_R,615,,WEAK_OR_NEEDS_MORE_DATA
+direction_confidence_0_100,result_R,8921,-0.072,WEAK_OR_NEEDS_MORE_DATA
+direction_confidence_0_100,MFE_R,8971,0.1251,WEAK_OR_NEEDS_MORE_DATA
+direction_confidence_0_100,MAE_R,8971,0.186,WEAK_OR_NEEDS_MORE_DATA
+direction_confidence_0_100,branch_result_R,241001,-0.0667,WEAK_OR_NEEDS_MORE_DATA

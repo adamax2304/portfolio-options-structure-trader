@@ -1,0 +1,5 @@
+bucket,N,unique_days,expectancy,profit_factor,win_rate,median_R,average_winner,average_loser,MFE,MAE,max_drawdown,positive_day_pct,best_day,best_day_R,best_day_contribution,worst_day,worst_day_R,remove_best_day_expectancy,bootstrap_ci_low,bootstrap_ci_high
+CALL_WALL,4,1,0.3977,infinite,1.0,0.114,0.3977,0.0,1.3608,0.23,0.0,1.0,2026-09-03,1.5907,1.0,2026-09-03,1.5907,,0.3977,0.3977
+GAMMA_FLIP,1,1,0.2695,infinite,1.0,0.2695,0.2695,0.0,0.4375,0.5228,0.0,1.0,2026-09-03,0.2695,1.0,2026-09-03,0.2695,,0.2695,0.2695
+GEX_NODE,1297,19,-0.071,0.8367,0.5104,0.0033,0.7126,-0.9258,1.2376,0.9096,127.2855,0.2632,2026-08-26,21.4341,0.2328,2026-08-24,-24.5698,-0.0918,-0.1543,0.0176
+PUT_WALL,7,2,0.2054,infinite,1.0,0.0815,0.2054,0.0,1.1499,0.8557,0.0,1.0,2026-09-02,0.8636,0.6007,2026-09-03,0.5742,0.2871,0.1727,0.2871

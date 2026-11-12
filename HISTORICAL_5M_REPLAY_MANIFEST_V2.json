@@ -1,0 +1,271 @@
+{
+  "schema_version": "historical_5m_replay_manifest.v1",
+  "generated_at_utc": "2026-09-04T19:12:07.035794+00:00",
+  "parser_version": "phase3c1_5m_parser_v1",
+  "normalizer_version": "phase3c1_5m_normalizer_v1",
+  "validation_version": "phase3c1_source_validation_v1",
+  "replay_version": "phase3c1_replay_v1_existing_detector",
+  "source_version": "fds_indx_data_wrds_taq_github_master_3b7ac233",
+  "massive_status": {
+    "configured": false,
+    "credential_state": "NOT_CONFIGURED",
+    "provider": "MASSIVE_FORMERLY_POLYGON",
+    "endpoint": "/v2/aggs/ticker/{ticker}/range/5/minute/{from}/{to}",
+    "production_grade_for_this_project": false,
+    "notes": [
+      "Add MASSIVE_API_KEY to local .env to validate the free Stocks Basic entitlement."
+    ],
+    "usable": false,
+    "status": "MASSIVE_API_KEY_NOT_CONFIGURED"
+  },
+  "wrds_repo_probe": {
+    "repo": "https://github.com/Aryan092/fds-indx-data",
+    "status": "FILES_FOUND",
+    "repo_status_code": 200,
+    "description": "Index ETF (SPY, QQQ, IWM, DIA, IWB) 1-min and 5-min OHLCV data from WRDS TAQ, June 2024 - Dec 2025",
+    "default_branch": "master",
+    "license": null,
+    "size_kb": 83561,
+    "pushed_at": "2026-06-13T09:56:28Z",
+    "tree_status_code": 200,
+    "tree_truncated": false,
+    "blob_count": 67,
+    "target_5m_files": [
+      {
+        "path": "indx_data/IWM_5min.csv",
+        "size": 1754811,
+        "sha": "0f4ece43784ad6936cd7f79879bbf88d8e3e9127"
+      },
+      {
+        "path": "indx_data/QQQ_5min.csv",
+        "size": 1753401,
+        "sha": "7b0010aef1c036ae684680e0d8bbfc0aad55d92e"
+      },
+      {
+        "path": "indx_data/SPY_5min.csv",
+        "size": 1763909,
+        "sha": "fdbc9d97983701e12ab40ddb32b879e43aa11197"
+      }
+    ]
+  },
+  "raw_files": [
+    {
+      "symbol": "SPY",
+      "url": "https://raw.githubusercontent.com/Aryan092/fds-indx-data/master/indx_data/SPY_5min.csv",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\data\\historical\\phase3c1\\raw\\fds_indx_data\\SPY_5min.csv",
+      "size_bytes": 1763909,
+      "sha256": "789c248091040fcefca332967e0f191392679b9c831d3e060209306a90f47dfe",
+      "downloaded_at_utc": "2026-09-04T19:09:58.234315+00:00"
+    },
+    {
+      "symbol": "QQQ",
+      "url": "https://raw.githubusercontent.com/Aryan092/fds-indx-data/master/indx_data/QQQ_5min.csv",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\data\\historical\\phase3c1\\raw\\fds_indx_data\\QQQ_5min.csv",
+      "size_bytes": 1753401,
+      "sha256": "077b9ade0172166b82a111d3d161fa1af3cbc34fd21432a54020088742b9da33",
+      "downloaded_at_utc": "2026-09-04T19:09:58.238318+00:00"
+    },
+    {
+      "symbol": "IWM",
+      "url": "https://raw.githubusercontent.com/Aryan092/fds-indx-data/master/indx_data/IWM_5min.csv",
+      "path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\data\\historical\\phase3c1\\raw\\fds_indx_data\\IWM_5min.csv",
+      "size_bytes": 1754811,
+      "sha256": "13539dc9a3aa87a1532c50a26a031590324a45fe6e7db18d93380a959a1a5676",
+      "downloaded_at_utc": "2026-09-04T19:09:58.242313+00:00"
+    }
+  ],
+  "wrds_metrics": {
+    "SPY": {
+      "rows": 30966,
+      "unique_dates": 397,
+      "earliest": "2024-06-03",
+      "latest": "2025-12-31",
+      "columns": [
+        "datetime",
+        "open",
+        "high",
+        "low",
+        "close",
+        "volume",
+        "symbol",
+        "timestamp_et",
+        "timestamp_utc",
+        "trade_date",
+        "time"
+      ],
+      "min_time": "09:30:00",
+      "max_time": "15:55:00",
+      "bars_per_day_min": 78,
+      "bars_per_day_median": 78.0,
+      "bars_per_day_max": 78,
+      "duplicate_timestamps": 0,
+      "bad_ohlc_rows": 0,
+      "non_session_dates": [],
+      "bars_before_session_open": 0,
+      "bars_at_or_after_session_close": 216,
+      "early_close_dates": [
+        "2024-07-03",
+        "2024-11-29",
+        "2024-12-24",
+        "2025-07-03",
+        "2025-11-28",
+        "2025-12-24"
+      ],
+      "expected_missing_rth_bars_after_cleaning": 0,
+      "redistribution_license": "NO_LICENSE_FILE_IN_REPO",
+      "suitability": "EXPLORATORY_RESEARCH"
+    },
+    "QQQ": {
+      "rows": 30966,
+      "unique_dates": 397,
+      "earliest": "2024-06-03",
+      "latest": "2025-12-31",
+      "columns": [
+        "datetime",
+        "open",
+        "high",
+        "low",
+        "close",
+        "volume",
+        "symbol",
+        "timestamp_et",
+        "timestamp_utc",
+        "trade_date",
+        "time"
+      ],
+      "min_time": "09:30:00",
+      "max_time": "15:55:00",
+      "bars_per_day_min": 78,
+      "bars_per_day_median": 78.0,
+      "bars_per_day_max": 78,
+      "duplicate_timestamps": 0,
+      "bad_ohlc_rows": 0,
+      "non_session_dates": [],
+      "bars_before_session_open": 0,
+      "bars_at_or_after_session_close": 216,
+      "early_close_dates": [
+        "2024-07-03",
+        "2024-11-29",
+        "2024-12-24",
+        "2025-07-03",
+        "2025-11-28",
+        "2025-12-24"
+      ],
+      "expected_missing_rth_bars_after_cleaning": 0,
+      "redistribution_license": "NO_LICENSE_FILE_IN_REPO",
+      "suitability": "EXPLORATORY_RESEARCH"
+    },
+    "IWM": {
+      "rows": 30966,
+      "unique_dates": 397,
+      "earliest": "2024-06-03",
+      "latest": "2025-12-31",
+      "columns": [
+        "datetime",
+        "open",
+        "high",
+        "low",
+        "close",
+        "volume",
+        "symbol",
+        "timestamp_et",
+        "timestamp_utc",
+        "trade_date",
+        "time"
+      ],
+      "min_time": "09:30:00",
+      "max_time": "15:55:00",
+      "bars_per_day_min": 78,
+      "bars_per_day_median": 78.0,
+      "bars_per_day_max": 78,
+      "duplicate_timestamps": 0,
+      "bad_ohlc_rows": 0,
+      "non_session_dates": [],
+      "bars_before_session_open": 0,
+      "bars_at_or_after_session_close": 216,
+      "early_close_dates": [
+        "2024-07-03",
+        "2024-11-29",
+        "2024-12-24",
+        "2025-07-03",
+        "2025-11-28",
+        "2025-12-24"
+      ],
+      "expected_missing_rth_bars_after_cleaning": 0,
+      "redistribution_license": "NO_LICENSE_FILE_IN_REPO",
+      "suitability": "EXPLORATORY_RESEARCH"
+    }
+  },
+  "crosscheck_summary": {
+    "IWM": {
+      "status": "DAILY_ROLLUP_CROSSCHECK_COMPLETE",
+      "overlap_days": 385,
+      "close_median_bps": 4.4559,
+      "close_p95_bps": 12.9579,
+      "open_median_bps": 0.0,
+      "high_p95_bps": 612.0878,
+      "low_p95_bps": 687.8672,
+      "volume_median_deviation_pct": 9.7511,
+      "assessment": "CLOSES_USABLE_HIGH_LOW_VOLUME_REQUIRE_CAUTION"
+    },
+    "QQQ": {
+      "status": "DAILY_ROLLUP_CROSSCHECK_COMPLETE",
+      "overlap_days": 386,
+      "close_median_bps": 4.2781,
+      "close_p95_bps": 13.6623,
+      "open_median_bps": 0.0,
+      "high_p95_bps": 436.5609,
+      "low_p95_bps": 834.8591,
+      "volume_median_deviation_pct": 11.1882,
+      "assessment": "CLOSES_USABLE_HIGH_LOW_VOLUME_REQUIRE_CAUTION"
+    },
+    "SPY": {
+      "status": "DAILY_ROLLUP_CROSSCHECK_COMPLETE",
+      "overlap_days": 385,
+      "close_median_bps": 4.0555,
+      "close_p95_bps": 13.705,
+      "open_median_bps": 0.0,
+      "high_p95_bps": 192.1951,
+      "low_p95_bps": 924.8352,
+      "volume_median_deviation_pct": 16.075,
+      "assessment": "CLOSES_USABLE_HIGH_LOW_VOLUME_REQUIRE_CAUTION"
+    }
+  },
+  "artifacts": {
+    "validation_report": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\HISTORICAL_5M_SOURCE_VALIDATION.md",
+    "phase_report": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\PHASE_3C1_HISTORICAL_5M_REPLAY.md",
+    "historical_intraday_5m_v2": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_intraday_5m_v2.parquet",
+    "historical_replay_v2": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_replay_v2.parquet",
+    "historical_expanded_option_levels_v2": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_expanded_option_levels_v2.parquet",
+    "historical_control_levels_v2": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_control_levels_v2.parquet",
+    "historical_options_vs_controls_v2.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_options_vs_controls_v2.csv",
+    "historical_long_short_v2.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_long_short_v2.csv",
+    "historical_level_type_v2.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_level_type_v2.csv",
+    "historical_gex_model_comparison.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_gex_model_comparison.csv",
+    "historical_discovery_holdout_v2.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_discovery_holdout_v2.csv",
+    "historical_walkforward_v2.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_walkforward_v2.csv",
+    "historical_daily_robustness_v2.csv": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_daily_robustness_v2.csv"
+  },
+  "artifact_hashes": {
+    "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\HISTORICAL_5M_SOURCE_VALIDATION.md": "bde320b2a46e8724799601e0d60da68f1a68b4fc1ee2d25332f2ec1a5f0192d2",
+    "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\PHASE_3C1_HISTORICAL_5M_REPLAY.md": "c27de0f9e0f104449773359e161f0e4d700825021eabe33d09663bc274ad8dd5",
+    "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_intraday_5m_v2.parquet": "46a3f6749e4809aa1f29fa243e55df6529dbed7beb6a1084a30846578f90b8c4",
+    "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_replay_v2.parquet": "d95f57a61ea81f7be264bd6e6ebe0415542033cd65c09ddba788baaf25962747",
+    "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_expanded_option_levels_v2.parquet": "07649e21044137e004e4f38d3c9e517413147145cc19b204f4be5627508681f0",
+    "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_control_levels_v2.parquet": "e331e0523c1b9f4277f1698b656a883affb2bfa6c225a6ec20be919bd8695319",
+    "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_options_vs_controls_v2.csv": "525992c3f5c9e925052f7b03c2190018d7a5b7852bea53604661d02e5df5889a",
+    "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_long_short_v2.csv": "5f66db4204a557c43e73e5655051862ba4ec5fbe8b20219f818f2ba064164367",
+    "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_level_type_v2.csv": "f48aa78196de1ea5b4538e4d06e71ded2f7c5782fcabef216026c8ef2070d164",
+    "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_gex_model_comparison.csv": "4415edd2e8884f87cdba3096b1d1e82e35c65069f2e86e857ef027d65e9ea269",
+    "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_discovery_holdout_v2.csv": "e511aa4689aabbd20535e32ef4ae253cfc733f92b1aadbc64d1449ec9c49e5c2",
+    "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_walkforward_v2.csv": "8814d141c1aeb8a6ec1d356c08992dc0b42367db0b6f99cdd4a54136f151dc4c",
+    "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\historical_daily_robustness_v2.csv": "2b9481caefd18e2a8db88fd992a9f379acd6d28ca71116e0e8ae92e286886907"
+  },
+  "historical_data_tiers": {
+    "TIER_H1_FULL_INTRADAY": "Timestamped historical option-chain snapshots with intraday OI/Greeks/IV where available, plus underlying intraday OHLCV.",
+    "TIER_H2_DAILY_CHAIN": "One option chain/OI snapshot per day. Levels are static for the next session and must be known before the tested intraday decision.",
+    "TIER_H3_PARTIAL_CHAIN": "Incomplete chain or structure snapshot. Missing OI/Greeks/expiries are explicit; usable only for exploratory reconstruction.",
+    "TIER_H4_PRICE_ONLY_CONTROL": "Underlying-only control with no option-derived structure.",
+    "WRDS_TAQ_PUBLIC_GITHUB_EXPLORATORY": "Public GitHub 5m files claiming WRDS TAQ source; technically usable but weak redistribution provenance."
+  }
+}

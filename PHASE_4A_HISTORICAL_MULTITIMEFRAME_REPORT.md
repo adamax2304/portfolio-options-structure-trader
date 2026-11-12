@@ -1,0 +1,214 @@
+# Phase 4A-H Historical Multi-Timeframe Strategy Replay
+
+Generated: 2026-09-04T23:33:50.478732+00:00
+
+Namespace: `PHASE_4A_HISTORICAL`
+
+This is a separate historical research pipeline. It uses D-1 EOD option-chain-derived levels and validated historical 5m OHLCV. It does not use or modify the prospective Phase 4A tables, canonical paper behavior, live daemon settings, provider gates, Portfolio OS boundaries, or live-execution settings.
+
+## Critical answers
+
+1. Does 15m confirmation beat 5m? `5m expectancy -0.1701 / PF 0.6026 / N 126851; 15m expectancy -0.1447 / PF 0.5537 / N 68202.`
+2. Do Top-3/Top-5 levels beat all levels? `TOP_5_LEVELS: expectancy -0.1332, PF 0.6092, N 7150, days 384`
+3. Does reclaim beat rejection? `RECLAIM: expectancy -0.1419, PF 0.7103, N 18922, days 238`
+4. Does breakout work better in some regimes? `BREAKOUT: expectancy -0.1115, PF 0.7699, N 56335, days 372`
+5. LONG vs SHORT? `SHORT: expectancy -0.082, PF 0.7917, N 84328, days 366`
+6. Which holding horizon is natural? `60m: expectancy -0.0494, PF 0.7753, N 165531, days 384`
+7. Which stop width works best without overfitting? `STOP_D_STRUCTURE_PLUS_0_50_ATR: expectancy -0.134, PF 0.6457, N 8356, days 384`
+8. Do options levels beat matched price controls? `Options expectancy -0.1612 / PF 0.5884 / N 195053; best control PREVIOUS_DAY_HIGH: expectancy -0.0774, PF 0.7638, N 8340, days 383.`
+9. Does any result survive holdout and walk-forward? `Discovery winners 26; holdout survivors 18; walk-forward windows 4; total walk-forward survivors 0.`
+10. Is there any historically supported edge? `SUPPORTED only if positive expectancy, PF>1, positive holdout, walk-forward survival, and robustness are all present. See discovery/holdout and robustness CSVs; report does not promote canonical behavior.`
+
+## Data and scope
+
+- Symbols: SPY, QQQ, IWM
+- Static options model used: GEX_MODEL_C_ABSOLUTE_GAMMA_CONCENTRATION
+- Trading days in 5m dataset: 384
+- Level clusters considered: 5266
+- Parent economic level interactions: 8356
+- Historical branch rows: 334208
+- Resolved option-branch rows: 195053
+- Resolved matched-control rows: 41748
+- Variants tested: 40
+- Replay version: `phase4a_historical_multitimeframe_replay_v1`
+- Event deduplication: `phase4a_historical_60m_level_episode_dedup_v1`
+- Branch matrix: `phase4a_historical_A_B_E_matrix_v1`
+
+## What could not be reconstructed honestly
+
+- VARIANT_C_PERSISTENT_INTRADAY_5M: HISTORICALLY_UNAVAILABLE — Requires true intraday options-level persistence/strengthening snapshots.
+- VARIANT_D_PERSISTENT_INTRADAY_15M_5M: HISTORICALLY_UNAVAILABLE — Requires true intraday options-level persistence/strengthening snapshots.
+
+No intraday persistence or strengthening state was fabricated from static D-1 levels.
+
+Signed dealer-assumption models A/B are intentionally not treated as separate Phase 4A-H intraday-equivalent signals here. This run screens strong static D-1 option concentration levels using the sign-agnostic gamma concentration model.
+
+## Overall options-level result
+
+| comparison_group | N | unique_days | expectancy_R | PF | win_rate | median_R | avg_winner | avg_loser | MFE | MAE | max_DD | positive_day_pct | day_block_ci_low | day_block_ci_high |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| OPTIONS_STRONG_LEVELS | 195053 | 384 | -0.1612 | 0.5884 | 0.4252 | -0.0521 | 0.5421 | -0.6816 | 1.7419 | 2.1785 | 31609.0175 | 0.263 | -0.1564 | -0.1142 |
+
+## Timeframe comparison
+
+| strategy_variant | confirmation_tf | N | unique_days | expectancy_R | PF | win_rate | median_R | avg_winner | avg_loser | MFE | MAE | max_DD | positive_day_pct | day_block_ci_low | day_block_ci_high |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | 15m | 33795 | 383 | -0.1438 | 0.5542 | 0.4296 | -0.0264 | 0.4162 | -0.5656 | 1.1485 | 1.5549 | 4917.7643 | 0.3238 | -0.1486 | -0.0909 |
+| VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | 15m | 34407 | 383 | -0.1456 | 0.5531 | 0.4296 | -0.0264 | 0.4195 | -0.5712 | 1.1646 | 1.593 | 5048.4673 | 0.3133 | -0.1487 | -0.0897 |
+| VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | 5m | 126851 | 384 | -0.1701 | 0.6026 | 0.4229 | -0.0833 | 0.6099 | -0.7417 | 2.0566 | 2.5035 | 21674.335 | 0.2578 | -0.1656 | -0.1229 |
+
+## Level-strength comparison
+
+| level_filter | strategy_variant | management_variant | N | unique_days | expectancy_R | PF | win_rate | median_R | avg_winner | avg_loser | MFE | MAE | max_DD | positive_day_pct | day_block_ci_low | day_block_ci_high |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| GAMMA_FLIP | VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | TM_FIXED_2R | 72 | 32 | -0.1313 | 0.6308 | 0.4306 | -0.0215 | 0.521 | -0.6245 | 0.6336 | 1.7808 | 17.3949 | 0.4688 | -0.2825 | 0.1326 |
+| TOP_1_LEVEL | VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | TM_FIXED_2R | 72 | 32 | -0.1313 | 0.6308 | 0.4306 | -0.0215 | 0.521 | -0.6245 | 0.6336 | 1.7808 | 17.3949 | 0.4688 | -0.2825 | 0.1326 |
+| STRONGEST_ABSOLUTE_GAMMA_ZONES | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | TM_FIXED_0_5R | 5911 | 384 | -0.1318 | 0.6213 | 0.5243 | 0.0256 | 0.4125 | -0.7316 | 2.1452 | 2.5066 | 781.1101 | 0.3073 | -0.1255 | -0.0803 |
+| CALL_WALL | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | TM_FIXED_0_5R | 3283 | 368 | -0.1323 | 0.6202 | 0.5196 | 0.0217 | 0.4157 | -0.7251 | 2.1305 | 2.5406 | 436.3518 | 0.3859 | -0.1002 | -0.0474 |
+| TOP_5_LEVELS | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | TM_FIXED_0_5R | 7150 | 384 | -0.1332 | 0.6092 | 0.5194 | 0.0162 | 0.3998 | -0.7093 | 2.0133 | 2.4187 | 955.3404 | 0.2943 | -0.1298 | -0.0903 |
+| TOP_3_LEVELS | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | TM_FIXED_0_5R | 5612 | 383 | -0.1335 | 0.6142 | 0.521 | 0.018 | 0.4079 | -0.7225 | 2.0395 | 2.4818 | 752.1946 | 0.3238 | -0.1191 | -0.0798 |
+| GEX_OI_CLUSTER | VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | TM_FIXED_1_5R | 2369 | 372 | -0.1335 | 0.5959 | 0.4031 | -0.0374 | 0.4883 | -0.5534 | 1.0405 | 1.5002 | 321.3394 | 0.3602 | -0.1187 | -0.0334 |
+| GEX_OI_CLUSTER | VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | TM_FIXED_1_5R | 2331 | 372 | -0.1342 | 0.5915 | 0.4024 | -0.0376 | 0.4829 | -0.5497 | 1.0256 | 1.4735 | 316.4234 | 0.3548 | -0.1258 | -0.0386 |
+| GEX_OI_CLUSTER | VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | TM_FIXED_2R | 2369 | 372 | -0.1353 | 0.6027 | 0.3883 | -0.0466 | 0.5288 | -0.557 | 1.0405 | 1.5002 | 323.8302 | 0.3333 | -0.1248 | -0.0285 |
+| GEX_OI_CLUSTER | VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | TM_FIXED_2R | 2331 | 372 | -0.1356 | 0.5995 | 0.3878 | -0.0466 | 0.5234 | -0.5531 | 1.0256 | 1.4735 | 320.2743 | 0.3387 | -0.1273 | -0.0352 |
+| TOP_5_LEVELS | VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | TM_FIXED_1_5R | 3155 | 382 | -0.1358 | 0.6137 | 0.3959 | -0.0473 | 0.5449 | -0.5818 | 1.1536 | 1.5893 | 439.278 | 0.3586 | -0.1357 | -0.0613 |
+| GEX_OI_CLUSTER | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | TM_FIXED_1_5R | 4804 | 380 | -0.1375 | 0.6849 | 0.3872 | -0.1129 | 0.7719 | -0.7121 | 1.7885 | 2.2234 | 664.0618 | 0.3632 | -0.112 | -0.0365 |
+| GAMMA_FLIP | VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | TM_FIXED_2R | 71 | 31 | -0.1381 | 0.6171 | 0.4225 | -0.0233 | 0.5267 | -0.6245 | 0.6373 | 1.8056 | 17.746 | 0.4516 | -0.3 | 0.1371 |
+| TOP_1_LEVEL | VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | TM_FIXED_2R | 71 | 31 | -0.1381 | 0.6171 | 0.4225 | -0.0233 | 0.5267 | -0.6245 | 0.6373 | 1.8056 | 17.746 | 0.4516 | -0.3 | 0.1371 |
+| CALL_WALL | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | TM_FIXED_1_5R | 3283 | 368 | -0.1382 | 0.7092 | 0.3789 | -0.2161 | 0.8895 | -0.7653 | 2.1305 | 2.5406 | 458.8483 | 0.375 | -0.0994 | -0.0056 |
+| TOP_5_LEVELS | VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | TM_FIXED_0_5R | 3155 | 382 | -0.1385 | 0.5164 | 0.477 | -0.0058 | 0.3101 | -0.5478 | 1.1536 | 1.5893 | 438.5771 | 0.3743 | -0.1313 | -0.0819 |
+| GEX_OI_CLUSTER | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | TM_FIXED_0_5R | 4804 | 380 | -0.1387 | 0.5788 | 0.5104 | 0.0049 | 0.3733 | -0.6725 | 1.7885 | 2.2234 | 668.5569 | 0.3211 | -0.1138 | -0.0674 |
+| GEX_OI_CLUSTER | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | TM_FIXED_1R | 4804 | 380 | -0.1392 | 0.6532 | 0.428 | -0.053 | 0.6126 | -0.7017 | 1.7885 | 2.2234 | 670.8929 | 0.3579 | -0.1074 | -0.0476 |
+| TOP_5_LEVELS | VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | TM_FIXED_1_5R | 3213 | 382 | -0.1396 | 0.6081 | 0.3943 | -0.0509 | 0.5494 | -0.5882 | 1.1697 | 1.6234 | 457.6257 | 0.356 | -0.1367 | -0.0611 |
+| GEX_OI_CLUSTER | VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | TM_HALF_0_5R_RUNNER | 2369 | 372 | -0.1398 | 0.4926 | 0.4732 | -0.0055 | 0.2867 | -0.5228 | 1.0405 | 1.5002 | 330.2825 | 0.3495 | -0.127 | -0.0623 |
+| GEX_OI_CLUSTER | VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | TM_HALF_0_5R_RUNNER | 2331 | 372 | -0.1398 | 0.4906 | 0.4719 | -0.006 | 0.2852 | -0.5196 | 1.0256 | 1.4735 | 324.8274 | 0.3495 | -0.1287 | -0.066 |
+| GEX_OI_CLUSTER | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | TM_HALF_0_5R_RUNNER | 4804 | 380 | -0.1405 | 0.5732 | 0.5104 | 0.0049 | 0.3697 | -0.6725 | 1.7885 | 2.2234 | 675.8208 | 0.3342 | -0.1196 | -0.068 |
+| CALL_WALL | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | TM_FIXED_1R | 3283 | 368 | -0.1409 | 0.677 | 0.4225 | -0.0953 | 0.699 | -0.7553 | 2.1305 | 2.5406 | 465.4741 | 0.3832 | -0.1108 | -0.0306 |
+| CALL_WALL | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | TM_FIXED_2R | 3283 | 368 | -0.1409 | 0.7179 | 0.3524 | -0.3801 | 1.0177 | -0.7714 | 2.1305 | 2.5406 | 470.5429 | 0.3777 | -0.0961 | 0.0124 |
+| GAMMA_FLIP | VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | TM_HALF_0_5R_RUNNER | 72 | 32 | -0.1409 | 0.5345 | 0.5139 | 0.0015 | 0.3149 | -0.6229 | 0.6336 | 1.7808 | 14.443 | 0.5 | -0.256 | 0.0709 |
+| TOP_1_LEVEL | VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | TM_HALF_0_5R_RUNNER | 72 | 32 | -0.1409 | 0.5345 | 0.5139 | 0.0015 | 0.3149 | -0.6229 | 0.6336 | 1.7808 | 14.443 | 0.5 | -0.256 | 0.0709 |
+| TOP_5_LEVELS | VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | TM_FIXED_0_5R | 3213 | 382 | -0.141 | 0.5132 | 0.4768 | -0.0058 | 0.3118 | -0.5536 | 1.1697 | 1.6234 | 454.5249 | 0.3586 | -0.1334 | -0.0836 |
+| GEX_OI_CLUSTER | VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | TM_FIXED_0_5R | 2331 | 372 | -0.1413 | 0.4849 | 0.4719 | -0.006 | 0.2819 | -0.5196 | 1.0256 | 1.4735 | 328.4773 | 0.3548 | -0.1293 | -0.0647 |
+| GEX_OI_CLUSTER | VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | TM_FIXED_0_5R | 2369 | 372 | -0.1414 | 0.4866 | 0.4732 | -0.0055 | 0.2832 | -0.5228 | 1.0405 | 1.5002 | 334.4536 | 0.3522 | -0.1269 | -0.0626 |
+| STRONGEST_ABSOLUTE_GAMMA_ZONES | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | TM_FIXED_1R | 5911 | 384 | -0.142 | 0.6747 | 0.4246 | -0.103 | 0.6934 | -0.7585 | 2.1452 | 2.5066 | 842.2057 | 0.3177 | -0.1338 | -0.0761 |
+| ... | 186 more rows omitted | | | | | | | | | | | | | | | |
+
+## Entry comparison
+
+| entry_variant | strategy_variant | N | unique_days | expectancy_R | PF | win_rate | median_R | avg_winner | avg_loser | MFE | MAE | max_DD | positive_day_pct | day_block_ci_low | day_block_ci_high |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ENTRY_1_CLOSE_RECLAIM | VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | 33795 | 383 | -0.1438 | 0.5542 | 0.4296 | -0.0264 | 0.4162 | -0.5656 | 1.1485 | 1.5549 | 4917.7643 | 0.3238 | -0.1486 | -0.0909 |
+| ENTRY_1_CLOSE_RECLAIM | VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | 34407 | 383 | -0.1456 | 0.5531 | 0.4296 | -0.0264 | 0.4195 | -0.5712 | 1.1646 | 1.593 | 5048.4673 | 0.3133 | -0.1487 | -0.0897 |
+| ENTRY_5_MARKET_ALIGNMENT | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | 7731 | 384 | -0.1643 | 0.6092 | 0.4225 | -0.0726 | 0.6063 | -0.728 | 1.9842 | 2.4215 | 1278.4238 | 0.2656 | -0.1617 | -0.1136 |
+| ENTRY_4_VOLUME_CONFIRMATION | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | 4198 | 351 | -0.1664 | 0.6136 | 0.4166 | -0.1078 | 0.6342 | -0.7381 | 1.9217 | 2.2566 | 706.8122 | 0.302 | -0.2017 | -0.1145 |
+| ENTRY_1_CLOSE_RECLAIM | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | 108591 | 384 | -0.1687 | 0.6031 | 0.4247 | -0.0783 | 0.6033 | -0.7385 | 2.0517 | 2.504 | 18392.2376 | 0.2552 | -0.1655 | -0.1228 |
+| ENTRY_3_SWEEP_RECLAIM_RETEST | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | 628 | 230 | -0.1776 | 0.6485 | 0.4156 | -0.4682 | 0.7884 | -0.8647 | 2.4749 | 2.469 | 112.7734 | 0.387 | -0.1827 | -0.0149 |
+| ENTRY_2_RECLAIM_RETEST | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | 5703 | 380 | -0.2076 | 0.5747 | 0.3952 | -0.2827 | 0.7095 | -0.8069 | 2.3026 | 2.7909 | 1187.7675 | 0.2684 | -0.2047 | -0.1352 |
+
+## Stop comparison
+
+| stop_variant | strategy_variant | N | unique_days | expectancy_R | PF | win_rate | median_R | avg_winner | avg_loser | MFE | MAE | max_DD | positive_day_pct | day_block_ci_low | day_block_ci_high |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| STOP_D_STRUCTURE_PLUS_0_50_ATR | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | 8356 | 384 | -0.134 | 0.6457 | 0.4399 | -0.0435 | 0.5551 | -0.6753 | 1.4824 | 1.8406 | 1124.9435 | 0.2891 | -0.134 | -0.0937 |
+| STOP_A_CURRENT_STRUCTURAL | VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | 33795 | 383 | -0.1438 | 0.5542 | 0.4296 | -0.0264 | 0.4162 | -0.5656 | 1.1485 | 1.5549 | 4917.7643 | 0.3238 | -0.1486 | -0.0909 |
+| STOP_A_CURRENT_STRUCTURAL | VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | 34407 | 383 | -0.1456 | 0.5531 | 0.4296 | -0.0264 | 0.4195 | -0.5712 | 1.1646 | 1.593 | 5048.4673 | 0.3133 | -0.1487 | -0.0897 |
+| STOP_C_STRUCTURE_PLUS_0_30_ATR | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | 8356 | 384 | -0.1459 | 0.6308 | 0.4345 | -0.0522 | 0.5736 | -0.6988 | 1.6436 | 2.0209 | 1225.6596 | 0.276 | -0.1451 | -0.1005 |
+| STOP_B_STRUCTURE_PLUS_0_15_ATR | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | 8356 | 384 | -0.1475 | 0.6352 | 0.4315 | -0.0588 | 0.5953 | -0.7115 | 1.7962 | 2.1893 | 1240.1782 | 0.276 | -0.1467 | -0.1024 |
+| STOP_A_CURRENT_STRUCTURAL | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | 93464 | 384 | -0.1562 | 0.6267 | 0.4301 | -0.0684 | 0.6096 | -0.7342 | 2.0099 | 2.4203 | 14676.7512 | 0.2734 | -0.1528 | -0.1084 |
+| STOP_E_ZONE_INVALIDATION | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | 8319 | 384 | -0.4094 | 0.363 | 0.3042 | -1.0 | 0.767 | -0.9238 | 3.8355 | 4.9042 | 3411.1942 | 0.0885 | -0.3998 | -0.3416 |
+
+## Management comparison
+
+| management_variant | strategy_variant | N | unique_days | expectancy_R | PF | win_rate | median_R | avg_winner | avg_loser | MFE | MAE | max_DD | positive_day_pct | day_block_ci_low | day_block_ci_high |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| TM_FIXED_1_5R | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | 8356 | 384 | -0.1286 | 0.7148 | 0.3871 | -0.1473 | 0.8323 | -0.7356 | 1.9913 | 2.4008 | 1084.2328 | 0.3099 | -0.1267 | -0.0736 |
+| TM_FIXED_1_5R | VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | 3755 | 383 | -0.1287 | 0.6253 | 0.3995 | -0.0444 | 0.5379 | -0.5722 | 1.1485 | 1.5549 | 496.0051 | 0.3551 | -0.1372 | -0.0724 |
+| TM_FIXED_1_5R | VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | 3823 | 383 | -0.1308 | 0.6237 | 0.3989 | -0.0454 | 0.5434 | -0.5782 | 1.1646 | 1.593 | 510.6093 | 0.3499 | -0.1351 | -0.071 |
+| TM_FIXED_2R | VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | 3755 | 383 | -0.1326 | 0.6277 | 0.383 | -0.056 | 0.584 | -0.5774 | 1.1485 | 1.5549 | 515.0522 | 0.3368 | -0.1502 | -0.0727 |
+| TM_FIXED_0_5R | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | 8356 | 384 | -0.1339 | 0.6032 | 0.5176 | 0.0107 | 0.3931 | -0.6993 | 1.9913 | 2.4008 | 1121.5004 | 0.2891 | -0.1301 | -0.0956 |
+| TM_FIXED_2R | VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | 3823 | 383 | -0.1354 | 0.6243 | 0.3822 | -0.0582 | 0.589 | -0.5835 | 1.1646 | 1.593 | 532.8188 | 0.3316 | -0.1481 | -0.0723 |
+| TM_FIXED_1R | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | 8356 | 384 | -0.1362 | 0.6726 | 0.4276 | -0.0675 | 0.6541 | -0.7265 | 1.9913 | 2.4008 | 1142.8549 | 0.3021 | -0.1316 | -0.088 |
+| TM_FIXED_0_5R | VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | 3755 | 383 | -0.1382 | 0.5111 | 0.477 | -0.0054 | 0.3028 | -0.5402 | 1.1485 | 1.5549 | 520.2625 | 0.3551 | -0.1331 | -0.0846 |
+| TM_FIXED_0_5R | VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | 3823 | 383 | -0.1399 | 0.5094 | 0.4774 | -0.0054 | 0.3044 | -0.5458 | 1.1646 | 1.593 | 536.4669 | 0.3446 | -0.1326 | -0.0844 |
+| TM_FIXED_2R | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | 8356 | 384 | -0.1401 | 0.7055 | 0.3593 | -0.2264 | 0.934 | -0.7423 | 1.9913 | 2.4008 | 1184.4401 | 0.3307 | -0.1426 | -0.0796 |
+| TM_HALF_0_5R_RUNNER | VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | 3755 | 383 | -0.1404 | 0.5033 | 0.4767 | -0.0054 | 0.2984 | -0.54 | 1.1485 | 1.5549 | 529.8428 | 0.3081 | -0.1454 | -0.0904 |
+| TM_HALF_0_5R_RUNNER | VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | 3823 | 383 | -0.1424 | 0.5007 | 0.4771 | -0.0054 | 0.2994 | -0.5456 | 1.1646 | 1.593 | 547.276 | 0.3029 | -0.1443 | -0.0892 |
+| TM_HALF_0_5R_RUNNER | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | 8356 | 384 | -0.1435 | 0.5747 | 0.5175 | 0.0105 | 0.3747 | -0.6991 | 1.9913 | 2.4008 | 1202.5795 | 0.25 | -0.1418 | -0.103 |
+| TM_FIXED_1R | VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | 3755 | 383 | -0.1443 | 0.5619 | 0.4186 | -0.0322 | 0.4422 | -0.5667 | 1.1485 | 1.5549 | 546.2359 | 0.3499 | -0.1435 | -0.0854 |
+| TM_FIXED_1R | VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | 3823 | 383 | -0.1451 | 0.5634 | 0.419 | -0.0324 | 0.4469 | -0.5721 | 1.1646 | 1.593 | 557.7018 | 0.3342 | -0.144 | -0.0847 |
+| TM_V0_CURRENT | VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | 3755 | 383 | -0.1488 | 0.5484 | 0.4186 | -0.0322 | 0.4316 | -0.5667 | 1.1485 | 1.5549 | 566.4314 | 0.3238 | -0.1556 | -0.0951 |
+| TM_HALF_1R_RUNNER | VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | 3755 | 383 | -0.1495 | 0.5463 | 0.4186 | -0.0322 | 0.4299 | -0.5667 | 1.1485 | 1.5549 | 567.6472 | 0.3055 | -0.1568 | -0.0923 |
+| TM_V3_TP1_PLUS_RUNNER | VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | 3755 | 383 | -0.1495 | 0.5463 | 0.4186 | -0.0322 | 0.4299 | -0.5667 | 1.1485 | 1.5549 | 567.6472 | 0.3055 | -0.1568 | -0.0923 |
+| TM_V0_CURRENT | VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | 3823 | 383 | -0.15 | 0.5487 | 0.419 | -0.0324 | 0.4351 | -0.5721 | 1.1646 | 1.593 | 579.1651 | 0.3238 | -0.1555 | -0.0946 |
+| TM_HALF_1R_RUNNER | VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | 3823 | 383 | -0.1506 | 0.547 | 0.419 | -0.0324 | 0.4338 | -0.5721 | 1.1646 | 1.593 | 580.4179 | 0.3107 | -0.1559 | -0.0917 |
+| TM_V3_TP1_PLUS_RUNNER | VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | 3823 | 383 | -0.1506 | 0.547 | 0.419 | -0.0324 | 0.4338 | -0.5721 | 1.1646 | 1.593 | 580.4179 | 0.3107 | -0.1559 | -0.0917 |
+| TM_HALF_1R_RUNNER | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | 8356 | 384 | -0.1538 | 0.6302 | 0.4276 | -0.0675 | 0.6129 | -0.7265 | 1.9913 | 2.4008 | 1293.0013 | 0.2812 | -0.1515 | -0.1046 |
+| TM_V3_TP1_PLUS_RUNNER | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | 8356 | 384 | -0.1538 | 0.6302 | 0.4276 | -0.0675 | 0.6129 | -0.7265 | 1.9913 | 2.4008 | 1293.0013 | 0.2812 | -0.1515 | -0.1046 |
+| TM_STRUCTURE_TARGETS | VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | 3755 | 383 | -0.1624 | 0.4935 | 0.4554 | -0.0169 | 0.3475 | -0.5888 | 1.1485 | 1.5549 | 617.8924 | 0.2977 | -0.1765 | -0.1177 |
+| TM_STRUCTURE_TARGETS | VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | 3823 | 383 | -0.1655 | 0.4896 | 0.4549 | -0.0175 | 0.349 | -0.5949 | 1.1646 | 1.593 | 638.6427 | 0.2898 | -0.1758 | -0.1199 |
+| TM_V0_CURRENT | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | 60003 | 384 | -0.1922 | 0.57 | 0.4091 | -0.1255 | 0.6228 | -0.7565 | 2.1294 | 2.6179 | 11581.7395 | 0.2214 | -0.1866 | -0.1424 |
+| TM_STRUCTURE_TARGETS | VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | 8356 | 384 | -0.2123 | 0.5168 | 0.4181 | -0.1095 | 0.543 | -0.755 | 1.9913 | 2.4008 | 1777.3206 | 0.224 | -0.217 | -0.1557 |
+
+## Options vs matched controls
+
+| comparison_group | N | unique_days | expectancy_R | PF | win_rate | median_R | avg_winner | avg_loser | MFE | MAE | max_DD | positive_day_pct | day_block_ci_low | day_block_ci_high |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| PREVIOUS_DAY_HIGH | 8340 | 383 | -0.0774 | 0.7638 | 0.4484 | -0.0276 | 0.5582 | -0.5942 | 1.5287 | 2.14 | 657.5698 | 0.3603 | -0.0916 | -0.0404 |
+| PREVIOUS_DAY_LOW | 8340 | 383 | -0.1072 | 0.6644 | 0.452 | -0.017 | 0.4697 | -0.5831 | 1.9885 | 1.2976 | 903.2871 | 0.3316 | -0.1067 | -0.0628 |
+| VWAP | 8356 | 384 | -0.1511 | 0.6325 | 0.4272 | -0.0673 | 0.6086 | -0.7177 | 2.1214 | 2.3315 | 1278.7883 | 0.2812 | -0.1512 | -0.1045 |
+| OPTIONS_STRONG_LEVELS | 195053 | 384 | -0.1612 | 0.5884 | 0.4252 | -0.0521 | 0.5421 | -0.6816 | 1.7419 | 2.1785 | 31609.0175 | 0.263 | -0.1564 | -0.1142 |
+| ROUND_NUMBER | 8356 | 384 | -0.163 | 0.6123 | 0.4223 | -0.0762 | 0.6095 | -0.7278 | 2.0771 | 2.4755 | 1371.0765 | 0.2578 | -0.1613 | -0.1165 |
+| MATCHED_RANDOM_NEARBY_LEVEL | 8356 | 384 | -0.1651 | 0.6106 | 0.4223 | -0.0771 | 0.6132 | -0.7342 | 2.1914 | 2.6258 | 1387.8386 | 0.2526 | -0.163 | -0.1182 |
+
+## Discovery / holdout
+
+| strategy_variant | entry_variant | stop_variant | management_variant | direction | structural_family | sample_split | N | unique_days | expectancy_R | PF | win_rate | median_R | avg_winner | avg_loser | MFE | MAE | max_DD | positive_day_pct | day_block_ci_low | day_block_ci_high |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_FIXED_2R | SHORT | BREAKOUT | HOLDOUT | 108 | 77 | 0.4679 | 2.0849 | 0.5 | -0.0002 | 1.7984 | -0.8626 | 8.2939 | 1.6087 | 5.5229 | 0.5584 | 0.2194 | 0.765 |
+| VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_FIXED_2R | SHORT | BREAKOUT | HOLDOUT | 102 | 72 | 0.46 | 2.0524 | 0.4902 | -0.0288 | 1.8299 | -0.8573 | 8.2541 | 1.6496 | 6.0004 | 0.5556 | 0.2081 | 0.717 |
+| VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_FIXED_1_5R | SHORT | BREAKOUT | HOLDOUT | 108 | 77 | 0.2869 | 1.6675 | 0.5093 | 0.0259 | 1.4075 | -0.876 | 8.2939 | 1.6087 | 5.9723 | 0.5714 | 0.0856 | 0.5395 |
+| VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_FIXED_1_5R | SHORT | BREAKOUT | HOLDOUT | 102 | 72 | 0.2681 | 1.6155 | 0.5 | -0.0002 | 1.4073 | -0.8711 | 8.2541 | 1.6496 | 7.4723 | 0.5694 | 0.0601 | 0.4792 |
+| VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_STRUCTURE_TARGETS | SHORT | BREAKOUT | HOLDOUT | 108 | 77 | 0.2673 | 1.5971 | 0.463 | -0.2215 | 1.5442 | -0.8335 | 8.2939 | 1.6087 | 5.6569 | 0.4545 | 0.0129 | 0.72 |
+| VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_FIXED_2R | SHORT | BREAKOUT | HOLDOUT | 582 | 141 | 0.2623 | 1.5474 | 0.4502 | -0.24 | 1.6473 | -0.8716 | 5.8233 | 1.464 | 14.633 | 0.5816 | 0.0998 | 0.3878 |
+| VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_STRUCTURE_TARGETS | SHORT | BREAKOUT | HOLDOUT | 102 | 72 | 0.2579 | 1.5678 | 0.4608 | -0.2377 | 1.5455 | -0.8424 | 8.2541 | 1.6496 | 5.6569 | 0.4583 | -0.0349 | 0.7342 |
+| VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_HALF_1R_RUNNER | SHORT | BREAKOUT | HOLDOUT | 108 | 77 | 0.2002 | 1.4978 | 0.537 | 0.5 | 1.1214 | -0.8685 | 8.2939 | 1.6087 | 4.5004 | 0.5844 | -0.0065 | 0.4236 |
+| VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_V3_TP1_PLUS_RUNNER | SHORT | BREAKOUT | HOLDOUT | 108 | 77 | 0.2002 | 1.4978 | 0.537 | 0.5 | 1.1214 | -0.8685 | 8.2939 | 1.6087 | 4.5004 | 0.5844 | -0.0065 | 0.4236 |
+| VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_HALF_1R_RUNNER | SHORT | BREAKOUT | HOLDOUT | 102 | 72 | 0.1923 | 1.4736 | 0.5294 | 0.5 | 1.1304 | -0.863 | 8.2541 | 1.6496 | 5.0433 | 0.5833 | -0.0283 | 0.3699 |
+| VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_V3_TP1_PLUS_RUNNER | SHORT | BREAKOUT | HOLDOUT | 102 | 72 | 0.1923 | 1.4736 | 0.5294 | 0.5 | 1.1304 | -0.863 | 8.2541 | 1.6496 | 5.0433 | 0.5833 | -0.0283 | 0.3699 |
+| VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_HALF_0_5R_RUNNER | SHORT | BREAKOUT | HOLDOUT | 102 | 72 | 0.189 | 1.6708 | 0.6765 | 0.25 | 0.6959 | -0.8708 | 8.2541 | 1.6496 | 4.5004 | 0.6944 | 0.0216 | 0.3475 |
+| VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_V0_CURRENT | SHORT | BREAKOUT | HOLDOUT | 108 | 77 | 0.1888 | 1.4695 | 0.537 | 0.33 | 1.1002 | -0.8685 | 8.2939 | 1.6087 | 4.3404 | 0.5584 | -0.0283 | 0.4147 |
+| VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_FIXED_2R | SHORT | BREAKOUT | DISCOVERY | 153 | 105 | 0.1877 | 1.3801 | 0.4248 | -0.3117 | 1.6043 | -0.8586 | 4.0686 | 2.0127 | 8.4813 | 0.4381 | -0.0107 | 0.3953 |
+| VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_V0_CURRENT | SHORT | BREAKOUT | HOLDOUT | 102 | 72 | 0.1787 | 1.4399 | 0.5294 | 0.33 | 1.1046 | -0.863 | 8.2541 | 1.6496 | 5.3733 | 0.5556 | -0.0436 | 0.3457 |
+| VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_HALF_0_5R_RUNNER | SHORT | BREAKOUT | HOLDOUT | 108 | 77 | 0.1785 | 1.6272 | 0.6759 | 0.25 | 0.6851 | -0.8782 | 8.2939 | 1.6087 | 4.2504 | 0.6883 | -0.0198 | 0.3422 |
+| VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_D_STRUCTURE_PLUS_0_50_ATR | TM_V0_CURRENT | SHORT | BREAKOUT | HOLDOUT | 582 | 141 | 0.1759 | 1.4943 | 0.5515 | 0.3263 | 0.9639 | -0.7933 | 4.481 | 1.1126 | 13.1154 | 0.5745 | 0.0435 | 0.288 |
+| VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_FIXED_2R | SHORT | BREAKOUT | DISCOVERY | 155 | 106 | 0.1724 | 1.3445 | 0.4194 | -0.425 | 1.6043 | -0.8618 | 4.0658 | 2.0291 | 8.4813 | 0.434 | -0.0238 | 0.3689 |
+| VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_FIXED_1_5R | SHORT | BREAKOUT | DISCOVERY | 153 | 105 | 0.172 | 1.3766 | 0.4706 | -0.1768 | 1.3356 | -0.8624 | 4.0686 | 2.0127 | 5.4813 | 0.4857 | 0.0182 | 0.3523 |
+| VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_FIXED_1_5R | SHORT | BREAKOUT | DISCOVERY | 155 | 106 | 0.1568 | 1.3383 | 0.4645 | -0.1909 | 1.3356 | -0.8658 | 4.0658 | 2.0291 | 5.9646 | 0.4811 | -0.0146 | 0.3396 |
+| VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_FIXED_1_5R | SHORT | BREAKOUT | HOLDOUT | 582 | 141 | 0.1511 | 1.3245 | 0.4674 | -0.1778 | 1.3198 | -0.8743 | 5.8233 | 1.464 | 12.8332 | 0.5532 | 0.0071 | 0.262 |
+| VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_FIXED_2R | LONG | RECLAIM | DISCOVERY | 119 | 70 | 0.1471 | 1.29 | 0.4034 | -0.3773 | 1.6223 | -0.8503 | 2.5449 | 2.1044 | 7.6319 | 0.4714 | -0.0185 | 0.5441 |
+| VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_FIXED_2R | SHORT | REJECTION | HOLDOUT | 534 | 120 | 0.1415 | 1.4025 | 0.4326 | -0.0855 | 1.1397 | -0.6195 | 3.2062 | 1.1431 | 23.8971 | 0.5333 | 0.1025 | 0.4516 |
+| VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_FIXED_2R | LONG | RECLAIM | DISCOVERY | 125 | 73 | 0.14 | 1.2719 | 0.4 | -0.4941 | 1.6374 | -0.8582 | 2.4959 | 2.2208 | 9.6319 | 0.4658 | -0.033 | 0.4778 |
+| VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_C_STRUCTURE_PLUS_0_30_ATR | TM_V0_CURRENT | SHORT | BREAKOUT | HOLDOUT | 582 | 141 | 0.1356 | 1.3448 | 0.5275 | 0.2283 | 1.0027 | -0.8324 | 4.9225 | 1.2274 | 12.5997 | 0.5532 | -0.0003 | 0.2414 |
+| VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_FIXED_1R | SHORT | BREAKOUT | HOLDOUT | 108 | 77 | 0.1258 | 1.3129 | 0.537 | 1.0 | 0.983 | -0.8685 | 8.2939 | 1.6087 | 4.0004 | 0.5195 | -0.071 | 0.3198 |
+| VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_V0_CURRENT | SHORT | BREAKOUT | DISCOVERY | 153 | 105 | 0.1199 | 1.2852 | 0.5163 | 0.252 | 1.0464 | -0.8692 | 4.0686 | 2.0127 | 5.4813 | 0.5238 | -0.0463 | 0.2954 |
+| VARIANT_B_HIST_15M_CONFIRM_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_V0_CURRENT | SHORT | BREAKOUT | DISCOVERY | 155 | 106 | 0.114 | 1.2705 | 0.5161 | 0.252 | 1.0374 | -0.871 | 4.0658 | 2.0291 | 6.0228 | 0.5189 | -0.0523 | 0.2889 |
+| VARIANT_E_HIST_30M_CONTEXT_15M_SETUP_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_A_CURRENT_STRUCTURAL | TM_FIXED_1R | SHORT | BREAKOUT | HOLDOUT | 102 | 72 | 0.1136 | 1.2798 | 0.5294 | 1.0 | 0.9817 | -0.863 | 8.2541 | 1.6496 | 5.0433 | 0.5139 | -0.0702 | 0.2684 |
+| VARIANT_A_HIST_5M_CONFIRM_5M_ENTRY | ENTRY_1_CLOSE_RECLAIM | STOP_D_STRUCTURE_PLUS_0_50_ATR | TM_V0_CURRENT | SHORT | REJECTION | HOLDOUT | 534 | 120 | 0.1135 | 1.4386 | 0.5094 | 0.0267 | 0.7311 | -0.5276 | 2.4354 | 0.902 | 16.6429 | 0.575 | 0.0438 | 0.3093 |
+| ... | 390 more rows omitted | | | | | | | | | | | | | | | | | | | |
+
+## Walk-forward
+
+| window | discovery_winners | holdout_survivors |
+| --- | --- | --- |
+| 2024-06..2024-11->2024-12..2025-02 | 0 | 0 |
+| 2024-09..2025-02->2025-03..2025-05 | 0 | 0 |
+| 2024-12..2025-05->2025-06..2025-08 | 0 | 0 |
+| 2025-03..2025-08->2025-09..2025-11 | 0 | 0 |
+
+## Multiple-testing guard
+
+Many predefined combinations are tested. The best discovery result is not treated as an edge unless it also survives chronological holdout, walk-forward, day/symbol/month robustness, and is not dominated by one symbol/month.
+
+## Interpretation boundary
+
+Historical Phase 4A-H uses `D1_EOD_STATIC_OPTIONS`. It is useful for screening whether stronger static option levels and higher-timeframe confirmations reduce noise. It is not equivalent to the live intraday options-level system because true historical intraday GEX/OI persistence snapshots are unavailable.

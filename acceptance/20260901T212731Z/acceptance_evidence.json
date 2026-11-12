@@ -1,0 +1,2576 @@
+{
+  "generated_at_utc": "2026-09-01T21:27:31.179793+00:00",
+  "isolation": {
+    "source_audit": {
+      "python_import_count": 86,
+      "forbidden_imports": [],
+      "live_execution_tokens": [],
+      "shared_pipeline_tokens": []
+    },
+    "portfolio_db_before": {
+      "data\\portfolio.db": {
+        "size": 11333632,
+        "mtime_ns": 1787922369017961200
+      }
+    },
+    "portfolio_db_after": {
+      "data\\portfolio.db": {
+        "size": 11333632,
+        "mtime_ns": 1787922369017961200
+      }
+    },
+    "portfolio_db_changes": {},
+    "acceptance_database": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\acceptance\\20260901T212731Z\\acceptance.db",
+    "paper_broker_class": "options_structure_trader.broker.StandalonePaperBroker",
+    "alert_dispatcher_class": "options_structure_trader.alerts.AlertDispatcher",
+    "telegram_enabled": false
+  },
+  "gating": {
+    "synthetic": {
+      "ticker": "SPY",
+      "setup": {
+        "setup_event_id": "setup_f24d7ca140754c8386e052f3cc6d6c1c",
+        "ticker": "SPY",
+        "setup_type": "LEVEL_RECLAIM_LONG",
+        "side": "LONG",
+        "level_id": "lvl_722889d6378741d081a1944eb90d4f14",
+        "level_type": "GAMMA_FLIP",
+        "created_at_utc": "2026-09-01T21:27:37.771512Z",
+        "score": {
+          "total": 79.6,
+          "breakdown": {
+            "dealer_positioning": 22.0,
+            "options_flow": 14.4,
+            "oi_confirmation": 7.5,
+            "big_trades_dark_pool": 4.5,
+            "price_structure": 19.0,
+            "volatility_liquidity": 8.2,
+            "data_quality_event_guard": 4.0
+          },
+          "raw_components": {
+            "dealer_positioning": 0.88,
+            "options_flow": 0.72,
+            "oi_confirmation": 0.75,
+            "big_trades_dark_pool": 0.45,
+            "price_structure": 0.95,
+            "volatility_liquidity": 0.82,
+            "data_quality_event_guard": 0.8
+          },
+          "score_model_version": "score_v0_baseline_manual",
+          "score_weight_set_id": "baseline_manual"
+        },
+        "trade_plan": {
+          "entry_zone_low": 640.96,
+          "entry_zone_high": 641.0880000000002,
+          "planned_entry": 640.96,
+          "stop_initial": 638.336,
+          "targets": [
+            645.12,
+            650.24,
+            652.864
+          ],
+          "primary_rr": 1.585,
+          "shares": 95,
+          "risk_dollars": 249.28,
+          "invalidation_logic": "5m close below 638.34 or loss of reclaimed GAMMA_FLIP zone"
+        },
+        "production_paper_allowed": false,
+        "shadow_paper_allowed": true,
+        "blocking_reasons": [
+          "Primary R:R 1.59 is below minimum",
+          "Synthetic fixture data cannot enter Production Paper"
+        ],
+        "reason": [
+          "Long 5m closed-candle reclaim of GAMMA_FLIP",
+          "Level existed before reaction (2026-09-01T21:12:37.771512+00:00)",
+          "Deterministic confluence score 80/100",
+          "Volume expanded versus baseline",
+          "Macro Event Guard clear"
+        ],
+        "config_version": "sha256:d2c344520a2154a8",
+        "source_mode": "DEMO_FIXTURE",
+        "signal_snapshot": {
+          "schema_version": "signal_snapshot.v1",
+          "captured_at_utc": "2026-09-01T21:27:37.771512+00:00",
+          "source_timestamp_utc": "2026-09-01T21:12:37.771512+00:00",
+          "ingestion_timestamp_utc": "2026-09-01T21:27:38.138244+00:00",
+          "ticker_state": {
+            "ticker": "SPY",
+            "timestamp_utc": "2026-09-01T21:27:37.771512Z",
+            "source": "demo_fixture",
+            "spot_price": 640.96,
+            "bid": 640.928,
+            "ask": 640.9920000000001,
+            "last": 640.96,
+            "spread_bps": 0.9985022466300548,
+            "volume_today": 2000000.0,
+            "relative_volume": 1.5,
+            "average_daily_volume": 10000000.0,
+            "ticker_class": "index_etf",
+            "trading_session": "regular",
+            "is_halted": false,
+            "source_freshness_seconds": 0.0
+          },
+          "level": {
+            "level_id": "lvl_722889d6378741d081a1944eb90d4f14",
+            "ticker": "SPY",
+            "level_type": "GAMMA_FLIP",
+            "price": 640.0,
+            "zone_low": 639.35904,
+            "zone_high": 640.64096,
+            "known_at_utc": "2026-09-01T21:12:37.771512Z",
+            "source": "demo_fixture",
+            "strength_score": 1.0,
+            "source_count": 1,
+            "source_agreement_score": 1.0,
+            "freshness_score": 0.8333333333333334,
+            "metadata": {}
+          },
+          "previous_bar": {
+            "ticker": "SPY",
+            "timeframe": "5m",
+            "bar_start_utc": "2026-09-01T21:17:37.771512Z",
+            "bar_end_utc": "2026-09-01T21:22:37.771512Z",
+            "open": 640.64,
+            "high": 641.28,
+            "low": 638.72,
+            "close": 639.36,
+            "volume": 100000.0,
+            "vwap": 640.0,
+            "atr": 1.28,
+            "relative_volume": 1.1,
+            "closed": true
+          },
+          "confirmation_bar": {
+            "ticker": "SPY",
+            "timeframe": "5m",
+            "bar_start_utc": "2026-09-01T21:22:37.771512Z",
+            "bar_end_utc": "2026-09-01T21:27:37.771512Z",
+            "open": 639.36,
+            "high": 641.92,
+            "low": 639.04,
+            "close": 640.96,
+            "volume": 180000.0,
+            "vwap": 640.32,
+            "atr": 1.28,
+            "relative_volume": 1.8,
+            "closed": true
+          },
+          "features": {
+            "dealer_positioning": 0.88,
+            "options_flow": 0.72,
+            "oi_confirmation": 0.75,
+            "big_trades_dark_pool": 0.45,
+            "price_structure": 0.95,
+            "volatility_liquidity": 0.82,
+            "data_quality_event_guard": 0.8,
+            "flow_direction": "bullish",
+            "retest_confirmed": false,
+            "volume_expansion": true,
+            "data_staleness_flag": false,
+            "source_conflict_flag": false,
+            "raw": {
+              "fixture": true,
+              "gamma_regime": "positive"
+            }
+          },
+          "guard": {
+            "ticker": "SPY",
+            "evaluated_at_utc": "2026-09-01T21:27:37.771512Z",
+            "blocked": false,
+            "event_name": null,
+            "event_time_utc": null,
+            "minutes_to_event": null,
+            "minutes_since_event": null,
+            "macro_event_proximity_flag": false,
+            "blocking_reasons": []
+          },
+          "target_nodes": [
+            631.04,
+            634.88,
+            638.72,
+            645.12,
+            650.24
+          ]
+        }
+      },
+      "trade": {
+        "trade_id": "trade_83db28f1325245949868c3f40b41d166",
+        "setup_event_id": "setup_f24d7ca140754c8386e052f3cc6d6c1c",
+        "ticker": "SPY",
+        "setup_type": "LEVEL_RECLAIM_LONG",
+        "side": "LONG",
+        "mode": "shadow_paper",
+        "created_at_utc": "2026-09-01T21:27:38.867005Z",
+        "entry_type": "market_sim",
+        "entry_zone_low": 640.96,
+        "entry_zone_high": 641.0880000000002,
+        "planned_entry": 640.96,
+        "actual_fill_price": null,
+        "stop_initial": 638.336,
+        "stop_current": 638.336,
+        "targets": [
+          645.12,
+          650.24,
+          652.864
+        ],
+        "shares": 95,
+        "remaining_shares": 95,
+        "risk_dollars": 249.28,
+        "status": "pending",
+        "bars_pending": 0,
+        "realized_r": 0.0,
+        "mfe_r": 0.0,
+        "mae_r": 0.0,
+        "fees": 0.0,
+        "slippage": 0.0,
+        "exit_reason": null,
+        "score_total": 79.6,
+        "score_breakdown": {
+          "dealer_positioning": 22.0,
+          "options_flow": 14.4,
+          "oi_confirmation": 7.5,
+          "big_trades_dark_pool": 4.5,
+          "price_structure": 19.0,
+          "volatility_liquidity": 8.2,
+          "data_quality_event_guard": 4.0
+        },
+        "score_model_version": "score_v0_baseline_manual",
+        "config_version": "sha256:d2c344520a2154a8",
+        "macro_event_flags": {
+          "blocked": false,
+          "macro_event_proximity_flag": false,
+          "event_name": null
+        },
+        "variant_id": null
+      },
+      "forced_production_error": "Blocked setup cannot enter Production Paper"
+    },
+    "stale": {
+      "setup": {
+        "setup_event_id": "setup_6975a113ba0644d88f8a1c0f9df0b336",
+        "ticker": "STALE",
+        "setup_type": "LEVEL_RECLAIM_LONG",
+        "side": "LONG",
+        "level_id": "lvl_1ae3947f49f24a928b3aba1910352335",
+        "level_type": "GAMMA_FLIP",
+        "created_at_utc": "2026-08-03T17:00:00Z",
+        "score": {
+          "total": 92.75,
+          "breakdown": {
+            "dealer_positioning": 23.75,
+            "options_flow": 18.0,
+            "oi_confirmation": 9.0,
+            "big_trades_dark_pool": 8.0,
+            "price_structure": 20.0,
+            "volatility_liquidity": 9.0,
+            "data_quality_event_guard": 5.0
+          },
+          "raw_components": {
+            "dealer_positioning": 0.95,
+            "options_flow": 0.9,
+            "oi_confirmation": 0.9,
+            "big_trades_dark_pool": 0.8,
+            "price_structure": 1.0,
+            "volatility_liquidity": 0.9,
+            "data_quality_event_guard": 1.0
+          },
+          "score_model_version": "score_v0_baseline_manual",
+          "score_weight_set_id": "baseline_manual"
+        },
+        "trade_plan": {
+          "entry_zone_low": 100.5,
+          "entry_zone_high": 100.54000000000002,
+          "planned_entry": 100.5,
+          "stop_initial": 98.85,
+          "targets": [
+            105.0,
+            108.0,
+            112.0
+          ],
+          "primary_rr": 2.727,
+          "shares": 151,
+          "risk_dollars": 249.15,
+          "invalidation_logic": "5m close below 98.85 or loss of reclaimed GAMMA_FLIP zone"
+        },
+        "production_paper_allowed": false,
+        "shadow_paper_allowed": true,
+        "blocking_reasons": [
+          "Critical market data is stale"
+        ],
+        "reason": [
+          "Long 5m closed-candle reclaim of GAMMA_FLIP",
+          "Level existed before reaction (2026-08-03T16:00:00+00:00)",
+          "Deterministic confluence score 93/100",
+          "Volume expanded versus baseline",
+          "Macro Event Guard clear"
+        ],
+        "config_version": "sha256:d2c344520a2154a8",
+        "source_mode": "ACCEPTANCE_NORMALIZED",
+        "signal_snapshot": {
+          "schema_version": "signal_snapshot.v1",
+          "captured_at_utc": "2026-08-03T17:00:00+00:00",
+          "source_timestamp_utc": "2026-08-03T16:00:00+00:00",
+          "ingestion_timestamp_utc": "2026-09-01T21:27:38.891013+00:00",
+          "ticker_state": {
+            "ticker": "STALE",
+            "timestamp_utc": "2026-08-03T17:00:00Z",
+            "source": "acceptance_feed",
+            "spot_price": 100.5,
+            "bid": 100.49,
+            "ask": 100.51,
+            "last": 100.5,
+            "spread_bps": 2.0,
+            "volume_today": 2000000.0,
+            "relative_volume": 2.0,
+            "average_daily_volume": 10000000.0,
+            "ticker_class": "unknown",
+            "trading_session": "regular",
+            "is_halted": false,
+            "source_freshness_seconds": 999.0
+          },
+          "level": {
+            "level_id": "lvl_1ae3947f49f24a928b3aba1910352335",
+            "ticker": "STALE",
+            "level_type": "GAMMA_FLIP",
+            "price": 100.0,
+            "zone_low": 99.9,
+            "zone_high": 100.1,
+            "known_at_utc": "2026-08-03T16:00:00Z",
+            "source": "acceptance_feed",
+            "strength_score": 0.95,
+            "source_count": 1,
+            "source_agreement_score": 1.0,
+            "freshness_score": 1.0,
+            "metadata": {}
+          },
+          "previous_bar": {
+            "ticker": "STALE",
+            "timeframe": "5m",
+            "bar_start_utc": "2026-08-03T16:50:00Z",
+            "bar_end_utc": "2026-08-03T16:55:00Z",
+            "open": 100.3,
+            "high": 100.5,
+            "low": 99.0,
+            "close": 99.7,
+            "volume": 100000.0,
+            "vwap": 100.0,
+            "atr": 0.5,
+            "relative_volume": 1.0,
+            "closed": true
+          },
+          "confirmation_bar": {
+            "ticker": "STALE",
+            "timeframe": "5m",
+            "bar_start_utc": "2026-08-03T16:55:00Z",
+            "bar_end_utc": "2026-08-03T17:00:00Z",
+            "open": 99.7,
+            "high": 100.7,
+            "low": 99.4,
+            "close": 100.5,
+            "volume": 220000.0,
+            "vwap": 100.2,
+            "atr": 0.5,
+            "relative_volume": 2.0,
+            "closed": true
+          },
+          "features": {
+            "dealer_positioning": 0.95,
+            "options_flow": 0.9,
+            "oi_confirmation": 0.9,
+            "big_trades_dark_pool": 0.8,
+            "price_structure": 1.0,
+            "volatility_liquidity": 0.9,
+            "data_quality_event_guard": 1.0,
+            "flow_direction": "bullish",
+            "retest_confirmed": false,
+            "volume_expansion": true,
+            "data_staleness_flag": true,
+            "source_conflict_flag": false,
+            "raw": {
+              "acceptance_fixture": true
+            }
+          },
+          "guard": {
+            "ticker": "STALE",
+            "evaluated_at_utc": "2026-08-03T17:00:00Z",
+            "blocked": false,
+            "event_name": null,
+            "event_time_utc": null,
+            "minutes_to_event": null,
+            "minutes_since_event": null,
+            "macro_event_proximity_flag": false,
+            "blocking_reasons": []
+          },
+          "target_nodes": [
+            105.0,
+            108.0,
+            112.0
+          ]
+        }
+      },
+      "trade": {
+        "trade_id": "trade_b4f3cb2c490947da8a623fc8fd529cb2",
+        "setup_event_id": "setup_6975a113ba0644d88f8a1c0f9df0b336",
+        "ticker": "STALE",
+        "setup_type": "LEVEL_RECLAIM_LONG",
+        "side": "LONG",
+        "mode": "shadow_paper",
+        "created_at_utc": "2026-09-01T21:27:41.202557Z",
+        "entry_type": "market_sim",
+        "entry_zone_low": 100.5,
+        "entry_zone_high": 100.54000000000002,
+        "planned_entry": 100.5,
+        "actual_fill_price": null,
+        "stop_initial": 98.85,
+        "stop_current": 98.85,
+        "targets": [
+          105.0,
+          108.0,
+          112.0
+        ],
+        "shares": 151,
+        "remaining_shares": 151,
+        "risk_dollars": 249.15,
+        "status": "pending",
+        "bars_pending": 0,
+        "realized_r": 0.0,
+        "mfe_r": 0.0,
+        "mae_r": 0.0,
+        "fees": 0.0,
+        "slippage": 0.0,
+        "exit_reason": null,
+        "score_total": 92.75,
+        "score_breakdown": {
+          "dealer_positioning": 23.75,
+          "options_flow": 18.0,
+          "oi_confirmation": 9.0,
+          "big_trades_dark_pool": 8.0,
+          "price_structure": 20.0,
+          "volatility_liquidity": 9.0,
+          "data_quality_event_guard": 5.0
+        },
+        "score_model_version": "score_v0_baseline_manual",
+        "config_version": "sha256:d2c344520a2154a8",
+        "macro_event_flags": {
+          "blocked": false,
+          "macro_event_proximity_flag": false,
+          "event_name": null
+        },
+        "variant_id": null
+      },
+      "forced_production_error": "Blocked setup cannot enter Production Paper"
+    },
+    "incomplete": {
+      "status": "rejected",
+      "audit_event_id": "audit_99db9fc2b5e046b988e22d1979ce14be",
+      "reasons": [
+        "ticker_state: Field required",
+        "level: Field required",
+        "previous_bar: Field required",
+        "confirmation_bar: Field required",
+        "features: Field required",
+        "target_nodes: Field required"
+      ]
+    },
+    "audit_event_count": 9,
+    "audit_events": [
+      {
+        "event_id": "audit_c7dd99a43c6544748b0a3be58bc4631f",
+        "event_type": "setup_evaluation",
+        "outcome": "production_eligible",
+        "payload": {
+          "production_paper_allowed": true,
+          "score": 92.75,
+          "setup_event_id": "setup_7d21d4342ad74beca2284b219bf280a7",
+          "source_mode": "ACCEPTANCE_NORMALIZED"
+        },
+        "reasons": [],
+        "severity": "INFO",
+        "ticker": "CLEAR",
+        "timestamp_utc": "2026-09-01T21:27:42.521119+00:00"
+      },
+      {
+        "event_id": "audit_da1c64d6ef3d4f5798666b6ef6a4fdf6",
+        "event_type": "setup_evaluation",
+        "outcome": "shadow_only",
+        "payload": {
+          "production_paper_allowed": false,
+          "score": 87.75,
+          "setup_event_id": "setup_7939c084b53a437c9b37c844d1d71669",
+          "source_mode": "ACCEPTANCE_NORMALIZED"
+        },
+        "reasons": [
+          "NFP event window (+20 minutes)"
+        ],
+        "severity": "WARNING",
+        "ticker": "MACRONFP",
+        "timestamp_utc": "2026-09-01T21:27:42.107098+00:00"
+      },
+      {
+        "event_id": "audit_0baaa6a1f05e4faab69d49a7ac2ea285",
+        "event_type": "setup_evaluation",
+        "outcome": "shadow_only",
+        "payload": {
+          "production_paper_allowed": false,
+          "score": 87.75,
+          "setup_event_id": "setup_7702bf495a6a438982ae4dcaad09fd5d",
+          "source_mode": "ACCEPTANCE_NORMALIZED"
+        },
+        "reasons": [
+          "FOMC event window (+20 minutes)"
+        ],
+        "severity": "WARNING",
+        "ticker": "MACROFOMC",
+        "timestamp_utc": "2026-09-01T21:27:41.671800+00:00"
+      },
+      {
+        "event_id": "audit_df1901a0140c4ecbbf4f7d0a8e383c83",
+        "event_type": "setup_evaluation",
+        "outcome": "shadow_only",
+        "payload": {
+          "production_paper_allowed": false,
+          "score": 87.75,
+          "setup_event_id": "setup_2e378bfd7b4c4f0e8d006769705c3378",
+          "source_mode": "ACCEPTANCE_NORMALIZED"
+        },
+        "reasons": [
+          "CPI event window (+20 minutes)"
+        ],
+        "severity": "WARNING",
+        "ticker": "MACROCPI",
+        "timestamp_utc": "2026-09-01T21:27:41.255073+00:00"
+      },
+      {
+        "event_id": "audit_99db9fc2b5e046b988e22d1979ce14be",
+        "event_type": "normalized_input_rejected",
+        "outcome": "rejected",
+        "payload": {
+          "provided_fields": [
+            "ticker"
+          ]
+        },
+        "reasons": [
+          "ticker_state: Field required",
+          "level: Field required",
+          "previous_bar: Field required",
+          "confirmation_bar: Field required",
+          "features: Field required",
+          "target_nodes: Field required"
+        ],
+        "severity": "ERROR",
+        "ticker": "INCOMPLETE",
+        "timestamp_utc": "2026-09-01T21:27:41.222559+00:00"
+      },
+      {
+        "event_id": "audit_27fef673e55f4fb5b1164e75bca58bcc",
+        "event_type": "setup_evaluation",
+        "outcome": "shadow_only",
+        "payload": {
+          "production_paper_allowed": false,
+          "score": 92.75,
+          "setup_event_id": "setup_6975a113ba0644d88f8a1c0f9df0b336",
+          "source_mode": "ACCEPTANCE_NORMALIZED"
+        },
+        "reasons": [
+          "Critical market data is stale"
+        ],
+        "severity": "WARNING",
+        "ticker": "STALE",
+        "timestamp_utc": "2026-09-01T21:27:38.925026+00:00"
+      },
+      {
+        "event_id": "audit_52c4a8a84ab041929a07af64ff12fbd3",
+        "event_type": "setup_evaluation",
+        "outcome": "shadow_only",
+        "payload": {
+          "production_paper_allowed": false,
+          "score": 79.6,
+          "setup_event_id": "setup_f24d7ca140754c8386e052f3cc6d6c1c",
+          "source_mode": "DEMO_FIXTURE"
+        },
+        "reasons": [
+          "Primary R:R 1.59 is below minimum",
+          "Synthetic fixture data cannot enter Production Paper"
+        ],
+        "severity": "WARNING",
+        "ticker": "SPY",
+        "timestamp_utc": "2026-09-01T21:27:38.175783+00:00"
+      },
+      {
+        "event_id": "audit_e11b59aa153e43098d4e09aafc27baef",
+        "event_type": "setup_evaluation",
+        "outcome": "production_eligible",
+        "payload": {
+          "production_paper_allowed": true,
+          "score": 92.75,
+          "setup_event_id": "setup_84430d9628524ae996405524a559139b",
+          "source_mode": "ACCEPTANCE_NORMALIZED"
+        },
+        "reasons": [],
+        "severity": "INFO",
+        "ticker": "ACCSHORT",
+        "timestamp_utc": "2026-09-01T21:27:36.938375+00:00"
+      },
+      {
+        "event_id": "audit_1f704b8731c048f1816a1b756c663dc9",
+        "event_type": "setup_evaluation",
+        "outcome": "production_eligible",
+        "payload": {
+          "production_paper_allowed": true,
+          "score": 92.75,
+          "setup_event_id": "setup_6eed92ea19a9451f8dbdb57e67b2b7d7",
+          "source_mode": "ACCEPTANCE_NORMALIZED"
+        },
+        "reasons": [],
+        "severity": "INFO",
+        "ticker": "ACCLONG",
+        "timestamp_utc": "2026-09-01T21:27:36.284525+00:00"
+      }
+    ]
+  },
+  "live_disabled": {
+    "source_tokens": [],
+    "env_flag_health": false,
+    "config_flag_health": false,
+    "live_mode_error": "Only standalone paper modes are executable",
+    "real_order_routes": [],
+    "api_routes": [
+      "/config/status",
+      "/exports/research",
+      "/health",
+      "/journal/events",
+      "/macro/events",
+      "/macro/guard-status",
+      "/paper/closed",
+      "/paper/open",
+      "/performance/ablation",
+      "/performance/by-setup",
+      "/performance/summary",
+      "/replay/options-structure/run",
+      "/scanner/options-structure/evaluate-normalized",
+      "/scanner/options-structure/run-once",
+      "/setups/live",
+      "/setups/{setup_id}",
+      "/setups/{setup_id}/paper/accept",
+      "/sources/status",
+      "/ticker/{ticker}/flow",
+      "/ticker/{ticker}/levels",
+      "/ticker/{ticker}/options-map"
+    ]
+  },
+  "examples": {
+    "long": {
+      "input_snapshot": {
+        "ticker_state": {
+          "ticker": "ACCLONG",
+          "timestamp_utc": "2026-08-03T15:00:00Z",
+          "source": "acceptance_feed",
+          "spot_price": 100.5,
+          "bid": 100.49,
+          "ask": 100.51,
+          "last": 100.5,
+          "spread_bps": 2.0,
+          "volume_today": 2000000.0,
+          "relative_volume": 2.0,
+          "average_daily_volume": 10000000.0,
+          "ticker_class": "unknown",
+          "trading_session": "regular",
+          "is_halted": false,
+          "source_freshness_seconds": 0.0
+        },
+        "level": {
+          "level_id": "lvl_a030cabf43494654ae36f0088680a810",
+          "ticker": "ACCLONG",
+          "level_type": "GAMMA_FLIP",
+          "price": 100.0,
+          "zone_low": 99.9,
+          "zone_high": 100.1,
+          "known_at_utc": "2026-08-03T14:00:00Z",
+          "source": "acceptance_feed",
+          "strength_score": 0.95,
+          "source_count": 1,
+          "source_agreement_score": 1.0,
+          "freshness_score": 1.0,
+          "metadata": {}
+        },
+        "previous_bar": {
+          "ticker": "ACCLONG",
+          "timeframe": "5m",
+          "bar_start_utc": "2026-08-03T14:50:00Z",
+          "bar_end_utc": "2026-08-03T14:55:00Z",
+          "open": 100.3,
+          "high": 100.5,
+          "low": 99.0,
+          "close": 99.7,
+          "volume": 100000.0,
+          "vwap": 100.0,
+          "atr": 0.5,
+          "relative_volume": 1.0,
+          "closed": true
+        },
+        "confirmation_bar": {
+          "ticker": "ACCLONG",
+          "timeframe": "5m",
+          "bar_start_utc": "2026-08-03T14:55:00Z",
+          "bar_end_utc": "2026-08-03T15:00:00Z",
+          "open": 99.7,
+          "high": 100.7,
+          "low": 99.4,
+          "close": 100.5,
+          "volume": 220000.0,
+          "vwap": 100.2,
+          "atr": 0.5,
+          "relative_volume": 2.0,
+          "closed": true
+        },
+        "features": {
+          "dealer_positioning": 0.95,
+          "options_flow": 0.9,
+          "oi_confirmation": 0.9,
+          "big_trades_dark_pool": 0.8,
+          "price_structure": 1.0,
+          "volatility_liquidity": 0.9,
+          "data_quality_event_guard": 1.0,
+          "flow_direction": "bullish",
+          "retest_confirmed": false,
+          "volume_expansion": true,
+          "data_staleness_flag": false,
+          "source_conflict_flag": false,
+          "raw": {
+            "acceptance_fixture": true
+          }
+        },
+        "target_nodes": [
+          105.0,
+          108.0,
+          112.0
+        ],
+        "guard": {
+          "ticker": "ACCLONG",
+          "evaluated_at_utc": "2026-08-03T15:00:00Z",
+          "blocked": false,
+          "event_name": null,
+          "event_time_utc": null,
+          "minutes_to_event": null,
+          "minutes_since_event": null,
+          "macro_event_proximity_flag": false,
+          "blocking_reasons": []
+        },
+        "source_mode": "ACCEPTANCE_NORMALIZED"
+      },
+      "detected_level": {
+        "level_id": "lvl_a030cabf43494654ae36f0088680a810",
+        "ticker": "ACCLONG",
+        "level_type": "GAMMA_FLIP",
+        "price": 100.0,
+        "zone_low": 99.9,
+        "zone_high": 100.1,
+        "known_at_utc": "2026-08-03T14:00:00Z",
+        "source": "acceptance_feed",
+        "strength_score": 0.95,
+        "source_count": 1,
+        "source_agreement_score": 1.0,
+        "freshness_score": 1.0,
+        "metadata": {}
+      },
+      "reclaim_condition": {
+        "sweep": 99.0,
+        "confirmation_close": 100.5,
+        "closed_5m": true
+      },
+      "score": {
+        "total": 92.75,
+        "breakdown": {
+          "dealer_positioning": 23.75,
+          "options_flow": 18.0,
+          "oi_confirmation": 9.0,
+          "big_trades_dark_pool": 8.0,
+          "price_structure": 20.0,
+          "volatility_liquidity": 9.0,
+          "data_quality_event_guard": 5.0
+        },
+        "raw_components": {
+          "dealer_positioning": 0.95,
+          "options_flow": 0.9,
+          "oi_confirmation": 0.9,
+          "big_trades_dark_pool": 0.8,
+          "price_structure": 1.0,
+          "volatility_liquidity": 0.9,
+          "data_quality_event_guard": 1.0
+        },
+        "score_model_version": "score_v0_baseline_manual",
+        "score_weight_set_id": "baseline_manual"
+      },
+      "trade_plan": {
+        "entry_zone_low": 100.5,
+        "entry_zone_high": 100.54000000000002,
+        "planned_entry": 100.5,
+        "stop_initial": 98.85,
+        "targets": [
+          105.0,
+          108.0,
+          112.0
+        ],
+        "primary_rr": 2.727,
+        "shares": 151,
+        "risk_dollars": 249.15,
+        "invalidation_logic": "5m close below 98.85 or loss of reclaimed GAMMA_FLIP zone"
+      },
+      "paper_order_initial": {
+        "trade_id": "trade_c45879c4194a41aaad0b438b05806eee",
+        "setup_event_id": "setup_6eed92ea19a9451f8dbdb57e67b2b7d7",
+        "ticker": "ACCLONG",
+        "setup_type": "LEVEL_RECLAIM_LONG",
+        "side": "LONG",
+        "mode": "production_paper",
+        "created_at_utc": "2026-09-01T21:27:36.824298Z",
+        "entry_type": "market_sim",
+        "entry_zone_low": 100.5,
+        "entry_zone_high": 100.54000000000002,
+        "planned_entry": 100.5,
+        "actual_fill_price": null,
+        "stop_initial": 98.85,
+        "stop_current": 98.85,
+        "targets": [
+          105.0,
+          108.0,
+          112.0
+        ],
+        "shares": 151,
+        "remaining_shares": 151,
+        "risk_dollars": 249.15,
+        "status": "pending",
+        "bars_pending": 0,
+        "realized_r": 0.0,
+        "mfe_r": 0.0,
+        "mae_r": 0.0,
+        "fees": 0.0,
+        "slippage": 0.0,
+        "exit_reason": null,
+        "score_total": 92.75,
+        "score_breakdown": {
+          "dealer_positioning": 23.75,
+          "options_flow": 18.0,
+          "oi_confirmation": 9.0,
+          "big_trades_dark_pool": 8.0,
+          "price_structure": 20.0,
+          "volatility_liquidity": 9.0,
+          "data_quality_event_guard": 5.0
+        },
+        "score_model_version": "score_v0_baseline_manual",
+        "config_version": "sha256:d2c344520a2154a8",
+        "macro_event_flags": {
+          "blocked": false,
+          "macro_event_proximity_flag": false,
+          "event_name": null
+        },
+        "variant_id": null
+      },
+      "after_tp1": {
+        "trade_id": "trade_c45879c4194a41aaad0b438b05806eee",
+        "setup_event_id": "setup_6eed92ea19a9451f8dbdb57e67b2b7d7",
+        "ticker": "ACCLONG",
+        "setup_type": "LEVEL_RECLAIM_LONG",
+        "side": "LONG",
+        "mode": "production_paper",
+        "created_at_utc": "2026-09-01T21:27:36.824298Z",
+        "entry_type": "market_sim",
+        "entry_zone_low": 100.5,
+        "entry_zone_high": 100.54000000000002,
+        "planned_entry": 100.5,
+        "actual_fill_price": 100.51005,
+        "stop_initial": 98.85,
+        "stop_current": 100.51005,
+        "targets": [
+          105.0,
+          108.0,
+          112.0
+        ],
+        "shares": 151,
+        "remaining_shares": 101,
+        "risk_dollars": 249.15,
+        "status": "partial",
+        "bars_pending": 1,
+        "realized_r": 0.9010535821794086,
+        "mfe_r": 2.7649468389506056,
+        "mae_r": 0.06629318394024292,
+        "fees": 0.0,
+        "slippage": 1.51755,
+        "exit_reason": null,
+        "score_total": 92.75,
+        "score_breakdown": {
+          "dealer_positioning": 23.75,
+          "options_flow": 18.0,
+          "oi_confirmation": 9.0,
+          "big_trades_dark_pool": 8.0,
+          "price_structure": 20.0,
+          "volatility_liquidity": 9.0,
+          "data_quality_event_guard": 5.0
+        },
+        "score_model_version": "score_v0_baseline_manual",
+        "config_version": "sha256:d2c344520a2154a8",
+        "macro_event_flags": {
+          "blocked": false,
+          "macro_event_proximity_flag": false,
+          "event_name": null
+        },
+        "variant_id": null
+      },
+      "journal_record": {
+        "actual_fill_price": 100.51005,
+        "bars_pending": 1,
+        "config_version": "sha256:d2c344520a2154a8",
+        "created_at_utc": "2026-09-01T21:27:36.824298Z",
+        "entry_type": "market_sim",
+        "entry_zone_high": 100.54000000000002,
+        "entry_zone_low": 100.5,
+        "exit_reason": "breakeven_stop",
+        "fees": 0.0,
+        "macro_event_flags": {
+          "blocked": false,
+          "event_name": null,
+          "macro_event_proximity_flag": false
+        },
+        "mae_r": 0.06629318394024292,
+        "mfe_r": 2.7649468389506056,
+        "mode": "production_paper",
+        "planned_entry": 100.5,
+        "realized_r": 0.9010535821794086,
+        "remaining_shares": 0,
+        "risk_dollars": 249.15,
+        "score_breakdown": {
+          "big_trades_dark_pool": 8.0,
+          "data_quality_event_guard": 5.0,
+          "dealer_positioning": 23.75,
+          "oi_confirmation": 9.0,
+          "options_flow": 18.0,
+          "price_structure": 20.0,
+          "volatility_liquidity": 9.0
+        },
+        "score_model_version": "score_v0_baseline_manual",
+        "score_total": 92.75,
+        "setup_event_id": "setup_6eed92ea19a9451f8dbdb57e67b2b7d7",
+        "setup_type": "LEVEL_RECLAIM_LONG",
+        "shares": 151,
+        "side": "LONG",
+        "slippage": 1.51755,
+        "status": "closed",
+        "stop_current": 100.51005,
+        "stop_initial": 98.85,
+        "targets": [
+          105.0,
+          108.0,
+          112.0
+        ],
+        "ticker": "ACCLONG",
+        "trade_id": "trade_c45879c4194a41aaad0b438b05806eee",
+        "variant_id": null
+      },
+      "exit_result": {
+        "trade_id": "trade_c45879c4194a41aaad0b438b05806eee",
+        "setup_event_id": "setup_6eed92ea19a9451f8dbdb57e67b2b7d7",
+        "ticker": "ACCLONG",
+        "setup_type": "LEVEL_RECLAIM_LONG",
+        "side": "LONG",
+        "mode": "production_paper",
+        "created_at_utc": "2026-09-01T21:27:36.824298Z",
+        "entry_type": "market_sim",
+        "entry_zone_low": 100.5,
+        "entry_zone_high": 100.54000000000002,
+        "planned_entry": 100.5,
+        "actual_fill_price": 100.51005,
+        "stop_initial": 98.85,
+        "stop_current": 100.51005,
+        "targets": [
+          105.0,
+          108.0,
+          112.0
+        ],
+        "shares": 151,
+        "remaining_shares": 0,
+        "risk_dollars": 249.15,
+        "status": "closed",
+        "bars_pending": 1,
+        "realized_r": 0.9010535821794086,
+        "mfe_r": 2.7649468389506056,
+        "mae_r": 0.06629318394024292,
+        "fees": 0.0,
+        "slippage": 1.51755,
+        "exit_reason": "breakeven_stop",
+        "score_total": 92.75,
+        "score_breakdown": {
+          "dealer_positioning": 23.75,
+          "options_flow": 18.0,
+          "oi_confirmation": 9.0,
+          "big_trades_dark_pool": 8.0,
+          "price_structure": 20.0,
+          "volatility_liquidity": 9.0,
+          "data_quality_event_guard": 5.0
+        },
+        "score_model_version": "score_v0_baseline_manual",
+        "config_version": "sha256:d2c344520a2154a8",
+        "macro_event_flags": {
+          "blocked": false,
+          "macro_event_proximity_flag": false,
+          "event_name": null
+        },
+        "variant_id": null
+      }
+    },
+    "short": {
+      "input_snapshot": {
+        "ticker_state": {
+          "ticker": "ACCSHORT",
+          "timestamp_utc": "2026-08-03T16:00:00Z",
+          "source": "acceptance_feed",
+          "spot_price": 99.5,
+          "bid": 99.49,
+          "ask": 99.51,
+          "last": 99.5,
+          "spread_bps": 2.0,
+          "volume_today": 2000000.0,
+          "relative_volume": 2.0,
+          "average_daily_volume": 10000000.0,
+          "ticker_class": "unknown",
+          "trading_session": "regular",
+          "is_halted": false,
+          "source_freshness_seconds": 0.0
+        },
+        "level": {
+          "level_id": "lvl_c09ac5bfa2b744198b8bcd4580179f9e",
+          "ticker": "ACCSHORT",
+          "level_type": "GAMMA_FLIP",
+          "price": 100.0,
+          "zone_low": 99.9,
+          "zone_high": 100.1,
+          "known_at_utc": "2026-08-03T15:00:00Z",
+          "source": "acceptance_feed",
+          "strength_score": 0.95,
+          "source_count": 1,
+          "source_agreement_score": 1.0,
+          "freshness_score": 1.0,
+          "metadata": {}
+        },
+        "previous_bar": {
+          "ticker": "ACCSHORT",
+          "timeframe": "5m",
+          "bar_start_utc": "2026-08-03T15:50:00Z",
+          "bar_end_utc": "2026-08-03T15:55:00Z",
+          "open": 99.7,
+          "high": 101.0,
+          "low": 99.5,
+          "close": 100.4,
+          "volume": 100000.0,
+          "vwap": 100.0,
+          "atr": 0.5,
+          "relative_volume": 1.0,
+          "closed": true
+        },
+        "confirmation_bar": {
+          "ticker": "ACCSHORT",
+          "timeframe": "5m",
+          "bar_start_utc": "2026-08-03T15:55:00Z",
+          "bar_end_utc": "2026-08-03T16:00:00Z",
+          "open": 100.4,
+          "high": 100.7,
+          "low": 99.3,
+          "close": 99.5,
+          "volume": 220000.0,
+          "vwap": 99.8,
+          "atr": 0.5,
+          "relative_volume": 2.0,
+          "closed": true
+        },
+        "features": {
+          "dealer_positioning": 0.95,
+          "options_flow": 0.9,
+          "oi_confirmation": 0.9,
+          "big_trades_dark_pool": 0.8,
+          "price_structure": 1.0,
+          "volatility_liquidity": 0.9,
+          "data_quality_event_guard": 1.0,
+          "flow_direction": "bearish",
+          "retest_confirmed": false,
+          "volume_expansion": true,
+          "data_staleness_flag": false,
+          "source_conflict_flag": false,
+          "raw": {
+            "acceptance_fixture": true
+          }
+        },
+        "target_nodes": [
+          95.0,
+          92.0,
+          88.0
+        ],
+        "guard": {
+          "ticker": "ACCSHORT",
+          "evaluated_at_utc": "2026-08-03T16:00:00Z",
+          "blocked": false,
+          "event_name": null,
+          "event_time_utc": null,
+          "minutes_to_event": null,
+          "minutes_since_event": null,
+          "macro_event_proximity_flag": false,
+          "blocking_reasons": []
+        },
+        "source_mode": "ACCEPTANCE_NORMALIZED"
+      },
+      "detected_level": {
+        "level_id": "lvl_c09ac5bfa2b744198b8bcd4580179f9e",
+        "ticker": "ACCSHORT",
+        "level_type": "GAMMA_FLIP",
+        "price": 100.0,
+        "zone_low": 99.9,
+        "zone_high": 100.1,
+        "known_at_utc": "2026-08-03T15:00:00Z",
+        "source": "acceptance_feed",
+        "strength_score": 0.95,
+        "source_count": 1,
+        "source_agreement_score": 1.0,
+        "freshness_score": 1.0,
+        "metadata": {}
+      },
+      "reclaim_condition": {
+        "sweep": 101.0,
+        "confirmation_close": 99.5,
+        "closed_5m": true
+      },
+      "score": {
+        "total": 92.75,
+        "breakdown": {
+          "dealer_positioning": 23.75,
+          "options_flow": 18.0,
+          "oi_confirmation": 9.0,
+          "big_trades_dark_pool": 8.0,
+          "price_structure": 20.0,
+          "volatility_liquidity": 9.0,
+          "data_quality_event_guard": 5.0
+        },
+        "raw_components": {
+          "dealer_positioning": 0.95,
+          "options_flow": 0.9,
+          "oi_confirmation": 0.9,
+          "big_trades_dark_pool": 0.8,
+          "price_structure": 1.0,
+          "volatility_liquidity": 0.9,
+          "data_quality_event_guard": 1.0
+        },
+        "score_model_version": "score_v0_baseline_manual",
+        "score_weight_set_id": "baseline_manual"
+      },
+      "trade_plan": {
+        "entry_zone_low": 99.45999999999998,
+        "entry_zone_high": 99.5,
+        "planned_entry": 99.5,
+        "stop_initial": 101.15,
+        "targets": [
+          95.0,
+          92.0,
+          88.0
+        ],
+        "primary_rr": 2.727,
+        "shares": 151,
+        "risk_dollars": 249.15,
+        "invalidation_logic": "5m close above 101.15 or reclaim of lost GAMMA_FLIP zone"
+      },
+      "paper_order_initial": {
+        "trade_id": "trade_913afd5d35d74fc1afa1a7600185a227",
+        "setup_event_id": "setup_84430d9628524ae996405524a559139b",
+        "ticker": "ACCSHORT",
+        "setup_type": "LEVEL_RECLAIM_SHORT",
+        "side": "SHORT",
+        "mode": "production_paper",
+        "created_at_utc": "2026-09-01T21:27:37.642317Z",
+        "entry_type": "market_sim",
+        "entry_zone_low": 99.45999999999998,
+        "entry_zone_high": 99.5,
+        "planned_entry": 99.5,
+        "actual_fill_price": null,
+        "stop_initial": 101.15,
+        "stop_current": 101.15,
+        "targets": [
+          95.0,
+          92.0,
+          88.0
+        ],
+        "shares": 151,
+        "remaining_shares": 151,
+        "risk_dollars": 249.15,
+        "status": "pending",
+        "bars_pending": 0,
+        "realized_r": 0.0,
+        "mfe_r": 0.0,
+        "mae_r": 0.0,
+        "fees": 0.0,
+        "slippage": 0.0,
+        "exit_reason": null,
+        "score_total": 92.75,
+        "score_breakdown": {
+          "dealer_positioning": 23.75,
+          "options_flow": 18.0,
+          "oi_confirmation": 9.0,
+          "big_trades_dark_pool": 8.0,
+          "price_structure": 20.0,
+          "volatility_liquidity": 9.0,
+          "data_quality_event_guard": 5.0
+        },
+        "score_model_version": "score_v0_baseline_manual",
+        "config_version": "sha256:d2c344520a2154a8",
+        "macro_event_flags": {
+          "blocked": false,
+          "macro_event_proximity_flag": false,
+          "event_name": null
+        },
+        "variant_id": null
+      },
+      "after_tp1": {
+        "trade_id": "trade_913afd5d35d74fc1afa1a7600185a227",
+        "setup_event_id": "setup_84430d9628524ae996405524a559139b",
+        "ticker": "ACCSHORT",
+        "setup_type": "LEVEL_RECLAIM_SHORT",
+        "side": "SHORT",
+        "mode": "production_paper",
+        "created_at_utc": "2026-09-01T21:27:37.642317Z",
+        "entry_type": "market_sim",
+        "entry_zone_low": 99.45999999999998,
+        "entry_zone_high": 99.5,
+        "planned_entry": 99.5,
+        "actual_fill_price": 99.49005,
+        "stop_initial": 101.15,
+        "stop_current": 99.49005,
+        "targets": [
+          95.0,
+          92.0,
+          88.0
+        ],
+        "shares": 151,
+        "remaining_shares": 101,
+        "risk_dollars": 249.15,
+        "status": "partial",
+        "bars_pending": 1,
+        "realized_r": 0.9010736504113981,
+        "mfe_r": 2.7651736498087085,
+        "mae_r": 0.06623693484743345,
+        "fees": 0.0,
+        "slippage": 1.50245,
+        "exit_reason": null,
+        "score_total": 92.75,
+        "score_breakdown": {
+          "dealer_positioning": 23.75,
+          "options_flow": 18.0,
+          "oi_confirmation": 9.0,
+          "big_trades_dark_pool": 8.0,
+          "price_structure": 20.0,
+          "volatility_liquidity": 9.0,
+          "data_quality_event_guard": 5.0
+        },
+        "score_model_version": "score_v0_baseline_manual",
+        "config_version": "sha256:d2c344520a2154a8",
+        "macro_event_flags": {
+          "blocked": false,
+          "macro_event_proximity_flag": false,
+          "event_name": null
+        },
+        "variant_id": null
+      },
+      "journal_record": {
+        "actual_fill_price": 99.49005,
+        "bars_pending": 1,
+        "config_version": "sha256:d2c344520a2154a8",
+        "created_at_utc": "2026-09-01T21:27:37.642317Z",
+        "entry_type": "market_sim",
+        "entry_zone_high": 99.5,
+        "entry_zone_low": 99.45999999999998,
+        "exit_reason": "breakeven_stop",
+        "fees": 0.0,
+        "macro_event_flags": {
+          "blocked": false,
+          "event_name": null,
+          "macro_event_proximity_flag": false
+        },
+        "mae_r": 0.06623693484743345,
+        "mfe_r": 2.7651736498087085,
+        "mode": "production_paper",
+        "planned_entry": 99.5,
+        "realized_r": 0.9010736504113981,
+        "remaining_shares": 0,
+        "risk_dollars": 249.15,
+        "score_breakdown": {
+          "big_trades_dark_pool": 8.0,
+          "data_quality_event_guard": 5.0,
+          "dealer_positioning": 23.75,
+          "oi_confirmation": 9.0,
+          "options_flow": 18.0,
+          "price_structure": 20.0,
+          "volatility_liquidity": 9.0
+        },
+        "score_model_version": "score_v0_baseline_manual",
+        "score_total": 92.75,
+        "setup_event_id": "setup_84430d9628524ae996405524a559139b",
+        "setup_type": "LEVEL_RECLAIM_SHORT",
+        "shares": 151,
+        "side": "SHORT",
+        "slippage": 1.50245,
+        "status": "closed",
+        "stop_current": 99.49005,
+        "stop_initial": 101.15,
+        "targets": [
+          95.0,
+          92.0,
+          88.0
+        ],
+        "ticker": "ACCSHORT",
+        "trade_id": "trade_913afd5d35d74fc1afa1a7600185a227",
+        "variant_id": null
+      },
+      "exit_result": {
+        "trade_id": "trade_913afd5d35d74fc1afa1a7600185a227",
+        "setup_event_id": "setup_84430d9628524ae996405524a559139b",
+        "ticker": "ACCSHORT",
+        "setup_type": "LEVEL_RECLAIM_SHORT",
+        "side": "SHORT",
+        "mode": "production_paper",
+        "created_at_utc": "2026-09-01T21:27:37.642317Z",
+        "entry_type": "market_sim",
+        "entry_zone_low": 99.45999999999998,
+        "entry_zone_high": 99.5,
+        "planned_entry": 99.5,
+        "actual_fill_price": 99.49005,
+        "stop_initial": 101.15,
+        "stop_current": 99.49005,
+        "targets": [
+          95.0,
+          92.0,
+          88.0
+        ],
+        "shares": 151,
+        "remaining_shares": 0,
+        "risk_dollars": 249.15,
+        "status": "closed",
+        "bars_pending": 1,
+        "realized_r": 0.9010736504113981,
+        "mfe_r": 2.7651736498087085,
+        "mae_r": 0.06623693484743345,
+        "fees": 0.0,
+        "slippage": 1.50245,
+        "exit_reason": "breakeven_stop",
+        "score_total": 92.75,
+        "score_breakdown": {
+          "dealer_positioning": 23.75,
+          "options_flow": 18.0,
+          "oi_confirmation": 9.0,
+          "big_trades_dark_pool": 8.0,
+          "price_structure": 20.0,
+          "volatility_liquidity": 9.0,
+          "data_quality_event_guard": 5.0
+        },
+        "score_model_version": "score_v0_baseline_manual",
+        "config_version": "sha256:d2c344520a2154a8",
+        "macro_event_flags": {
+          "blocked": false,
+          "macro_event_proximity_flag": false,
+          "event_name": null
+        },
+        "variant_id": null
+      }
+    }
+  },
+  "replay_ablation": {
+    "replay": {
+      "run_id": "replay_ccf803f1554d47b3a104f1194dedb12f",
+      "snapshots_processed": 2,
+      "setups_detected": 2,
+      "lookahead_rejections": 0,
+      "determinism_hash": "7f0a0ffc98a05505bf10b21cd2f20f5db4a4cd66f7112cd1cdcca36b7e93baa6"
+    },
+    "score_models": {
+      "baseline_manual": {
+        "total": 92.75,
+        "breakdown": {
+          "dealer_positioning": 23.75,
+          "options_flow": 18.0,
+          "oi_confirmation": 9.0,
+          "big_trades_dark_pool": 8.0,
+          "price_structure": 20.0,
+          "volatility_liquidity": 9.0,
+          "data_quality_event_guard": 5.0
+        },
+        "raw_components": {
+          "dealer_positioning": 0.95,
+          "options_flow": 0.9,
+          "oi_confirmation": 0.9,
+          "big_trades_dark_pool": 0.8,
+          "price_structure": 1.0,
+          "volatility_liquidity": 0.9,
+          "data_quality_event_guard": 1.0
+        },
+        "score_model_version": "score_v0_baseline_manual",
+        "score_weight_set_id": "baseline_manual"
+      },
+      "equal_weight": {
+        "total": 92.14,
+        "breakdown": {
+          "dealer_positioning": 13.5714,
+          "options_flow": 12.8571,
+          "oi_confirmation": 12.8571,
+          "big_trades_dark_pool": 11.4286,
+          "price_structure": 14.2857,
+          "volatility_liquidity": 12.8571,
+          "data_quality_event_guard": 14.2857
+        },
+        "raw_components": {
+          "dealer_positioning": 0.95,
+          "options_flow": 0.9,
+          "oi_confirmation": 0.9,
+          "big_trades_dark_pool": 0.8,
+          "price_structure": 1.0,
+          "volatility_liquidity": 0.9,
+          "data_quality_event_guard": 1.0
+        },
+        "score_model_version": "score_v0_baseline_manual:equal_weight",
+        "score_weight_set_id": "equal_weight"
+      },
+      "no_flow": {
+        "total": 93.44,
+        "breakdown": {
+          "dealer_positioning": 29.6875,
+          "options_flow": 0.0,
+          "oi_confirmation": 11.25,
+          "big_trades_dark_pool": 10.0,
+          "price_structure": 25.0,
+          "volatility_liquidity": 11.25,
+          "data_quality_event_guard": 6.25
+        },
+        "raw_components": {
+          "dealer_positioning": 0.95,
+          "options_flow": 0.9,
+          "oi_confirmation": 0.9,
+          "big_trades_dark_pool": 0.8,
+          "price_structure": 1.0,
+          "volatility_liquidity": 0.9,
+          "data_quality_event_guard": 1.0
+        },
+        "score_model_version": "score_v0_baseline_manual:no_flow",
+        "score_weight_set_id": "no_flow"
+      },
+      "no_gex": {
+        "total": 92.0,
+        "breakdown": {
+          "dealer_positioning": 0.0,
+          "options_flow": 24.0,
+          "oi_confirmation": 12.0,
+          "big_trades_dark_pool": 10.6667,
+          "price_structure": 26.6667,
+          "volatility_liquidity": 12.0,
+          "data_quality_event_guard": 6.6667
+        },
+        "raw_components": {
+          "dealer_positioning": 0.95,
+          "options_flow": 0.9,
+          "oi_confirmation": 0.9,
+          "big_trades_dark_pool": 0.8,
+          "price_structure": 1.0,
+          "volatility_liquidity": 0.9,
+          "data_quality_event_guard": 1.0
+        },
+        "score_model_version": "score_v0_baseline_manual:no_gex",
+        "score_weight_set_id": "no_gex"
+      },
+      "no_oi": {
+        "total": 93.06,
+        "breakdown": {
+          "dealer_positioning": 26.3889,
+          "options_flow": 20.0,
+          "oi_confirmation": 0.0,
+          "big_trades_dark_pool": 8.8889,
+          "price_structure": 22.2222,
+          "volatility_liquidity": 10.0,
+          "data_quality_event_guard": 5.5556
+        },
+        "raw_components": {
+          "dealer_positioning": 0.95,
+          "options_flow": 0.9,
+          "oi_confirmation": 0.9,
+          "big_trades_dark_pool": 0.8,
+          "price_structure": 1.0,
+          "volatility_liquidity": 0.9,
+          "data_quality_event_guard": 1.0
+        },
+        "score_model_version": "score_v0_baseline_manual:no_oi",
+        "score_weight_set_id": "no_oi"
+      },
+      "price_action_only": {
+        "total": 100.0,
+        "breakdown": {
+          "dealer_positioning": 0.0,
+          "options_flow": 0.0,
+          "oi_confirmation": 0.0,
+          "big_trades_dark_pool": 0.0,
+          "price_structure": 100.0,
+          "volatility_liquidity": 0.0,
+          "data_quality_event_guard": 0.0
+        },
+        "raw_components": {
+          "dealer_positioning": 0.95,
+          "options_flow": 0.9,
+          "oi_confirmation": 0.9,
+          "big_trades_dark_pool": 0.8,
+          "price_structure": 1.0,
+          "volatility_liquidity": 0.9,
+          "data_quality_event_guard": 1.0
+        },
+        "score_model_version": "score_v0_baseline_manual:price_action_only",
+        "score_weight_set_id": "price_action_only"
+      },
+      "options_only": {
+        "total": 91.67,
+        "breakdown": {
+          "dealer_positioning": 31.6667,
+          "options_flow": 30.0,
+          "oi_confirmation": 30.0,
+          "big_trades_dark_pool": 0.0,
+          "price_structure": 0.0,
+          "volatility_liquidity": 0.0,
+          "data_quality_event_guard": 0.0
+        },
+        "raw_components": {
+          "dealer_positioning": 0.95,
+          "options_flow": 0.9,
+          "oi_confirmation": 0.9,
+          "big_trades_dark_pool": 0.8,
+          "price_structure": 1.0,
+          "volatility_liquidity": 0.9,
+          "data_quality_event_guard": 1.0
+        },
+        "score_model_version": "score_v0_baseline_manual:options_only",
+        "score_weight_set_id": "options_only"
+      }
+    },
+    "stop_variant_details": {
+      "0.15": {
+        "plan": {
+          "entry_zone_low": 100.5,
+          "entry_zone_high": 100.54000000000002,
+          "planned_entry": 100.5,
+          "stop_initial": 98.925,
+          "targets": [
+            105.0,
+            108.0,
+            112.0
+          ],
+          "primary_rr": 2.857,
+          "shares": 158,
+          "risk_dollars": 248.85,
+          "invalidation_logic": "5m close below 98.92 or loss of reclaimed GAMMA_FLIP zone"
+        },
+        "blockers": []
+      },
+      "0.3": {
+        "plan": {
+          "entry_zone_low": 100.5,
+          "entry_zone_high": 100.54000000000002,
+          "planned_entry": 100.5,
+          "stop_initial": 98.85,
+          "targets": [
+            105.0,
+            108.0,
+            112.0
+          ],
+          "primary_rr": 2.727,
+          "shares": 151,
+          "risk_dollars": 249.15,
+          "invalidation_logic": "5m close below 98.85 or loss of reclaimed GAMMA_FLIP zone"
+        },
+        "blockers": []
+      },
+      "0.5": {
+        "plan": {
+          "entry_zone_low": 100.5,
+          "entry_zone_high": 100.54000000000002,
+          "planned_entry": 100.5,
+          "stop_initial": 98.75,
+          "targets": [
+            105.0,
+            108.0,
+            112.0
+          ],
+          "primary_rr": 2.571,
+          "shares": 142,
+          "risk_dollars": 248.5,
+          "invalidation_logic": "5m close below 98.75 or loss of reclaimed GAMMA_FLIP zone"
+        },
+        "blockers": []
+      },
+      "0.75": {
+        "plan": {
+          "entry_zone_low": 100.5,
+          "entry_zone_high": 100.54000000000002,
+          "planned_entry": 100.5,
+          "stop_initial": 98.625,
+          "targets": [
+            105.0,
+            108.0,
+            112.0
+          ],
+          "primary_rr": 2.4,
+          "shares": 133,
+          "risk_dollars": 249.38,
+          "invalidation_logic": "5m close below 98.62 or loss of reclaimed GAMMA_FLIP zone"
+        },
+        "blockers": []
+      }
+    },
+    "stop_variants": [
+      "0.15",
+      "0.3",
+      "0.5",
+      "0.75"
+    ],
+    "tp_variants": [
+      "next_gex_node",
+      "fixed_R_1_2_3",
+      "partials_next_nodes",
+      "dynamic_flow_exit"
+    ],
+    "breakeven_variants": [
+      "none",
+      "after_1R",
+      "after_TP1",
+      "after_TP1_plus_retest"
+    ]
+  },
+  "macro_guard": {
+    "outside_window": {
+      "guard": {
+        "ticker": "CLEAR",
+        "evaluated_at_utc": "2026-08-03T15:00:00Z",
+        "blocked": false,
+        "event_name": null,
+        "event_time_utc": null,
+        "minutes_to_event": null,
+        "minutes_since_event": null,
+        "macro_event_proximity_flag": false,
+        "blocking_reasons": []
+      },
+      "setup": {
+        "setup_event_id": "setup_7d21d4342ad74beca2284b219bf280a7",
+        "ticker": "CLEAR",
+        "setup_type": "LEVEL_RECLAIM_LONG",
+        "side": "LONG",
+        "level_id": "lvl_b54a1171aeb1415a97aa8fa2a4aa41a7",
+        "level_type": "GAMMA_FLIP",
+        "created_at_utc": "2026-08-03T15:00:00Z",
+        "score": {
+          "total": 92.75,
+          "breakdown": {
+            "dealer_positioning": 23.75,
+            "options_flow": 18.0,
+            "oi_confirmation": 9.0,
+            "big_trades_dark_pool": 8.0,
+            "price_structure": 20.0,
+            "volatility_liquidity": 9.0,
+            "data_quality_event_guard": 5.0
+          },
+          "raw_components": {
+            "dealer_positioning": 0.95,
+            "options_flow": 0.9,
+            "oi_confirmation": 0.9,
+            "big_trades_dark_pool": 0.8,
+            "price_structure": 1.0,
+            "volatility_liquidity": 0.9,
+            "data_quality_event_guard": 1.0
+          },
+          "score_model_version": "score_v0_baseline_manual",
+          "score_weight_set_id": "baseline_manual"
+        },
+        "trade_plan": {
+          "entry_zone_low": 100.5,
+          "entry_zone_high": 100.54000000000002,
+          "planned_entry": 100.5,
+          "stop_initial": 98.85,
+          "targets": [
+            105.0,
+            108.0,
+            112.0
+          ],
+          "primary_rr": 2.727,
+          "shares": 151,
+          "risk_dollars": 249.15,
+          "invalidation_logic": "5m close below 98.85 or loss of reclaimed GAMMA_FLIP zone"
+        },
+        "production_paper_allowed": true,
+        "shadow_paper_allowed": true,
+        "blocking_reasons": [],
+        "reason": [
+          "Long 5m closed-candle reclaim of GAMMA_FLIP",
+          "Level existed before reaction (2026-08-03T14:00:00+00:00)",
+          "Deterministic confluence score 93/100",
+          "Volume expanded versus baseline",
+          "Macro Event Guard clear"
+        ],
+        "config_version": "sha256:d2c344520a2154a8",
+        "source_mode": "ACCEPTANCE_NORMALIZED",
+        "signal_snapshot": {
+          "schema_version": "signal_snapshot.v1",
+          "captured_at_utc": "2026-08-03T15:00:00+00:00",
+          "source_timestamp_utc": "2026-08-03T14:00:00+00:00",
+          "ingestion_timestamp_utc": "2026-09-01T21:27:42.504135+00:00",
+          "ticker_state": {
+            "ticker": "CLEAR",
+            "timestamp_utc": "2026-08-03T15:00:00Z",
+            "source": "acceptance_feed",
+            "spot_price": 100.5,
+            "bid": 100.49,
+            "ask": 100.51,
+            "last": 100.5,
+            "spread_bps": 2.0,
+            "volume_today": 2000000.0,
+            "relative_volume": 2.0,
+            "average_daily_volume": 10000000.0,
+            "ticker_class": "unknown",
+            "trading_session": "regular",
+            "is_halted": false,
+            "source_freshness_seconds": 0.0
+          },
+          "level": {
+            "level_id": "lvl_b54a1171aeb1415a97aa8fa2a4aa41a7",
+            "ticker": "CLEAR",
+            "level_type": "GAMMA_FLIP",
+            "price": 100.0,
+            "zone_low": 99.9,
+            "zone_high": 100.1,
+            "known_at_utc": "2026-08-03T14:00:00Z",
+            "source": "acceptance_feed",
+            "strength_score": 0.95,
+            "source_count": 1,
+            "source_agreement_score": 1.0,
+            "freshness_score": 1.0,
+            "metadata": {}
+          },
+          "previous_bar": {
+            "ticker": "CLEAR",
+            "timeframe": "5m",
+            "bar_start_utc": "2026-08-03T14:50:00Z",
+            "bar_end_utc": "2026-08-03T14:55:00Z",
+            "open": 100.3,
+            "high": 100.5,
+            "low": 99.0,
+            "close": 99.7,
+            "volume": 100000.0,
+            "vwap": 100.0,
+            "atr": 0.5,
+            "relative_volume": 1.0,
+            "closed": true
+          },
+          "confirmation_bar": {
+            "ticker": "CLEAR",
+            "timeframe": "5m",
+            "bar_start_utc": "2026-08-03T14:55:00Z",
+            "bar_end_utc": "2026-08-03T15:00:00Z",
+            "open": 99.7,
+            "high": 100.7,
+            "low": 99.4,
+            "close": 100.5,
+            "volume": 220000.0,
+            "vwap": 100.2,
+            "atr": 0.5,
+            "relative_volume": 2.0,
+            "closed": true
+          },
+          "features": {
+            "dealer_positioning": 0.95,
+            "options_flow": 0.9,
+            "oi_confirmation": 0.9,
+            "big_trades_dark_pool": 0.8,
+            "price_structure": 1.0,
+            "volatility_liquidity": 0.9,
+            "data_quality_event_guard": 1.0,
+            "flow_direction": "bullish",
+            "retest_confirmed": false,
+            "volume_expansion": true,
+            "data_staleness_flag": false,
+            "source_conflict_flag": false,
+            "raw": {
+              "acceptance_fixture": true
+            }
+          },
+          "guard": {
+            "ticker": "CLEAR",
+            "evaluated_at_utc": "2026-08-03T15:00:00Z",
+            "blocked": false,
+            "event_name": null,
+            "event_time_utc": null,
+            "minutes_to_event": null,
+            "minutes_since_event": null,
+            "macro_event_proximity_flag": false,
+            "blocking_reasons": []
+          },
+          "target_nodes": [
+            105.0,
+            108.0,
+            112.0
+          ]
+        }
+      }
+    },
+    "blocked_events": {
+      "CPI": {
+        "guard": {
+          "ticker": "MACROCPI",
+          "evaluated_at_utc": "2026-08-04T14:40:00Z",
+          "blocked": true,
+          "event_name": "CPI",
+          "event_time_utc": "2026-08-04T15:00:00Z",
+          "minutes_to_event": 20.0,
+          "minutes_since_event": null,
+          "macro_event_proximity_flag": true,
+          "blocking_reasons": [
+            "CPI event window (+20 minutes)"
+          ]
+        },
+        "setup": {
+          "setup_event_id": "setup_2e378bfd7b4c4f0e8d006769705c3378",
+          "ticker": "MACROCPI",
+          "setup_type": "LEVEL_RECLAIM_LONG",
+          "side": "LONG",
+          "level_id": "lvl_83b639546a7b499f9d4f0a7c65a8e7ea",
+          "level_type": "GAMMA_FLIP",
+          "created_at_utc": "2026-08-04T14:40:00Z",
+          "score": {
+            "total": 87.75,
+            "breakdown": {
+              "dealer_positioning": 23.75,
+              "options_flow": 18.0,
+              "oi_confirmation": 9.0,
+              "big_trades_dark_pool": 8.0,
+              "price_structure": 20.0,
+              "volatility_liquidity": 9.0,
+              "data_quality_event_guard": 0.0
+            },
+            "raw_components": {
+              "dealer_positioning": 0.95,
+              "options_flow": 0.9,
+              "oi_confirmation": 0.9,
+              "big_trades_dark_pool": 0.8,
+              "price_structure": 1.0,
+              "volatility_liquidity": 0.9,
+              "data_quality_event_guard": 0.0
+            },
+            "score_model_version": "score_v0_baseline_manual",
+            "score_weight_set_id": "baseline_manual"
+          },
+          "trade_plan": {
+            "entry_zone_low": 100.5,
+            "entry_zone_high": 100.54000000000002,
+            "planned_entry": 100.5,
+            "stop_initial": 98.85,
+            "targets": [
+              105.0,
+              108.0,
+              112.0
+            ],
+            "primary_rr": 2.727,
+            "shares": 151,
+            "risk_dollars": 249.15,
+            "invalidation_logic": "5m close below 98.85 or loss of reclaimed GAMMA_FLIP zone"
+          },
+          "production_paper_allowed": false,
+          "shadow_paper_allowed": true,
+          "blocking_reasons": [
+            "CPI event window (+20 minutes)"
+          ],
+          "reason": [
+            "Long 5m closed-candle reclaim of GAMMA_FLIP",
+            "Level existed before reaction (2026-08-04T13:40:00+00:00)",
+            "Deterministic confluence score 88/100",
+            "Volume expanded versus baseline"
+          ],
+          "config_version": "sha256:d2c344520a2154a8",
+          "source_mode": "ACCEPTANCE_NORMALIZED",
+          "signal_snapshot": {
+            "schema_version": "signal_snapshot.v1",
+            "captured_at_utc": "2026-08-04T14:40:00+00:00",
+            "source_timestamp_utc": "2026-08-04T13:40:00+00:00",
+            "ingestion_timestamp_utc": "2026-09-01T21:27:41.237565+00:00",
+            "ticker_state": {
+              "ticker": "MACROCPI",
+              "timestamp_utc": "2026-08-04T14:40:00Z",
+              "source": "acceptance_feed",
+              "spot_price": 100.5,
+              "bid": 100.49,
+              "ask": 100.51,
+              "last": 100.5,
+              "spread_bps": 2.0,
+              "volume_today": 2000000.0,
+              "relative_volume": 2.0,
+              "average_daily_volume": 10000000.0,
+              "ticker_class": "unknown",
+              "trading_session": "regular",
+              "is_halted": false,
+              "source_freshness_seconds": 0.0
+            },
+            "level": {
+              "level_id": "lvl_83b639546a7b499f9d4f0a7c65a8e7ea",
+              "ticker": "MACROCPI",
+              "level_type": "GAMMA_FLIP",
+              "price": 100.0,
+              "zone_low": 99.9,
+              "zone_high": 100.1,
+              "known_at_utc": "2026-08-04T13:40:00Z",
+              "source": "acceptance_feed",
+              "strength_score": 0.95,
+              "source_count": 1,
+              "source_agreement_score": 1.0,
+              "freshness_score": 1.0,
+              "metadata": {}
+            },
+            "previous_bar": {
+              "ticker": "MACROCPI",
+              "timeframe": "5m",
+              "bar_start_utc": "2026-08-04T14:30:00Z",
+              "bar_end_utc": "2026-08-04T14:35:00Z",
+              "open": 100.3,
+              "high": 100.5,
+              "low": 99.0,
+              "close": 99.7,
+              "volume": 100000.0,
+              "vwap": 100.0,
+              "atr": 0.5,
+              "relative_volume": 1.0,
+              "closed": true
+            },
+            "confirmation_bar": {
+              "ticker": "MACROCPI",
+              "timeframe": "5m",
+              "bar_start_utc": "2026-08-04T14:35:00Z",
+              "bar_end_utc": "2026-08-04T14:40:00Z",
+              "open": 99.7,
+              "high": 100.7,
+              "low": 99.4,
+              "close": 100.5,
+              "volume": 220000.0,
+              "vwap": 100.2,
+              "atr": 0.5,
+              "relative_volume": 2.0,
+              "closed": true
+            },
+            "features": {
+              "dealer_positioning": 0.95,
+              "options_flow": 0.9,
+              "oi_confirmation": 0.9,
+              "big_trades_dark_pool": 0.8,
+              "price_structure": 1.0,
+              "volatility_liquidity": 0.9,
+              "data_quality_event_guard": 0.0,
+              "flow_direction": "bullish",
+              "retest_confirmed": false,
+              "volume_expansion": true,
+              "data_staleness_flag": false,
+              "source_conflict_flag": false,
+              "raw": {
+                "acceptance_fixture": true
+              }
+            },
+            "guard": {
+              "ticker": "MACROCPI",
+              "evaluated_at_utc": "2026-08-04T14:40:00Z",
+              "blocked": true,
+              "event_name": "CPI",
+              "event_time_utc": "2026-08-04T15:00:00Z",
+              "minutes_to_event": 20.0,
+              "minutes_since_event": null,
+              "macro_event_proximity_flag": true,
+              "blocking_reasons": [
+                "CPI event window (+20 minutes)"
+              ]
+            },
+            "target_nodes": [
+              105.0,
+              108.0,
+              112.0
+            ]
+          }
+        },
+        "trade": {
+          "trade_id": "trade_5daa20c3e4024881abc73fc9caa82071",
+          "setup_event_id": "setup_2e378bfd7b4c4f0e8d006769705c3378",
+          "ticker": "MACROCPI",
+          "setup_type": "LEVEL_RECLAIM_LONG",
+          "side": "LONG",
+          "mode": "shadow_paper",
+          "created_at_utc": "2026-09-01T21:27:41.635266Z",
+          "entry_type": "market_sim",
+          "entry_zone_low": 100.5,
+          "entry_zone_high": 100.54000000000002,
+          "planned_entry": 100.5,
+          "actual_fill_price": null,
+          "stop_initial": 98.85,
+          "stop_current": 98.85,
+          "targets": [
+            105.0,
+            108.0,
+            112.0
+          ],
+          "shares": 151,
+          "remaining_shares": 151,
+          "risk_dollars": 249.15,
+          "status": "pending",
+          "bars_pending": 0,
+          "realized_r": 0.0,
+          "mfe_r": 0.0,
+          "mae_r": 0.0,
+          "fees": 0.0,
+          "slippage": 0.0,
+          "exit_reason": null,
+          "score_total": 87.75,
+          "score_breakdown": {
+            "dealer_positioning": 23.75,
+            "options_flow": 18.0,
+            "oi_confirmation": 9.0,
+            "big_trades_dark_pool": 8.0,
+            "price_structure": 20.0,
+            "volatility_liquidity": 9.0,
+            "data_quality_event_guard": 0.0
+          },
+          "score_model_version": "score_v0_baseline_manual",
+          "config_version": "sha256:d2c344520a2154a8",
+          "macro_event_flags": {
+            "blocked": true,
+            "macro_event_proximity_flag": true,
+            "event_name": "CPI"
+          },
+          "variant_id": null
+        }
+      },
+      "FOMC": {
+        "guard": {
+          "ticker": "MACROFOMC",
+          "evaluated_at_utc": "2026-08-04T14:40:00Z",
+          "blocked": true,
+          "event_name": "FOMC",
+          "event_time_utc": "2026-08-04T15:00:00Z",
+          "minutes_to_event": 20.0,
+          "minutes_since_event": null,
+          "macro_event_proximity_flag": true,
+          "blocking_reasons": [
+            "FOMC event window (+20 minutes)"
+          ]
+        },
+        "setup": {
+          "setup_event_id": "setup_7702bf495a6a438982ae4dcaad09fd5d",
+          "ticker": "MACROFOMC",
+          "setup_type": "LEVEL_RECLAIM_LONG",
+          "side": "LONG",
+          "level_id": "lvl_8b171b7234374997b1054e1ca723463d",
+          "level_type": "GAMMA_FLIP",
+          "created_at_utc": "2026-08-04T14:40:00Z",
+          "score": {
+            "total": 87.75,
+            "breakdown": {
+              "dealer_positioning": 23.75,
+              "options_flow": 18.0,
+              "oi_confirmation": 9.0,
+              "big_trades_dark_pool": 8.0,
+              "price_structure": 20.0,
+              "volatility_liquidity": 9.0,
+              "data_quality_event_guard": 0.0
+            },
+            "raw_components": {
+              "dealer_positioning": 0.95,
+              "options_flow": 0.9,
+              "oi_confirmation": 0.9,
+              "big_trades_dark_pool": 0.8,
+              "price_structure": 1.0,
+              "volatility_liquidity": 0.9,
+              "data_quality_event_guard": 0.0
+            },
+            "score_model_version": "score_v0_baseline_manual",
+            "score_weight_set_id": "baseline_manual"
+          },
+          "trade_plan": {
+            "entry_zone_low": 100.5,
+            "entry_zone_high": 100.54000000000002,
+            "planned_entry": 100.5,
+            "stop_initial": 98.85,
+            "targets": [
+              105.0,
+              108.0,
+              112.0
+            ],
+            "primary_rr": 2.727,
+            "shares": 151,
+            "risk_dollars": 249.15,
+            "invalidation_logic": "5m close below 98.85 or loss of reclaimed GAMMA_FLIP zone"
+          },
+          "production_paper_allowed": false,
+          "shadow_paper_allowed": true,
+          "blocking_reasons": [
+            "FOMC event window (+20 minutes)"
+          ],
+          "reason": [
+            "Long 5m closed-candle reclaim of GAMMA_FLIP",
+            "Level existed before reaction (2026-08-04T13:40:00+00:00)",
+            "Deterministic confluence score 88/100",
+            "Volume expanded versus baseline"
+          ],
+          "config_version": "sha256:d2c344520a2154a8",
+          "source_mode": "ACCEPTANCE_NORMALIZED",
+          "signal_snapshot": {
+            "schema_version": "signal_snapshot.v1",
+            "captured_at_utc": "2026-08-04T14:40:00+00:00",
+            "source_timestamp_utc": "2026-08-04T13:40:00+00:00",
+            "ingestion_timestamp_utc": "2026-09-01T21:27:41.651797+00:00",
+            "ticker_state": {
+              "ticker": "MACROFOMC",
+              "timestamp_utc": "2026-08-04T14:40:00Z",
+              "source": "acceptance_feed",
+              "spot_price": 100.5,
+              "bid": 100.49,
+              "ask": 100.51,
+              "last": 100.5,
+              "spread_bps": 2.0,
+              "volume_today": 2000000.0,
+              "relative_volume": 2.0,
+              "average_daily_volume": 10000000.0,
+              "ticker_class": "unknown",
+              "trading_session": "regular",
+              "is_halted": false,
+              "source_freshness_seconds": 0.0
+            },
+            "level": {
+              "level_id": "lvl_8b171b7234374997b1054e1ca723463d",
+              "ticker": "MACROFOMC",
+              "level_type": "GAMMA_FLIP",
+              "price": 100.0,
+              "zone_low": 99.9,
+              "zone_high": 100.1,
+              "known_at_utc": "2026-08-04T13:40:00Z",
+              "source": "acceptance_feed",
+              "strength_score": 0.95,
+              "source_count": 1,
+              "source_agreement_score": 1.0,
+              "freshness_score": 1.0,
+              "metadata": {}
+            },
+            "previous_bar": {
+              "ticker": "MACROFOMC",
+              "timeframe": "5m",
+              "bar_start_utc": "2026-08-04T14:30:00Z",
+              "bar_end_utc": "2026-08-04T14:35:00Z",
+              "open": 100.3,
+              "high": 100.5,
+              "low": 99.0,
+              "close": 99.7,
+              "volume": 100000.0,
+              "vwap": 100.0,
+              "atr": 0.5,
+              "relative_volume": 1.0,
+              "closed": true
+            },
+            "confirmation_bar": {
+              "ticker": "MACROFOMC",
+              "timeframe": "5m",
+              "bar_start_utc": "2026-08-04T14:35:00Z",
+              "bar_end_utc": "2026-08-04T14:40:00Z",
+              "open": 99.7,
+              "high": 100.7,
+              "low": 99.4,
+              "close": 100.5,
+              "volume": 220000.0,
+              "vwap": 100.2,
+              "atr": 0.5,
+              "relative_volume": 2.0,
+              "closed": true
+            },
+            "features": {
+              "dealer_positioning": 0.95,
+              "options_flow": 0.9,
+              "oi_confirmation": 0.9,
+              "big_trades_dark_pool": 0.8,
+              "price_structure": 1.0,
+              "volatility_liquidity": 0.9,
+              "data_quality_event_guard": 0.0,
+              "flow_direction": "bullish",
+              "retest_confirmed": false,
+              "volume_expansion": true,
+              "data_staleness_flag": false,
+              "source_conflict_flag": false,
+              "raw": {
+                "acceptance_fixture": true
+              }
+            },
+            "guard": {
+              "ticker": "MACROFOMC",
+              "evaluated_at_utc": "2026-08-04T14:40:00Z",
+              "blocked": true,
+              "event_name": "FOMC",
+              "event_time_utc": "2026-08-04T15:00:00Z",
+              "minutes_to_event": 20.0,
+              "minutes_since_event": null,
+              "macro_event_proximity_flag": true,
+              "blocking_reasons": [
+                "FOMC event window (+20 minutes)"
+              ]
+            },
+            "target_nodes": [
+              105.0,
+              108.0,
+              112.0
+            ]
+          }
+        },
+        "trade": {
+          "trade_id": "trade_3fa6fdc39ba44d2788dba96f3a9c8050",
+          "setup_event_id": "setup_7702bf495a6a438982ae4dcaad09fd5d",
+          "ticker": "MACROFOMC",
+          "setup_type": "LEVEL_RECLAIM_LONG",
+          "side": "LONG",
+          "mode": "shadow_paper",
+          "created_at_utc": "2026-09-01T21:27:42.074527Z",
+          "entry_type": "market_sim",
+          "entry_zone_low": 100.5,
+          "entry_zone_high": 100.54000000000002,
+          "planned_entry": 100.5,
+          "actual_fill_price": null,
+          "stop_initial": 98.85,
+          "stop_current": 98.85,
+          "targets": [
+            105.0,
+            108.0,
+            112.0
+          ],
+          "shares": 151,
+          "remaining_shares": 151,
+          "risk_dollars": 249.15,
+          "status": "pending",
+          "bars_pending": 0,
+          "realized_r": 0.0,
+          "mfe_r": 0.0,
+          "mae_r": 0.0,
+          "fees": 0.0,
+          "slippage": 0.0,
+          "exit_reason": null,
+          "score_total": 87.75,
+          "score_breakdown": {
+            "dealer_positioning": 23.75,
+            "options_flow": 18.0,
+            "oi_confirmation": 9.0,
+            "big_trades_dark_pool": 8.0,
+            "price_structure": 20.0,
+            "volatility_liquidity": 9.0,
+            "data_quality_event_guard": 0.0
+          },
+          "score_model_version": "score_v0_baseline_manual",
+          "config_version": "sha256:d2c344520a2154a8",
+          "macro_event_flags": {
+            "blocked": true,
+            "macro_event_proximity_flag": true,
+            "event_name": "FOMC"
+          },
+          "variant_id": null
+        }
+      },
+      "NFP": {
+        "guard": {
+          "ticker": "MACRONFP",
+          "evaluated_at_utc": "2026-08-04T14:40:00Z",
+          "blocked": true,
+          "event_name": "NFP",
+          "event_time_utc": "2026-08-04T15:00:00Z",
+          "minutes_to_event": 20.0,
+          "minutes_since_event": null,
+          "macro_event_proximity_flag": true,
+          "blocking_reasons": [
+            "NFP event window (+20 minutes)"
+          ]
+        },
+        "setup": {
+          "setup_event_id": "setup_7939c084b53a437c9b37c844d1d71669",
+          "ticker": "MACRONFP",
+          "setup_type": "LEVEL_RECLAIM_LONG",
+          "side": "LONG",
+          "level_id": "lvl_2f91b58a132d43ee86dfcfbc87ccac07",
+          "level_type": "GAMMA_FLIP",
+          "created_at_utc": "2026-08-04T14:40:00Z",
+          "score": {
+            "total": 87.75,
+            "breakdown": {
+              "dealer_positioning": 23.75,
+              "options_flow": 18.0,
+              "oi_confirmation": 9.0,
+              "big_trades_dark_pool": 8.0,
+              "price_structure": 20.0,
+              "volatility_liquidity": 9.0,
+              "data_quality_event_guard": 0.0
+            },
+            "raw_components": {
+              "dealer_positioning": 0.95,
+              "options_flow": 0.9,
+              "oi_confirmation": 0.9,
+              "big_trades_dark_pool": 0.8,
+              "price_structure": 1.0,
+              "volatility_liquidity": 0.9,
+              "data_quality_event_guard": 0.0
+            },
+            "score_model_version": "score_v0_baseline_manual",
+            "score_weight_set_id": "baseline_manual"
+          },
+          "trade_plan": {
+            "entry_zone_low": 100.5,
+            "entry_zone_high": 100.54000000000002,
+            "planned_entry": 100.5,
+            "stop_initial": 98.85,
+            "targets": [
+              105.0,
+              108.0,
+              112.0
+            ],
+            "primary_rr": 2.727,
+            "shares": 151,
+            "risk_dollars": 249.15,
+            "invalidation_logic": "5m close below 98.85 or loss of reclaimed GAMMA_FLIP zone"
+          },
+          "production_paper_allowed": false,
+          "shadow_paper_allowed": true,
+          "blocking_reasons": [
+            "NFP event window (+20 minutes)"
+          ],
+          "reason": [
+            "Long 5m closed-candle reclaim of GAMMA_FLIP",
+            "Level existed before reaction (2026-08-04T13:40:00+00:00)",
+            "Deterministic confluence score 88/100",
+            "Volume expanded versus baseline"
+          ],
+          "config_version": "sha256:d2c344520a2154a8",
+          "source_mode": "ACCEPTANCE_NORMALIZED",
+          "signal_snapshot": {
+            "schema_version": "signal_snapshot.v1",
+            "captured_at_utc": "2026-08-04T14:40:00+00:00",
+            "source_timestamp_utc": "2026-08-04T13:40:00+00:00",
+            "ingestion_timestamp_utc": "2026-09-01T21:27:42.089552+00:00",
+            "ticker_state": {
+              "ticker": "MACRONFP",
+              "timestamp_utc": "2026-08-04T14:40:00Z",
+              "source": "acceptance_feed",
+              "spot_price": 100.5,
+              "bid": 100.49,
+              "ask": 100.51,
+              "last": 100.5,
+              "spread_bps": 2.0,
+              "volume_today": 2000000.0,
+              "relative_volume": 2.0,
+              "average_daily_volume": 10000000.0,
+              "ticker_class": "unknown",
+              "trading_session": "regular",
+              "is_halted": false,
+              "source_freshness_seconds": 0.0
+            },
+            "level": {
+              "level_id": "lvl_2f91b58a132d43ee86dfcfbc87ccac07",
+              "ticker": "MACRONFP",
+              "level_type": "GAMMA_FLIP",
+              "price": 100.0,
+              "zone_low": 99.9,
+              "zone_high": 100.1,
+              "known_at_utc": "2026-08-04T13:40:00Z",
+              "source": "acceptance_feed",
+              "strength_score": 0.95,
+              "source_count": 1,
+              "source_agreement_score": 1.0,
+              "freshness_score": 1.0,
+              "metadata": {}
+            },
+            "previous_bar": {
+              "ticker": "MACRONFP",
+              "timeframe": "5m",
+              "bar_start_utc": "2026-08-04T14:30:00Z",
+              "bar_end_utc": "2026-08-04T14:35:00Z",
+              "open": 100.3,
+              "high": 100.5,
+              "low": 99.0,
+              "close": 99.7,
+              "volume": 100000.0,
+              "vwap": 100.0,
+              "atr": 0.5,
+              "relative_volume": 1.0,
+              "closed": true
+            },
+            "confirmation_bar": {
+              "ticker": "MACRONFP",
+              "timeframe": "5m",
+              "bar_start_utc": "2026-08-04T14:35:00Z",
+              "bar_end_utc": "2026-08-04T14:40:00Z",
+              "open": 99.7,
+              "high": 100.7,
+              "low": 99.4,
+              "close": 100.5,
+              "volume": 220000.0,
+              "vwap": 100.2,
+              "atr": 0.5,
+              "relative_volume": 2.0,
+              "closed": true
+            },
+            "features": {
+              "dealer_positioning": 0.95,
+              "options_flow": 0.9,
+              "oi_confirmation": 0.9,
+              "big_trades_dark_pool": 0.8,
+              "price_structure": 1.0,
+              "volatility_liquidity": 0.9,
+              "data_quality_event_guard": 0.0,
+              "flow_direction": "bullish",
+              "retest_confirmed": false,
+              "volume_expansion": true,
+              "data_staleness_flag": false,
+              "source_conflict_flag": false,
+              "raw": {
+                "acceptance_fixture": true
+              }
+            },
+            "guard": {
+              "ticker": "MACRONFP",
+              "evaluated_at_utc": "2026-08-04T14:40:00Z",
+              "blocked": true,
+              "event_name": "NFP",
+              "event_time_utc": "2026-08-04T15:00:00Z",
+              "minutes_to_event": 20.0,
+              "minutes_since_event": null,
+              "macro_event_proximity_flag": true,
+              "blocking_reasons": [
+                "NFP event window (+20 minutes)"
+              ]
+            },
+            "target_nodes": [
+              105.0,
+              108.0,
+              112.0
+            ]
+          }
+        },
+        "trade": {
+          "trade_id": "trade_974b5699d3df49da852ab82b3fcfa124",
+          "setup_event_id": "setup_7939c084b53a437c9b37c844d1d71669",
+          "ticker": "MACRONFP",
+          "setup_type": "LEVEL_RECLAIM_LONG",
+          "side": "LONG",
+          "mode": "shadow_paper",
+          "created_at_utc": "2026-09-01T21:27:42.483591Z",
+          "entry_type": "market_sim",
+          "entry_zone_low": 100.5,
+          "entry_zone_high": 100.54000000000002,
+          "planned_entry": 100.5,
+          "actual_fill_price": null,
+          "stop_initial": 98.85,
+          "stop_current": 98.85,
+          "targets": [
+            105.0,
+            108.0,
+            112.0
+          ],
+          "shares": 151,
+          "remaining_shares": 151,
+          "risk_dollars": 249.15,
+          "status": "pending",
+          "bars_pending": 0,
+          "realized_r": 0.0,
+          "mfe_r": 0.0,
+          "mae_r": 0.0,
+          "fees": 0.0,
+          "slippage": 0.0,
+          "exit_reason": null,
+          "score_total": 87.75,
+          "score_breakdown": {
+            "dealer_positioning": 23.75,
+            "options_flow": 18.0,
+            "oi_confirmation": 9.0,
+            "big_trades_dark_pool": 8.0,
+            "price_structure": 20.0,
+            "volatility_liquidity": 9.0,
+            "data_quality_event_guard": 0.0
+          },
+          "score_model_version": "score_v0_baseline_manual",
+          "config_version": "sha256:d2c344520a2154a8",
+          "macro_event_flags": {
+            "blocked": true,
+            "macro_event_proximity_flag": true,
+            "event_name": "NFP"
+          },
+          "variant_id": null
+        }
+      }
+    }
+  },
+  "api_dashboard": {
+    "health": {
+      "status": "ok",
+      "service_name": "options_structure_trader",
+      "signal_family": "OPTIONS_STRUCTURE",
+      "runtime_mode": "standalone_paper_validation",
+      "live_auto_enabled": false,
+      "config_version": "sha256:d2c344520a2154a8",
+      "database": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\acceptance\\20260901T212731Z\\acceptance.db",
+      "counts": {
+        "options_raw_payloads": 1,
+        "options_gex_snapshots": 1,
+        "option_levels": 13,
+        "setup_events": 8,
+        "paper_trades": 7,
+        "audit_events": 9
+      },
+      "server_time_utc": "2026-09-01T21:27:42.981968+00:00"
+    },
+    "dashboard_status": 200,
+    "dashboard_title_present": true,
+    "latest_scans_count": 8,
+    "journal_count": 9,
+    "open_count": 5,
+    "closed_count": 2,
+    "ablation_weight_sets": [
+      "baseline_manual",
+      "equal_weight",
+      "no_dark_pool",
+      "no_flow",
+      "no_gex",
+      "no_macro_filter",
+      "no_oi",
+      "options_only",
+      "price_action_only"
+    ],
+    "config_status": {
+      "config_version": "sha256:d2c344520a2154a8",
+      "runtime_mode": "standalone_paper_validation",
+      "database_path": "C:\\Users\\adama\\Documents\\my ai projects\\options-structure-trader\\acceptance\\20260901T212731Z\\acceptance.db",
+      "isolated_standalone_mvp": true,
+      "live_auto_enabled": false,
+      "production_setup_families": {
+        "LEVEL_RECLAIM_LONG": true,
+        "LEVEL_RECLAIM_SHORT": true
+      },
+      "score_model": "score_v0_baseline_manual"
+    },
+    "route_count": 21
+  },
+  "checks": {
+    "standalone_imports": true,
+    "portfolio_database_unchanged": true,
+    "standalone_paper_broker": true,
+    "standalone_alerting": true,
+    "synthetic_shadow_only": true,
+    "synthetic_production_rejected": true,
+    "stale_shadow_only": true,
+    "stale_production_rejected": true,
+    "incomplete_rejection_audited": true,
+    "live_execution_absent": true,
+    "live_flags_inert": true,
+    "live_mode_rejected": true,
+    "long_end_to_end": true,
+    "short_end_to_end": true,
+    "replay_ablation_complete": true,
+    "variants_complete": true,
+    "macro_guard_complete": true,
+    "api_dashboard_complete": true
+  },
+  "overall": "PASS"
+}

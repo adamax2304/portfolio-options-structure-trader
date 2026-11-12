@@ -1,0 +1,144 @@
+calendar:
+  name: manual_us_market_macro_calendar
+  timezone: America/New_York
+  manually_verified: false
+  calendar_approved: false
+  last_verified_at_utc: null
+  verified_by: null
+  approval_note: >-
+    Template is intentionally unapproved. Fill every applicable event, verify against official sources,
+    then set both manually_verified and calendar_approved true. CPI, FOMC, and NFP coverage is mandatory.
+
+events:
+  - event_name: CPI release
+    event_type: CPI
+    date: null
+    time_et: null
+    severity: high
+    affected_symbols: [ALL]
+    block_before_minutes: 60
+    block_after_minutes: 30
+    source_note: Verify against the U.S. Bureau of Labor Statistics release calendar.
+    manually_verified: false
+    calendar_approved: false
+  - event_name: FOMC rate decision
+    event_type: FOMC
+    date: 2026-09-16
+    time_et: "14:00:00"
+    severity: high
+    affected_symbols: [ALL]
+    block_before_minutes: 60
+    block_after_minutes: 30
+    source_note: Existing Phase 2B entry; re-verify against the Federal Reserve calendar before approval.
+    manually_verified: false
+    calendar_approved: false
+  - event_name: Nonfarm Payrolls
+    event_type: NFP
+    date: null
+    time_et: null
+    severity: high
+    affected_symbols: [ALL]
+    block_before_minutes: 60
+    block_after_minutes: 30
+    source_note: Verify against the U.S. Bureau of Labor Statistics Employment Situation calendar.
+    manually_verified: false
+    calendar_approved: false
+  - event_name: PPI release
+    event_type: PPI
+    date: null
+    time_et: null
+    severity: high
+    affected_symbols: [ALL]
+    block_before_minutes: 45
+    block_after_minutes: 20
+    source_note: Verify against the U.S. Bureau of Labor Statistics release calendar.
+    manually_verified: false
+    calendar_approved: false
+  - event_name: PCE price index
+    event_type: PCE
+    date: null
+    time_et: null
+    severity: high
+    affected_symbols: [ALL]
+    block_before_minutes: 45
+    block_after_minutes: 20
+    source_note: Verify against the U.S. Bureau of Economic Analysis release schedule.
+    manually_verified: false
+    calendar_approved: false
+  - event_name: GDP release
+    event_type: GDP
+    date: null
+    time_et: null
+    severity: medium
+    affected_symbols: [ALL]
+    block_before_minutes: 30
+    block_after_minutes: 15
+    source_note: Verify against the U.S. Bureau of Economic Analysis release schedule.
+    manually_verified: false
+    calendar_approved: false
+  - event_name: Federal Reserve speaker
+    event_type: FED_SPEAKER
+    date: null
+    time_et: null
+    severity: medium
+    affected_symbols: [ALL]
+    block_before_minutes: 15
+    block_after_minutes: 10
+    source_note: Add material scheduled appearances from official Federal Reserve calendars.
+    manually_verified: false
+    calendar_approved: false
+  - event_name: U.S. Treasury auction
+    event_type: TREASURY_AUCTION
+    date: null
+    time_et: null
+    severity: medium
+    affected_symbols: [SPY, QQQ, IWM]
+    block_before_minutes: 15
+    block_after_minutes: 10
+    source_note: Verify against TreasuryDirect auction announcements.
+    manually_verified: false
+    calendar_approved: false
+  - event_name: Monthly options expiration
+    event_type: OPEX
+    date: null
+    time_et: null
+    severity: medium
+    affected_symbols: [ALL]
+    block_before_minutes: 0
+    block_after_minutes: 0
+    source_note: Add each monthly OPEX date and any desired session-level guard.
+    manually_verified: false
+    calendar_approved: false
+  - event_name: Quadruple witching
+    event_type: QUAD_WITCHING
+    date: null
+    time_et: null
+    severity: high
+    affected_symbols: [ALL]
+    block_before_minutes: 0
+    block_after_minutes: 0
+    source_note: Add quarterly March, June, September, and December dates.
+    manually_verified: false
+    calendar_approved: false
+  - event_name: U.S. market holiday
+    event_type: MARKET_HOLIDAY
+    date: null
+    time_et: null
+    severity: high
+    affected_symbols: [ALL]
+    block_before_minutes: 0
+    block_after_minutes: 0
+    source_note: RTH enforcement also uses the XNYS exchange calendar.
+    manually_verified: false
+    calendar_approved: false
+  - event_name: U.S. market early close
+    event_type: EARLY_CLOSE
+    date: null
+    time_et: null
+    severity: high
+    affected_symbols: [ALL]
+    block_before_minutes: 30
+    block_after_minutes: 0
+    source_note: RTH enforcement also uses the XNYS exchange calendar schedule.
+    manually_verified: false
+    calendar_approved: false

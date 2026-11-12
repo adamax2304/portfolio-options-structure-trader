@@ -1,0 +1,2 @@
+bucket,N,unique_trading_days,expectancy_R,profit_factor,win_rate,median_R,avg_winner,avg_loser,MFE,MAE,max_DD,status,blocker
+NOT_RUN,0,0,,,,,,,,,,BLOCKED,No validated 2024-2025 5m intraday OHLCV source for SPY/QQQ/IWM is available locally.

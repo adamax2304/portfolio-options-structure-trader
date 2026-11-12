@@ -1,0 +1,4 @@
+gex_model_version,N,unique_trading_days,expectancy_R,profit_factor,win_rate,median_R,avg_winner,avg_loser,MFE,MAE,max_DD,positive_day_pct,remove_best_day_expectancy,remove_best_month_expectancy,remove_best_symbol_expectancy,day_block_bootstrap_low,day_block_bootstrap_high
+GEX_MODEL_A_CALL_POSITIVE_PUT_NEGATIVE,15034,385,-0.2227,0.2846,0.474,-0.0059,0.1869,-0.5918,0.5562,1.1984,3349.9504,0.1688,-0.2252,-0.2242,-0.2294,-0.2478,-0.2013
+GEX_MODEL_B_CALL_NEGATIVE_PUT_POSITIVE,15034,385,-0.2227,0.2846,0.474,-0.0059,0.1869,-0.5918,0.5562,1.1984,3349.9504,0.1688,-0.2252,-0.2242,-0.2294,-0.2478,-0.2013
+GEX_MODEL_C_ABSOLUTE_GAMMA_CONCENTRATION,13635,385,-0.2301,0.2787,0.4605,-0.0148,0.1931,-0.5915,0.5565,1.1964,3139.9432,0.1558,-0.2316,-0.2318,-0.2352,-0.2562,-0.2058
